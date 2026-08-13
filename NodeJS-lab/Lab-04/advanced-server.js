@@ -28,9 +28,20 @@ const server = http.createServer((req, res) => {
   // Only GET requests are allowed
   if (req.method !== 'GET') {
     res.statusCode = 405;
+
     return res.end(JSON.stringify({
       error: "Only GET requests are allowed"
     }));
+  }
+
+  // Home route
+  if (pathName === '/') {
+    res.statusCode = 200;
+
+    return res.end(JSON.stringify({
+      message: "Advanced Student API is running",
+      endpoint: "/students"
+    }, null, 2));
   }
 
   // Bonus route: /students/course/BCA
@@ -39,6 +50,7 @@ const server = http.createServer((req, res) => {
   // Check valid routes
   if (pathName !== '/students' && !courseMatch) {
     res.statusCode = 404;
+
     return res.end(JSON.stringify({
       error: "Route not found"
     }));
@@ -48,8 +60,12 @@ const server = http.createServer((req, res) => {
   if (query.minMarks !== undefined) {
     const minMarks = Number(query.minMarks);
 
-    if (query.minMarks.trim() === '' || Number.isNaN(minMarks)) {
+    if (
+      query.minMarks.trim() === '' ||
+      Number.isNaN(minMarks)
+    ) {
       res.statusCode = 400;
+
       return res.end(JSON.stringify({
         error: "minMarks must be a number"
       }));
@@ -58,8 +74,12 @@ const server = http.createServer((req, res) => {
 
   // Validate sort
   if (query.sort !== undefined) {
-    if (query.sort !== 'name' && query.sort !== 'marks') {
+    if (
+      query.sort !== 'name' &&
+      query.sort !== 'marks'
+    ) {
       res.statusCode = 400;
+
       return res.end(JSON.stringify({
         error: "sort must be name or marks"
       }));
@@ -68,8 +88,12 @@ const server = http.createServer((req, res) => {
 
   // Validate order
   if (query.order !== undefined) {
-    if (query.order !== 'asc' && query.order !== 'desc') {
+    if (
+      query.order !== 'asc' &&
+      query.order !== 'desc'
+    ) {
       res.statusCode = 400;
+
       return res.end(JSON.stringify({
         error: "order must be asc or desc"
       }));
@@ -123,15 +147,20 @@ const server = http.createServer((req, res) => {
         comparison = a.marks - b.marks;
       }
 
-      return order === 'desc' ? -comparison : comparison;
+      return order === 'desc'
+        ? -comparison
+        : comparison;
     });
   }
 
   // Send final result
   res.statusCode = 200;
+
   res.end(JSON.stringify(result, null, 2));
 });
 
 server.listen(PORT, () => {
-  console.log(`Node.js server is running on http://localhost:${PORT}`);
+  console.log(
+    `Node.js server is running on http://localhost:${PORT}`
+  );
 });
