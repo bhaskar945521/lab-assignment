@@ -1,6 +1,8 @@
 const http = require('http');
 const url = require('url');
 
+const PORT = 3000;
+
 const students = [
   { id: 1, name: "Pragya", course: "BCA", marks: 92 },
   { id: 2, name: "AMIT", course: "IT", marks: 76 },
@@ -130,6 +132,6 @@ const server = http.createServer((req, res) => {
   res.end(JSON.stringify(result, null, 2));
 });
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log(`Node.js server is running on http://localhost:${PORT}`);
 });
