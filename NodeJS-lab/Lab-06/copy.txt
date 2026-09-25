@@ -1,0 +1,3 @@
+Node.js is a JavaScript runtime.
+The fs module is used to work with files.
+I am learning Node.js file system operations.
