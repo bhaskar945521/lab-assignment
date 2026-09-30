@@ -1,0 +1,40 @@
+LAB 05 - REFLECTION NOTES
+
+1. How does setTimeout simulate waiting?
+
+setTimeout() is used to simulate a delay in asynchronous operations.
+In this lab, setTimeout() was used to simulate the time required
+for food delivery operations such as placing, preparing and
+delivering an order.
+
+The callback inside setTimeout() is executed after the specified
+delay when Node.js can process it.
+
+
+2. What role does the Event Loop play?
+
+The Event Loop allows Node.js to handle asynchronous operations
+without blocking the main JavaScript execution.
+
+When a timer such as setTimeout() is scheduled, Node.js does not
+stop the entire program and wait. After the timer is ready, its
+callback can be processed by the Event Loop.
+
+
+3. How does Promise.all() help?
+
+Promise.all() allows multiple Promises to be started concurrently.
+In this lab, Pizza, Burger and Coffee orders were processed at the
+same time.
+
+Since each order took approximately 2 seconds, the concurrent
+execution completed in approximately 2 seconds instead of
+approximately 6 seconds in a sequential approach.
+
+
+4. What did I learn?
+
+This lab helped me understand callbacks, Promises, Promise
+chaining, async/await and Promise.all(). I also understood how
+asynchronous operations and the Event Loop allow Node.js to
+handle multiple operations efficiently.

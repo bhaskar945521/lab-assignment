@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bhaskar Mall - Node.js Lab Portfolio" />
+  <title>Node.js Lab Portfolio | Bhaskar Mall</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span>Node</span><b>.js</b> Lab</a>
+    <nav><a href="#labs">Labs</a><a href="#about">About</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">BCA • 7th Semester • Node.js</p>
+        <h1>Node.js <span>Lab Portfolio</span></h1>
+        <p class="hero-text">A complete collection of practical Node.js experiments, concepts, code and outputs.</p>
+        <div class="hero-buttons"><a class="btn primary" href="#labs">Explore Labs</a><a class="btn ghost" href="#about">Student Profile</a></div>
+      </div>
+      <div class="hero-card"><div class="terminal"><div class="dots"><i></i><i></i><i></i></div><code>$ node portfolio</code><strong>Portfolio running...</strong><small>Auto-discovering labs ✓</small></div></div>
+    </section>
+
+    <section class="stats" id="stats">
+      <div><strong id="totalLabs">0</strong><span>Total Labs</span></div>
+      <div><strong id="completedLabs">0</strong><span>Completed</span></div>
+      <div><strong id="techCount">0</strong><span>Technologies</span></div>
+      <div><strong id="studentId">23145005</strong><span>Student ID</span></div>
+    </section>
+
+    <section class="section" id="labs">
+      <div class="section-head"><div><p class="eyebrow">PRACTICAL WORK</p><h2>My Labs</h2></div><input id="search" type="search" placeholder="Search labs, topics, technologies..." /></div>
+      <div id="labsGrid" class="labs-grid"><div class="loading">Loading labs...</div></div>
+      <p id="empty" class="empty hidden">No matching labs found.</p>
+    </section>
+
+    <section class="section about" id="about">
+      <div><p class="eyebrow">STUDENT</p><h2>Bhaskar Mall</h2><p>BCA • 7th Semester</p><p class="muted">This portfolio documents my Node.js practical work with objectives, theory, procedures, technologies, source files and output screenshots.</p></div>
+      <div class="about-box"><span>Subject</span><strong>Node.js</strong><span>Course</span><strong>BCA</strong><span>Semester</span><strong>7th Semester</strong></div>
+    </section>
+  </main>
+
+  <footer>© 2026 Bhaskar Mall • Node.js Lab Portfolio</footer>
+  <script src="script.js"></script>
+</body>
+</html>

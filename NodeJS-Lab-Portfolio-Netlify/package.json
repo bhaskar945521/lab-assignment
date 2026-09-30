@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-lab-portfolio",
+  "version": "1.0.0",
+  "description": "Auto-discovered Node.js laboratory portfolio for Bhaskar Mall",
+  "main": "portfolio-server.js",
+  "scripts": {"start":"node portfolio-server.js","dev":"node portfolio-server.js"},
+  "keywords": ["nodejs","portfolio","lab"],
+  "license": "MIT"
+}

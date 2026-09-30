@@ -1,0 +1,29 @@
+{
+  "title": "Student Data HTTP Server",
+  "description": "Store student records and retrieve details using ID or name through HTTP routes.",
+  "objective": "Practice arrays of objects, HTTP routing and searching student data.",
+  "theory": "Student records are represented as JavaScript objects inside an array. Incoming URLs are interpreted to find a matching student by ID or name and return the requested details.",
+  "technologies": [
+    "Node.js",
+    "HTTP Module",
+    "JavaScript Arrays",
+    "Objects"
+  ],
+  "steps": [
+    "Create the student dataset",
+    "Create the HTTP server",
+    "Display the student list",
+    "Search by ID or name",
+    "Return matching student details"
+  ],
+  "screenshots": [
+    "students-output.png"
+  ],
+  "labNo": 3,
+  "folder": "Lab-03",
+  "status": "Completed",
+  "files": [
+    "student-server.js",
+    "students-output.png"
+  ]
+}

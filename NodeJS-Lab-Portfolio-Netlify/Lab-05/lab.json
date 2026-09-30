@@ -1,0 +1,36 @@
+{
+  "title": "Asynchronous Food Delivery Tracker",
+  "description": "Simulate a food delivery workflow using callbacks, Promises, chaining, async/await and Promise.all().",
+  "objective": "Understand asynchronous programming patterns in Node.js.",
+  "theory": "Callbacks, Promises and async/await provide different ways to coordinate asynchronous operations. Promise.all() can run independent asynchronous tasks concurrently.",
+  "technologies": [
+    "Node.js",
+    "Callbacks",
+    "Promises",
+    "Async/Await",
+    "Promise.all()",
+    "Event Loop"
+  ],
+  "steps": [
+    "Implement the callback version",
+    "Implement Promises with resolve/reject",
+    "Create a chained workflow",
+    "Rewrite the flow with async/await",
+    "Run concurrent orders with Promise.all()"
+  ],
+  "screenshots": [
+    "advanced-output.png"
+  ],
+  "labNo": 5,
+  "folder": "Lab-05",
+  "status": "Completed",
+  "files": [
+    "README.md",
+    "async-await-version.js",
+    "callback-version.js",
+    "chaining-version.js",
+    "concurrent-orders.js",
+    "promise-version.js",
+    "reflection-notes.txt"
+  ]
+}
