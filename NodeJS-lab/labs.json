@@ -1,0 +1,529 @@
+{
+  "generatedAt": "2026-09-30T12:08:25.613Z",
+  "student": {
+    "name": "Bhaskar Mall",
+    "course": "BCA (Bachelor of Computer Applications)",
+    "semester": "VII Semester",
+    "scholarNo": "23145005",
+    "subject": "CS403NOD - Node.js Architecture & Backend Development",
+    "college": "Dev Sanskriti Vishwavidyalaya (DSVV)",
+    "githubUrl": "https://github.com/bhaskar945521/lab-assignment"
+  },
+  "stats": {
+    "totalLabs": 6,
+    "totalJsFiles": 17,
+    "totalProjects": 3,
+    "totalScreenshots": 8,
+    "totalFiles": 30,
+    "totalLinesOfCode": 1169,
+    "allTechnologies": [
+      "Node.js",
+      "JavaScript",
+      "CLI",
+      "HTTP Module",
+      "REST API",
+      "URL Module",
+      "Promises",
+      "Async/Await",
+      "File System (fs)"
+    ]
+  },
+  "labs": [
+    {
+      "folder": "Lab-01",
+      "labNo": 1,
+      "formattedLabNo": "LAB 01",
+      "title": "Node.js Setup, Variables & Data Types",
+      "description": "Introduction to Node.js environment, project initialization with npm, variable scopes, JS data types, and Browser vs Node.js execution differences.",
+      "objective": "Demonstrate Node.js installation, running JS files outside browser, using typeof for data types, and understanding runtime environment differences.",
+      "concepts": [
+        "Node.js Architecture",
+        "V8 JavaScript Engine",
+        "Variables & Scope",
+        "Data Types (typeof)",
+        "Browser vs Node.js"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "CLI"
+      ],
+      "status": "Completed",
+      "date": "2026-08-01",
+      "student": {
+        "name": " Rishabh Khatiwada",
+        "scholarNo": " 23145018",
+        "course": " BCA",
+        "semester": " VII"
+      },
+      "entryFile": "app.js",
+      "howToRun": "node app.js",
+      "files": [
+        {
+          "filename": "app.js",
+          "relativePath": "Lab-01/app.js",
+          "ext": "js",
+          "sizeBytes": 1240,
+          "lines": 46,
+          "content": "console.log(\"Welcome to Node.js\");\r\n\r\nconsole.log(\"Name : Rishabh Khatiwada\");\r\nconsole.log(\"Scholar Number : 23145018\");\r\nconsole.log(\"Course : BCA\");\r\nconsole.log(\"Semester : VII\");\r\nconsole.log(\"College : Dev Sanskriti Vishwavidyalaya (DSVV)\");\r\n\r\nconsole.log(\"Hello Node.js\");\r\nconsole.log(\"Learning Backend Development\");\r\nconsole.log(\"Today's Lab Completed Successfully\");\r\n\r\n// Variables\r\n\r\nconst name = \"Rishabh Khatiwada\";\r\nconst scholarNumber = \"23145018\";\r\nconst semester = \"VII\";\r\nconst course = \"BCA\";\r\nconst college = \"Dev Sanskriti Vishwavidyalaya (DSVV)\";\r\n\r\nconsole.log(\"\\n------ Variables ------\");\r\n\r\nconsole.log(\"Name :\", name);\r\nconsole.log(\"Scholar Number :\", scholarNumber);\r\nconsole.log(\"Semester :\", semester);\r\nconsole.log(\"Course :\", course);\r\nconsole.log(\"College :\", college);\r\n\r\n\r\n// =======================\r\n// Task 7 - Data Types\r\n// =======================\r\n\r\nlet student = \"Rishabh\";\r\nlet age = 21;\r\nlet isStudent = true;\r\nlet city;\r\nlet address = null;\r\n\r\nconsole.log(\"\\n------ Data Types ------\");\r\n\r\nconsole.log(\"student :\", typeof student);\r\nconsole.log(\"age :\", typeof age);\r\nconsole.log(\"isStudent :\", typeof isStudent);\r\nconsole.log(\"city :\", typeof city);\r\nconsole.log(\"address :\", typeof address);"
+        },
+        {
+          "filename": "difference.txt",
+          "relativePath": "Lab-01/difference.txt",
+          "ext": "txt",
+          "sizeBytes": 581,
+          "lines": 16,
+          "content": "Difference Between Browser JavaScript and Node.js\r\n\r\n1. Browser JavaScript runs inside the browser.\r\n   Node.js runs outside the browser.\r\n\r\n2. Browser JavaScript is used for frontend development.\r\n   Node.js is used for backend development.\r\n\r\n3. Browser JavaScript can access the DOM.\r\n   Node.js cannot access the DOM.\r\n\r\n4. Browser JavaScript cannot directly access the file system.\r\n   Node.js can access the file system using the fs module.\r\n\r\n5. Browser JavaScript is mainly used to create interactive web pages.\r\n   Node.js is mainly used to build server-side applications."
+        },
+        {
+          "filename": "package.json",
+          "relativePath": "Lab-01/package.json",
+          "ext": "json",
+          "sizeBytes": 220,
+          "lines": 13,
+          "content": "{\n  \"name\": \"lab-01\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n"
+        },
+        {
+          "filename": "Readme.md",
+          "relativePath": "Lab-01/Readme.md",
+          "ext": "md",
+          "sizeBytes": 513,
+          "lines": 16,
+          "content": "# Node.js Lab Assignment 01\r\n\r\n## Student Details\r\n\r\n- **Name:** Rishabh Khatiwada\r\n- **Scholar Number:** 23145018\r\n- **Course:** BCA\r\n- **Semester:** VII\r\n- **Subject:** CS403NOD - Node.js\r\n- **Lab Number:** 01\r\n- **Date:** 31/07/2026\r\n- **Node-Version:** screen short on not version \r\n\r\n## Practical Description\r\n\r\nThis practical demonstrates the basics of Node.js, including installation, project initialization, console output, variables, data types, and the difference between Browser JavaScript and Node.js."
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "node-version.png",
+          "path": "Lab-01/node-version.png",
+          "caption": "Node Version"
+        }
+      ],
+      "totalLines": 91
+    },
+    {
+      "folder": "Lab-02",
+      "labNo": 2,
+      "formattedLabNo": "LAB 02",
+      "title": "HTTP Web Server & Custom Routing",
+      "description": "Building a custom HTTP web server using Node.js core http module, creating multiple endpoints (/about, /college, /profile), and learning Event Loop concepts.",
+      "objective": "Understand how Node.js http module handles incoming requests, sets HTTP headers, routes request URLs, and returns plain text or JSON output.",
+      "concepts": [
+        "HTTP Server Architecture",
+        "Custom Routing (req.url)",
+        "HTTP Status Codes",
+        "JSON Response Headers",
+        "Event Loop & libuv"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "HTTP Module",
+        "REST API"
+      ],
+      "status": "Completed",
+      "date": "2026-08-01",
+      "student": {
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA",
+        "semester": "VII"
+      },
+      "entryFile": "server.js",
+      "howToRun": "node server.js",
+      "files": [
+        {
+          "filename": "architecture-notes.txt",
+          "relativePath": "Lab-02/architecture-notes.txt",
+          "ext": "txt",
+          "sizeBytes": 1015,
+          "lines": 11,
+          "content": "1. What is the Event Loop?\r\n\r\nThe Event Loop is a mechanism in Node.js that allows it to handle many tasks without blocking the program. It checks if any asynchronous operation has finished and executes its callback. This makes Node.js fast and efficient. It helps the server handle multiple requests at the same time.\r\n\r\n2. Is Node.js single-threaded or multi-threaded? Explain.\r\n\r\nNode.js is single-threaded because JavaScript code runs on a single main thread. However, it uses the libuv library to perform background tasks like file operations and networking. This allows Node.js to handle many requests efficiently. So, it is single-threaded for JavaScript execution but supports asynchronous operations.\r\n\r\n3. What is the role of libuv?\r\n\r\nlibuv is a library used by Node.js to manage asynchronous operations. It handles tasks like file system access, networking, and timers in the background. It also provides the Event Loop implementation. This helps Node.js perform non-blocking I/O operations efficiently."
+        },
+        {
+          "filename": "package.json",
+          "relativePath": "Lab-02/package.json",
+          "ext": "json",
+          "sizeBytes": 220,
+          "lines": 13,
+          "content": "{\n  \"name\": \"lab-02\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n"
+        },
+        {
+          "filename": "server.js",
+          "relativePath": "Lab-02/server.js",
+          "ext": "js",
+          "sizeBytes": 1297,
+          "lines": 43,
+          "content": "const http = require(\"http\");\r\n\r\nconst server = http.createServer((req, res) => {\r\n\r\n    if (req.url === \"/\") {\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"Welcome! this server is created by Bhaskar \\nName - Bhaskar\\nScholar Number - 23145005\\nCourse - BCA\");\r\n    }\r\n\r\n    else if (req.url === \"/about\") {\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"About \\n\\nHello! I am Bhaskar.\");\r\n    }\r\n\r\n    else if (req.url === \"/college\") {\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"College \\n\\nCollege Name - Dev Sanskriti Vishwavidhlya \\nSemester - BCA VII\");\r\n    }\r\n    else if (req.url === \"/profile\") {\r\n\r\n    const profile = {\r\n        name: \"Bhaskar\",\r\n        scholarNumber: \"23145005\",\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        college: \"Dev Sanskriti Vishwavidhyalaya\"\r\n    };\r\n\r\n    res.writeHead(200, { \"Content-Type\": \"application/json\" });\r\n    res.end(JSON.stringify(profile));\r\n}\r\n\r\n    else {\r\n        res.writeHead(404, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"Page Not Found\");\r\n    }\r\n});\r\n\r\nconst PORT = process.env.PORT || 3000;\r\n\r\nserver.listen(PORT, () => {\r\n    console.log(`Node.js server is running on http://localhost:${PORT}`);\r\n});"
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "router-output.png",
+          "path": "Lab-02/router-output.png",
+          "caption": "Router Output"
+        },
+        {
+          "filename": "server-running.png",
+          "path": "Lab-02/server-running.png",
+          "caption": "Server Running"
+        }
+      ],
+      "totalLines": 67
+    },
+    {
+      "folder": "Lab-03",
+      "labNo": 3,
+      "formattedLabNo": "LAB 03",
+      "title": "Multi-Route Student Information Server",
+      "description": "HTTP server serving student database records. Features an index page listing all 12 BCA students and dynamic lookup routes by ID (/01, /03) or student name.",
+      "objective": "Implement dynamic route parameter handling in plain Node.js to filter and return student profile objects in clean text formatting.",
+      "concepts": [
+        "HTTP Web Server",
+        "Dynamic Route Matching",
+        "Array Searching & Filtering",
+        "String Normalization",
+        "Plain Text Formatting"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "HTTP Module",
+        "REST API"
+      ],
+      "status": "Completed",
+      "date": "2026-08-01",
+      "student": {
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA",
+        "semester": "VII"
+      },
+      "entryFile": "student-server.js",
+      "howToRun": "node student-server.js",
+      "files": [
+        {
+          "filename": "student-server.js",
+          "relativePath": "Lab-03/student-server.js",
+          "ext": "js",
+          "sizeBytes": 4449,
+          "lines": 201,
+          "content": "\r\nconst http = require(\"http\");\r\n\r\n// Store details of 12 students\r\nconst students = [\r\n    {\r\n        id: \"01\",\r\n        name: \"Aditya Soni\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"MP\",\r\n        phone: \"9876543210\",\r\n        hostel: \"Padini first floor H 1\"\r\n    },\r\n    {\r\n        id: \"02\",\r\n        name: \"Ayush Ram Tripathi\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543211\",\r\n        hostel: \"Padini first floor J 4\"\r\n    },\r\n    {\r\n        id: \"03\",\r\n        name: \"Bhaskar Mall\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543212\",\r\n        hostel: \"Padini first floor H 8\"\r\n    },\r\n    {\r\n        id: \"04\",\r\n        name: \"Gauri Tyagi\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543213\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"05\",\r\n        name: \"Kanak Sharma\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543214\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"06\",\r\n        name: \"Pragya Gupta\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543215\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"07\",\r\n        name: \"Nisha\",\r\n        age: 23,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Bihar\",\r\n        phone: \"9876543216\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"08\",\r\n        name: \"Shreya Kashyap\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9876543217\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"09\",\r\n        name: \"Shreya Singh\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9866543412\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"10\",\r\n        name: \"Mikki\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9876543456\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"11\",\r\n        name: \"Rishabh Kahtiwada\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Manipur\",\r\n        phone: \"9876543220\",\r\n        hostel: \"Padini hostel first floor H 8\"\r\n    },\r\n    {\r\n        id: \"12\",\r\n        name: \"Sayon\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Delhi\",\r\n        phone: \"9876543221\",\r\n        hostel: \"Padini hostel first floor H 4\"\r\n    }\r\n];\r\n\r\n\r\n// Create the server\r\nconst server = http.createServer((req, res) => {\r\n\r\n    // Show ID and Name on the home page\r\n    if (req.url === \"/\") {\r\n\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n\r\n        let data = \"STUDENT LIST\\n\\n\";\r\n\r\n        // Display ID and Name of all students\r\n        students.forEach((student) => {\r\n            data += `ID: ${student.id}    Name: ${student.name}\\n`;\r\n        });\r\n\r\n        data += \"\\nUse /ID or /Name to view student details.\";\r\n\r\n        res.end(data);\r\n    }\r\n\r\n    // Search student by ID or Name\r\n    else {\r\n\r\n        // Remove \"/\" from the URL\r\n        let search = req.url.substring(1);\r\n\r\n        // Find student by ID or Name\r\n        let student = students.find(\r\n            (s) =>\r\n                s.id === search ||\r\n                s.name.toLowerCase().replaceAll(\" \", \"\") === search.toLowerCase()\r\n        );\r\n\r\n        // If student is found\r\n        if (student) {\r\n\r\n            res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n\r\n            // Display complete student details\r\n            res.end(`\r\nSTUDENT DETAILS\r\n\r\nID: ${student.id}\r\nName: ${student.name}\r\nAge: ${student.age}\r\nCourse: ${student.course}\r\nSemester: ${student.semester}\r\nState: ${student.state}\r\nPhone: ${student.phone}\r\nHostel Address: ${student.hostel}\r\n            `);\r\n        }\r\n\r\n        // If student is not found\r\n        else {\r\n\r\n            res.writeHead(404, { \"Content-Type\": \"text/plain\" });\r\n\r\n            res.end(\"Student Not Found\");\r\n        }\r\n    }\r\n});\r\n\r\n\r\n// Set the port number\r\nconst PORT = 3000;\r\n\r\n// Start the server\r\nserver.listen(PORT, () => {\r\n    console.log(`Node.js server is running on http://localhost:${PORT}`);\r\n});\r\n\r\n"
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "students-output.png",
+          "path": "Lab-03/students-output.png",
+          "caption": "Students Output"
+        }
+      ],
+      "totalLines": 201
+    },
+    {
+      "folder": "Lab-04",
+      "labNo": 4,
+      "formattedLabNo": "LAB 04",
+      "title": "Advanced Student REST API with Query Filtering & Sorting",
+      "description": "Full-featured HTTP REST API supporting URL query parameters (minMarks, sort, order, search), endpoint routing (/students/course/BCA), and strict HTTP error responses.",
+      "objective": "Create a robust HTTP API with query parsing, input validation, case-insensitive searching, multi-field sorting, and proper HTTP status codes (200, 400, 404, 405).",
+      "concepts": [
+        "RESTful API Architecture",
+        "URL Query Parameters",
+        "Input Validation",
+        "Array Sorting & Filtering",
+        "HTTP Error Handling (400, 404, 405)"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "HTTP Module",
+        "URL Module",
+        "REST API"
+      ],
+      "status": "Completed",
+      "date": "2026-08-01",
+      "student": {
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA",
+        "semester": "VII"
+      },
+      "entryFile": "advanced-server.js",
+      "howToRun": "node advanced-server.js",
+      "files": [
+        {
+          "filename": "advanced-server.js",
+          "relativePath": "Lab-04/advanced-server.js",
+          "ext": "js",
+          "sizeBytes": 4080,
+          "lines": 166,
+          "content": "const http = require('http');\r\nconst url = require('url');\r\n\r\nconst PORT = 3000;\r\n\r\nconst students = [\r\n  { id: 1, name: \"Pragya\", course: \"BCA\", marks: 92 },\r\n  { id: 2, name: \"AMIT\", course: \"IT\", marks: 76 },\r\n  { id: 3, name: \"Bhaskar\", course: \"BCA\", marks: 85 },\r\n  { id: 4, name: \"Rishabh\", course: \"IT\", marks: 64 },\r\n  { id: 5, name: \"Yadev\", course: \"BCA\", marks: 58 },\r\n  { id: 6, name: \"Sudhanshu\", course: \"IT\", marks: 81 },\r\n  { id: 7, name: \"Ayush\", course: \"BCA\", marks: 71 },\r\n  { id: 8, name: \"Saroj\", course: \"IT\", marks: 47 },\r\n  { id: 9, name: \"Sayon\", course: \"BCA\", marks: 66 },\r\n  { id: 10, name: \"Gauri\", course: \"IT\", marks: 89 },\r\n  { id: 11, name: \"Kanak\", course: \"BCA\", marks: 53 },\r\n  { id: 12, name: \"Shreya\", course: \"IT\", marks: 73 }\r\n];\r\n\r\nconst server = http.createServer((req, res) => {\r\n  res.setHeader('Content-Type', 'application/json');\r\n\r\n  const parsedUrl = url.parse(req.url, true);\r\n  const pathName = parsedUrl.pathname;\r\n  const query = parsedUrl.query;\r\n\r\n  // Only GET requests are allowed\r\n  if (req.method !== 'GET') {\r\n    res.statusCode = 405;\r\n\r\n    return res.end(JSON.stringify({\r\n      error: \"Only GET requests are allowed\"\r\n    }));\r\n  }\r\n\r\n  // Home route\r\n  if (pathName === '/') {\r\n    res.statusCode = 200;\r\n\r\n    return res.end(JSON.stringify({\r\n      message: \"Advanced Student API is running\",\r\n      endpoint: \"/students\"\r\n    }, null, 2));\r\n  }\r\n\r\n  // Bonus route: /students/course/BCA\r\n  const courseMatch = pathName.match(/^\\/students\\/course\\/([^/]+)$/);\r\n\r\n  // Check valid routes\r\n  if (pathName !== '/students' && !courseMatch) {\r\n    res.statusCode = 404;\r\n\r\n    return res.end(JSON.stringify({\r\n      error: \"Route not found\"\r\n    }));\r\n  }\r\n\r\n  // Validate minMarks\r\n  if (query.minMarks !== undefined) {\r\n    const minMarks = Number(query.minMarks);\r\n\r\n    if (\r\n      query.minMarks.trim() === '' ||\r\n      Number.isNaN(minMarks)\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"minMarks must be a number\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Validate sort\r\n  if (query.sort !== undefined) {\r\n    if (\r\n      query.sort !== 'name' &&\r\n      query.sort !== 'marks'\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"sort must be name or marks\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Validate order\r\n  if (query.order !== undefined) {\r\n    if (\r\n      query.order !== 'asc' &&\r\n      query.order !== 'desc'\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"order must be asc or desc\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Start with all students\r\n  let result = [...students];\r\n\r\n  // Course filter\r\n  if (courseMatch) {\r\n    const routeCourse = decodeURIComponent(courseMatch[1]);\r\n\r\n    result = result.filter(student =>\r\n      student.course.toLowerCase() === routeCourse.toLowerCase()\r\n    );\r\n  } else if (query.course) {\r\n    result = result.filter(student =>\r\n      student.course.toLowerCase() === query.course.toLowerCase()\r\n    );\r\n  }\r\n\r\n  // Minimum marks filter\r\n  if (query.minMarks !== undefined) {\r\n    const minMarks = Number(query.minMarks);\r\n\r\n    result = result.filter(student =>\r\n      student.marks >= minMarks\r\n    );\r\n  }\r\n\r\n  // Partial and case-insensitive name search\r\n  if (query.search) {\r\n    const searchText = query.search.toLowerCase();\r\n\r\n    result = result.filter(student =>\r\n      student.name.toLowerCase().includes(searchText)\r\n    );\r\n  }\r\n\r\n  // Sorting\r\n  if (query.sort) {\r\n    const order = query.order || 'asc';\r\n\r\n    result.sort((a, b) => {\r\n      let comparison;\r\n\r\n      if (query.sort === 'name') {\r\n        comparison = a.name.localeCompare(b.name);\r\n      } else {\r\n        comparison = a.marks - b.marks;\r\n      }\r\n\r\n      return order === 'desc'\r\n        ? -comparison\r\n        : comparison;\r\n    });\r\n  }\r\n\r\n  // Send final result\r\n  res.statusCode = 200;\r\n\r\n  res.end(JSON.stringify(result, null, 2));\r\n});\r\n\r\nserver.listen(PORT, () => {\r\n  console.log(\r\n    `Node.js server is running on http://localhost:${PORT}`\r\n  );\r\n});"
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "advanced-output.png",
+          "path": "Lab-04/advanced-output.png",
+          "caption": "Advanced Output"
+        }
+      ],
+      "totalLines": 166
+    },
+    {
+      "folder": "Lab-05",
+      "labNo": 5,
+      "formattedLabNo": "LAB 05",
+      "title": "Asynchronous JavaScript & Food Delivery Tracker",
+      "description": "Comprehensive comparison of asynchronous paradigms in Node.js: Callbacks, Promises, Promise Chaining, Async/Await, and Promise.all() concurrent order processing.",
+      "objective": "Master non-blocking asynchronous programming patterns in Node.js through a practical Food Delivery Tracking simulation.",
+      "concepts": [
+        "Callbacks & Callback Hell",
+        "Promises (resolve/reject)",
+        "Promise Chaining",
+        "Async/Await & try/catch",
+        "Promise.all() Concurrency",
+        "Event Loop Async Execution"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "Promises",
+        "Async/Await"
+      ],
+      "status": "Completed",
+      "date": "2026-08-01",
+      "student": {
+        "name": " Rishabh Khatiwada",
+        "scholarNo": " 23145018",
+        "course": " BCA VII Semester",
+        "semester": "VII"
+      },
+      "entryFile": "async-await-version.js",
+      "howToRun": "node callback-version.js\nnode promise-version.js\nnode chaining-version.js\nnode async-await-version.js\nnode concurrent-orders.js",
+      "files": [
+        {
+          "filename": "async-await-version.js",
+          "relativePath": "Lab-05/async-await-version.js",
+          "ext": "js",
+          "sizeBytes": 1175,
+          "lines": 94,
+          "content": "function placeOrder() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Order Placed\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nfunction prepareOrder() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Preparing Food\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nfunction outForDelivery() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Out For Delivery\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nfunction delivered() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Delivered\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\n// Async/Await\r\n\r\nasync function processOrder() {\r\n\r\n    try {\r\n\r\n        await placeOrder();\r\n\r\n        await prepareOrder();\r\n\r\n        await outForDelivery();\r\n\r\n        await delivered();\r\n\r\n        console.log(\"Order Completed Successfully!\");\r\n\r\n    } catch (error) {\r\n\r\n        console.log(error);\r\n\r\n    }\r\n\r\n}\r\n\r\n\r\nprocessOrder();"
+        },
+        {
+          "filename": "callback-version.js",
+          "relativePath": "Lab-05/callback-version.js",
+          "ext": "js",
+          "sizeBytes": 832,
+          "lines": 51,
+          "content": "function placeOrderCallback(item, callback) {\r\n\r\n    console.log(`Order placed: ${item}`); //Order place - Pizza \r\n\r\n    setTimeout(() => {\r\n\r\n        callback();\r\n\r\n    }, 2000);\r\n}\r\n\r\n\r\nfunction trackOrderCallback(item, callback) {\r\n\r\n    console.log(`Tracking order: ${item}`); //Track order - Pizza \r\n\r\n    setTimeout(() => {\r\n\r\n        callback();\r\n\r\n    }, 2000);\r\n}\r\n\r\n\r\nfunction confirmDeliveryCallback(item, callback) {\r\n\r\n    console.log(`Delivery confirmed: ${item}`); // Delevery confirmed - Pizza \r\n\r\n    setTimeout(() => {\r\n\r\n        callback();\r\n\r\n    }, 2000);\r\n}\r\n\r\n\r\n// Callback Nesting\r\n\r\nplaceOrderCallback(\"Pizza\", () => {\r\n\r\n    trackOrderCallback(\"Pizza\", () => {\r\n\r\n        confirmDeliveryCallback(\"Pizza\", () => {\r\n\r\n            console.log(\"Order completed successfully!\");\r\n\r\n        });\r\n\r\n    });\r\n\r\n});"
+        },
+        {
+          "filename": "chaining-version.js",
+          "relativePath": "Lab-05/chaining-version.js",
+          "ext": "js",
+          "sizeBytes": 1107,
+          "lines": 86,
+          "content": "function placeOrder() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Order Placed\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nfunction prepareOrder() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Preparing Food\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nfunction outForDelivery() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Out For Delivery\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nfunction delivered() {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(\"Delivered\");\r\n\r\n            resolve();\r\n\r\n        }, 1000);\r\n\r\n    });\r\n\r\n}\r\n\r\nplaceOrder()\r\n\r\n    .then(() => prepareOrder())\r\n\r\n    .then(() => outForDelivery())\r\n\r\n    .then(() => delivered())\r\n\r\n    .then(() => {\r\n\r\n        console.log(\"Order Completed Successfully!\");\r\n\r\n    })\r\n\r\n    .catch((error) => {\r\n\r\n        console.log(error);\r\n\r\n    });"
+        },
+        {
+          "filename": "concurrent-orders.js",
+          "relativePath": "Lab-05/concurrent-orders.js",
+          "ext": "js",
+          "sizeBytes": 592,
+          "lines": 41,
+          "content": "function processOrder(item) {\r\n\r\n    return new Promise((resolve) => {\r\n\r\n        setTimeout(() => {\r\n\r\n            console.log(`${item} completed`);\r\n\r\n            resolve(`${item} order completed`);\r\n\r\n        }, 2000);\r\n\r\n    });\r\n\r\n}\r\n\r\n\r\nconst startTime = Date.now();\r\n\r\n\r\nPromise.all([\r\n    processOrder(\"Pizza\"),\r\n    processOrder(\"Burger\"),\r\n    processOrder(\"Coffee\")\r\n])\r\n\r\n.then((results) => {\r\n\r\n    console.log(results);\r\n\r\n    const endTime = Date.now();\r\n\r\n    console.log(`Total Time: ${endTime - startTime} ms`);\r\n\r\n})\r\n\r\n.catch((error) => {\r\n\r\n    console.log(error);\r\n\r\n});"
+        },
+        {
+          "filename": "promise-version.js",
+          "relativePath": "Lab-05/promise-version.js",
+          "ext": "js",
+          "sizeBytes": 678,
+          "lines": 39,
+          "content": "function placeOrder(item) { \r\n\r\n    return new Promise((resolve, reject) => {\r\n\r\n        console.log(`Order placed: ${item}`); \r\n\r\n        setTimeout(() => {\r\n\r\n            const success = Math.random() > 0.2; //randome no. to track delivery success or fail\r\n\r\n            if (success) {\r\n\r\n                resolve(`${item} is out for delivery!`);\r\n\r\n            } else {\r\n\r\n                reject(`Sorry, the restaurant could not prepare ${item}`);\r\n\r\n            }\r\n\r\n        }, 2000); //2 second \r\n\r\n    });\r\n}\r\n\r\n\r\nplaceOrder(\"Pizza\")\r\n\r\n    .then((message) => {\r\n\r\n        console.log(message);\r\n\r\n    })\r\n\r\n    .catch((error) => {\r\n\r\n        console.log(error);\r\n\r\n    });"
+        },
+        {
+          "filename": "README.md",
+          "relativePath": "Lab-05/README.md",
+          "ext": "md",
+          "sizeBytes": 1725,
+          "lines": 105,
+          "content": "# Node.js Lab - 05\r\n\r\n## Title\r\nSimulating a Food Delivery Tracker\r\n\r\n## Student Details\r\n\r\n- **Name:** Rishabh Khatiwada\r\n- **Scholar Number:** 23145018\r\n- **Course:** BCA VII Semester\r\n- **Subject:** CS403NOD - Node.js\r\n- **Lab:** 05\r\n- **Date:** 27 August 2026\r\n\r\n---\r\n\r\n## Objective\r\n\r\nThe objective of this lab is to understand asynchronous programming\r\nin Node.js using a food delivery tracking example.\r\n\r\nThe lab covers:\r\n\r\n- Callbacks\r\n- Promises\r\n- Promise Chaining\r\n- Async/Await\r\n- Promise.all()\r\n- Event Loop\r\n\r\n---\r\n\r\n## Files\r\n\r\n### 1. callback-version.js\r\n\r\nDemonstrates the food delivery process using callbacks.\r\n\r\nFlow:\r\n\r\nPlace Order → Track Order → Confirm Delivery\r\n\r\n---\r\n\r\n### 2. promise-version.js\r\n\r\nDemonstrates asynchronous operations using Promises with:\r\n\r\n- `resolve()`\r\n- `reject()`\r\n- `.then()`\r\n- `.catch()`\r\n\r\nBoth successful and failed outcomes were tested.\r\n\r\n---\r\n\r\n### 3. chaining-version.js\r\n\r\nDemonstrates Promise Chaining for sequential operations.\r\n\r\nFlow:\r\n\r\nOrder Placed → Preparing Food → Out For Delivery → Delivered\r\n\r\nA single `.catch()` is used to handle errors.\r\n\r\n---\r\n\r\n### 4. async-await-version.js\r\n\r\nDemonstrates the same asynchronous workflow using:\r\n\r\n- `async`\r\n- `await`\r\n- `try/catch`\r\n\r\nThis makes the asynchronous code easier to read.\r\n\r\n---\r\n\r\n### 5. concurrent-orders.js\r\n\r\nDemonstrates concurrent execution using `Promise.all()`.\r\n\r\nThree orders are processed:\r\n\r\n- Pizza\r\n- Burger\r\n- Coffee\r\n\r\nThe total execution time was approximately **2008 ms**.\r\n\r\n---\r\n\r\n## Execution\r\n\r\nRun the files using Node.js:\r\n\r\n```bash\r\nnode callback-version.js\r\nnode promise-version.js\r\nnode chaining-version.js\r\nnode async-await-version.js\r\nnode concurrent-orders.js"
+        },
+        {
+          "filename": "reflection-notes.txt",
+          "relativePath": "Lab-05/reflection-notes.txt",
+          "ext": "txt",
+          "sizeBytes": 1349,
+          "lines": 40,
+          "content": "LAB 05 - REFLECTION NOTES\r\n\r\n1. How does setTimeout simulate waiting?\r\n\r\nsetTimeout() is used to simulate a delay in asynchronous operations.\r\nIn this lab, setTimeout() was used to simulate the time required\r\nfor food delivery operations such as placing, preparing and\r\ndelivering an order.\r\n\r\nThe callback inside setTimeout() is executed after the specified\r\ndelay when Node.js can process it.\r\n\r\n\r\n2. What role does the Event Loop play?\r\n\r\nThe Event Loop allows Node.js to handle asynchronous operations\r\nwithout blocking the main JavaScript execution.\r\n\r\nWhen a timer such as setTimeout() is scheduled, Node.js does not\r\nstop the entire program and wait. After the timer is ready, its\r\ncallback can be processed by the Event Loop.\r\n\r\n\r\n3. How does Promise.all() help?\r\n\r\nPromise.all() allows multiple Promises to be started concurrently.\r\nIn this lab, Pizza, Burger and Coffee orders were processed at the\r\nsame time.\r\n\r\nSince each order took approximately 2 seconds, the concurrent\r\nexecution completed in approximately 2 seconds instead of\r\napproximately 6 seconds in a sequential approach.\r\n\r\n\r\n4. What did I learn?\r\n\r\nThis lab helped me understand callbacks, Promises, Promise\r\nchaining, async/await and Promise.all(). I also understood how\r\nasynchronous operations and the Event Loop allow Node.js to\r\nhandle multiple operations efficiently."
+        }
+      ],
+      "screenshots": [],
+      "totalLines": 456
+    },
+    {
+      "folder": "Lab-06",
+      "labNo": 6,
+      "formattedLabNo": "LAB 06",
+      "title": "File System (fs) Module & CLI Notes App",
+      "description": "Working with Node.js fs module for synchronous & asynchronous file I/O, writing, appending, unlinking files, fs.promises with Async/Await, and building a CLI Notes App.",
+      "objective": "Learn file manipulation in Node.js using both sync/async methods, error handling, file promises, and persistent storage via command-line arguments.",
+      "concepts": [
+        "File System (fs) Module",
+        "Synchronous vs Asynchronous I/O",
+        "fs.promises API",
+        "CLI Arguments (process.argv)",
+        "File Append & Unlink"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "File System (fs)",
+        "Async/Await"
+      ],
+      "status": "Completed",
+      "date": "2026-08-01",
+      "student": {
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA",
+        "semester": "VII"
+      },
+      "entryFile": "add-note.js",
+      "howToRun": "node add-note.js \"Study Node.js\"\nnode read-notes.js",
+      "files": [
+        {
+          "filename": "add-note.js",
+          "relativePath": "Lab-06/add-note.js",
+          "ext": "js",
+          "sizeBytes": 363,
+          "lines": 17,
+          "content": "const fs = require('fs');\r\n\r\nconst note = process.argv[2];\r\n\r\nif (!note) {\r\n    console.log('Please provide a note. Example: node add-note.js \"Buy groceries\"');\r\n    process.exit(1);\r\n}\r\n\r\nconst entry = `[${new Date().toLocaleString()}] ${note}\\n`;\r\n\r\nfs.appendFile('notes.txt', entry, (err) => {\r\n    if (err) throw err;\r\n\r\n    console.log('Note added!');\r\n});\r\n"
+        },
+        {
+          "filename": "append-file.js",
+          "relativePath": "Lab-06/append-file.js",
+          "ext": "js",
+          "sizeBytes": 182,
+          "lines": 8,
+          "content": "const fs = require('fs');\r\n\r\nfs.appendFile('output.txt', '\\nThis line was appended.', (err) => {\r\n    if (err) throw err;\r\n\r\n    console.log('Content appended successfully.');\r\n});\r\n"
+        },
+        {
+          "filename": "async-await-version.js",
+          "relativePath": "Lab-06/async-await-version.js",
+          "ext": "js",
+          "sizeBytes": 350,
+          "lines": 15,
+          "content": "const fs = require('fs').promises;\r\n\r\nasync function copyContent() {\r\n    try {\r\n        const data = await fs.readFile('sample.txt', 'utf8');\r\n        await fs.writeFile('copy.txt', data);\r\n\r\n        console.log('Copied successfully.');\r\n    } catch (err) {\r\n        console.error('Something went wrong:', err.message);\r\n    }\r\n}\r\n\r\ncopyContent();\r\n"
+        },
+        {
+          "filename": "copy.txt",
+          "relativePath": "Lab-06/copy.txt",
+          "ext": "txt",
+          "sizeBytes": 124,
+          "lines": 4,
+          "content": "Node.js is a JavaScript runtime.\r\nThe fs module is used to work with files.\r\nI am learning Node.js file system operations.\r\n"
+        },
+        {
+          "filename": "delete-file.js",
+          "relativePath": "Lab-06/delete-file.js",
+          "ext": "js",
+          "sizeBytes": 145,
+          "lines": 8,
+          "content": "const fs = require('fs');\r\n\r\nfs.unlink('output.txt', (err) => {\r\n    if (err) throw err;\r\n\r\n    console.log('File deleted successfully.');\r\n});\r\n"
+        },
+        {
+          "filename": "notes.txt",
+          "relativePath": "Lab-06/notes.txt",
+          "ext": "txt",
+          "sizeBytes": 90,
+          "lines": 3,
+          "content": "[25/9/2026, 2:41:03 pm] Complete Node.js Lab 06\r\n[25/9/2026, 2:41:15 pm] Learn fs module\r\n"
+        },
+        {
+          "filename": "output.txt",
+          "relativePath": "Lab-06/output.txt",
+          "ext": "txt",
+          "sizeBytes": 69,
+          "lines": 4,
+          "content": "Hello from Lab 06!\r\nThis line was appended.\r\nLab-06 By Bhaskar Mall\r\n"
+        },
+        {
+          "filename": "read-async.js",
+          "relativePath": "Lab-06/read-async.js",
+          "ext": "js",
+          "sizeBytes": 282,
+          "lines": 13,
+          "content": "const fs = require('fs');\r\n\r\nfs.readFile('sample.txt', 'utf8', (err, data) => {\r\n    if (err) {\r\n        console.error('Error reading file:', err.message);\r\n        return;\r\n    }\r\n\r\n    console.log(data);\r\n});\r\n\r\nconsole.log('This line runs BEFORE the file content is printed.');\r\n"
+        },
+        {
+          "filename": "read-notes.js",
+          "relativePath": "Lab-06/read-notes.js",
+          "ext": "js",
+          "sizeBytes": 196,
+          "lines": 11,
+          "content": "const fs = require('fs');\r\n\r\nfs.readFile('notes.txt', 'utf8', (err, data) => {\r\n    if (err) {\r\n        console.log('No notes found yet.');\r\n        return;\r\n    }\r\n\r\n    console.log(data);\r\n});\r\n"
+        },
+        {
+          "filename": "read-sync.js",
+          "relativePath": "Lab-06/read-sync.js",
+          "ext": "js",
+          "sizeBytes": 172,
+          "lines": 7,
+          "content": "const fs = require('fs');\r\n\r\nconst data = fs.readFileSync('sample.txt', 'utf8');\r\n\r\nconsole.log(data);\r\nconsole.log('This line runs AFTER the file has been fully read.');\r\n"
+        },
+        {
+          "filename": "README.md",
+          "relativePath": "Lab-06/README.md",
+          "ext": "md",
+          "sizeBytes": 1870,
+          "lines": 71,
+          "content": "# NodeJS Lab 06 - Working With The File System (fs) Module\r\n\r\n## Lab Number\r\n06\r\n\r\n## Date\r\n25 September 2026\r\n\r\n## Semester\r\nBCA VII\r\n\r\n## Objective\r\n\r\nThis lab demonstrates how to use the Node.js fs module for reading,\r\nwriting, appending, deleting files, and storing notes using file storage.\r\n\r\n## Files and Their Purpose\r\n\r\n- sample.txt - Contains sample text used by the file-reading programs.\r\n- read-async.js - Demonstrates asynchronous file reading using fs.readFile().\r\n- read-sync.js - Demonstrates synchronous file reading using fs.readFileSync().\r\n- write-file.js - Demonstrates writing and overwriting content in a file.\r\n- append-file.js - Demonstrates appending new content to an existing file.\r\n- delete-file.js - Demonstrates deleting a file using fs.unlink().\r\n- async-await-version.js - Demonstrates file operations using fs.promises.\r\n- add-note.js - Adds a command-line note to notes.txt.\r\n- read-notes.js - Reads and displays notes stored in notes.txt.\r\n- reflection-notes.txt - Contains answers to the reflection questions.\r\n\r\n## Tasks Completed\r\n\r\n### Task 1\r\nCreated the Lab-06 folder structure and sample.txt.\r\n\r\n### Task 2\r\nRead sample.txt asynchronously using fs.readFile().\r\n\r\n### Task 3\r\nRead sample.txt synchronously using fs.readFileSync().\r\n\r\n### Task 4\r\nUsed fs.writeFile() to write content to a file.\r\n\r\n### Task 5\r\nUsed fs.appendFile() to append content to a file.\r\n\r\n### Task 6\r\nUsed fs.unlink() to delete output.txt.\r\n\r\n### Task 7\r\nUsed fs.promises with async/await to create copy.txt.\r\n\r\n### Task 8\r\nCreated a command-line Notes App using add-note.js and read-notes.js.\r\n\r\n### Task 9\r\nAdded reflection notes.\r\n\r\n## Screenshots\r\n\r\n- read-comparison.png\r\n- notes-app-output.png\r\n\r\n## GitHub Submission\r\n\r\nUse these commands from the NodeJS-Lab folder:\r\n\r\ngit add .\r\ngit commit -m \"Lab 06 Submission - File System Module\"\r\ngit push\r\n"
+        },
+        {
+          "filename": "reflection-notes.txt",
+          "relativePath": "Lab-06/reflection-notes.txt",
+          "ext": "txt",
+          "sizeBytes": 1430,
+          "lines": 15,
+          "content": "LAB 06 - REFLECTION NOTES\r\n\r\nQuestion 1:\r\nUsing what you observed in Tasks 2 and 3, explain why fs.readFile() does not block the rest of your program, while fs.readFileSync() does.\r\n\r\nAnswer:\r\nfs.readFile() is an asynchronous method, so Node.js starts the file-reading operation and continues executing the next statements without waiting for the file to finish. This is why the message outside the callback appears before the file content. When the file has been completely read, the callback function runs and displays the content. On the other hand, fs.readFileSync() is synchronous and makes the program wait until the file has been fully read. Therefore, the next statement runs only after the reading operation is completed.\r\n\r\n\r\nQuestion 2:\r\nIn the Notes App, what could go wrong if two people ran add-note.js at the exact same moment, both appending to the same notes.txt file?\r\n\r\nAnswer:\r\nIf two people run add-note.js at exactly the same time, both programs will try to access and modify the same notes.txt file. Depending on the timing and operating system, the notes may be written in an unexpected order. In some situations, a write operation could also fail or cause unexpected file contents. A database would be more suitable for a large multi-user application because it provides better handling of simultaneous operations. For this small lab, using a text file is sufficient to demonstrate file-system concepts.\r\n"
+        },
+        {
+          "filename": "sample.txt",
+          "relativePath": "Lab-06/sample.txt",
+          "ext": "txt",
+          "sizeBytes": 124,
+          "lines": 4,
+          "content": "Node.js is a JavaScript runtime.\r\nThe fs module is used to work with files.\r\nI am learning Node.js file system operations.\r\n"
+        },
+        {
+          "filename": "write-file.js",
+          "relativePath": "Lab-06/write-file.js",
+          "ext": "js",
+          "sizeBytes": 170,
+          "lines": 8,
+          "content": "const fs = require('fs');\r\n\r\nfs.writeFile('output.txt', 'Hello from Lab 06!', (err) => {\r\n    if (err) throw err;\r\n\r\n    console.log('File written successfully.');\r\n});\r\n"
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "notes-app-output.png",
+          "path": "Lab-06/notes-app-output.png",
+          "caption": "Notes App Output"
+        },
+        {
+          "filename": "task-2-async.png",
+          "path": "Lab-06/task-2-async.png",
+          "caption": "Task 2 Async"
+        },
+        {
+          "filename": "task-3-async.png",
+          "path": "Lab-06/task-3-async.png",
+          "caption": "Task 3 Async"
+        }
+      ],
+      "totalLines": 188
+    }
+  ]
+}

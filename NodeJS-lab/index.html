@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Lab Portfolio — Bhaskar Mall | BCA Student</title>
+  <meta name="description" content="Real Node.js laboratory portfolio by Bhaskar Mall (BCA VII Semester). Showcasing HTTP servers, REST APIs, asynchronous JavaScript, and file system assignments.">
+  <meta name="author" content="Bhaskar Mall">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="name">Bhaskar Mall</span>
+          <span class="subtitle">Node.js Portfolio</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#labs" class="nav-link">Labs</a>
+        <a href="#stats" class="nav-link">Statistics</a>
+        <a href="#technologies" class="nav-link">Technologies</a>
+        <a href="#workflow" class="nav-link">Auto-Discovery</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/bhaskar945521/lab-assignment" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="githubLink">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge-pill">
+          <span class="status-dot"></span>
+          <span>BCA VII Semester · CS403NOD</span>
+        </div>
+        <h1 class="hero-title">
+          Node.js Practical <br>
+          <span class="text-gradient">Lab Portfolio</span>
+        </h1>
+        <p class="hero-lead">
+          A real, auto-discovered showcase of my Node.js laboratory work — featuring HTTP web servers, dynamic REST APIs, asynchronous JavaScript paradigms, and file system engineering.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#labs" class="btn btn-primary">
+            <span>Explore Practical Labs</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#workflow" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Auto-Discovery Workflow</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card-wrapper">
+        <div class="student-card">
+          <div class="student-header">
+            <div class="avatar">
+              <span>BM</span>
+            </div>
+            <div>
+              <h2 class="student-name">Bhaskar Mall</h2>
+              <p class="student-role">BCA Student · Node.js Learner</p>
+            </div>
+          </div>
+          <div class="student-details">
+            <div class="detail-item">
+              <span class="label">Scholar No.</span>
+              <span class="val">23145005</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Course</span>
+              <span class="val">BCA (VII Semester)</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Subject</span>
+              <span class="val">CS403NOD — Node.js</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Institution</span>
+              <span class="val">Dev Sanskriti Vishwavidyalaya</span>
+            </div>
+          </div>
+          <div class="card-footer-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Deployable directly on Netlify (Static & Dynamic Auto-Discovery)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Dashboard -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Portfolio Dashboard</h2>
+        <p class="section-subtitle">Real-time statistics calculated automatically from generated lab metadata</p>
+      </div>
+
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <div class="stat-icon cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number" id="statLabs">0</span>
+            <span class="stat-label">Total Practical Labs</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number" id="statJsFiles">0</span>
+            <span class="stat-label">JavaScript Source Files</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number" id="statProjects">0</span>
+            <span class="stat-label">Node.js Web & API Apps</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number" id="statScreenshots">0</span>
+            <span class="stat-label">Output Screenshots</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number" id="statLoc">0</span>
+            <span class="stat-label">Lines of Code Implemented</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon pink">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number" id="statTech">0</span>
+            <span class="stat-label">Core Modules & Techs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Labs Section -->
+  <section class="labs-section" id="labs">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Practical Laboratory Assignments</h2>
+          <p class="section-subtitle">Real Node.js code, HTTP web servers, asynchronous workflows, and file system applications</p>
+        </div>
+        <div class="lab-count-badge" id="resultsCount">Showing all labs</div>
+      </div>
+
+      <!-- Controls: Search, Filter, Sort -->
+      <div class="toolbar-card">
+        <div class="search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search labs by title, topic, technology, file name, or concepts...">
+          <button id="clearSearchBtn" class="clear-btn hidden" title="Clear Search">×</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Filter Tech:</span>
+          <div class="filter-pills" id="techFilters">
+            <button class="pill active" data-tech="all">All</button>
+            <!-- Dynamic tech pills populated via JS -->
+          </div>
+        </div>
+
+        <div class="sort-box">
+          <label for="sortSelect">Sort By:</label>
+          <select id="sortSelect" class="custom-select">
+            <option value="asc">Lab # (Ascending 01 → 06)</option>
+            <option value="desc">Lab # (Descending 06 → 01)</option>
+            <option value="files">Most Source Files</option>
+            <option value="screenshots">Most Screenshots</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Lab Cards Grid -->
+      <div class="labs-grid" id="labsGrid">
+        <!-- Lab cards dynamically rendered here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="tech-section" id="technologies">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Technologies & Core Modules Demonstrated</h2>
+        <p class="section-subtitle">Hands-on experience with native Node.js core modules and backend architecture</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <span>HTTP</span>
+          </div>
+          <h3>HTTP Server Module</h3>
+          <p>Created standalone web servers using <code>http.createServer()</code>, managing request routing, response headers, HTTP status codes, and JSON stringification.</p>
+          <span class="tech-badge">Labs: 02, 03, 04</span>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <span>FS</span>
+          </div>
+          <h3>File System (fs) Module</h3>
+          <p>Mastered synchronous & asynchronous file operations (<code>readFile</code>, <code>writeFile</code>, <code>appendFile</code>, <code>unlink</code>) and promise-based <code>fs.promises</code> API.</p>
+          <span class="tech-badge">Lab: 06</span>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <span>ASYNC</span>
+          </div>
+          <h3>Asynchronous Paradigms</h3>
+          <p>Implemented callback control flows, ES6 Promises, sequential Promise chaining, modern <code>async/await</code> with <code>try/catch</code>, and <code>Promise.all()</code> concurrency.</p>
+          <span class="tech-badge">Labs: 05, 06</span>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <span>REST</span>
+          </div>
+          <h3>REST API Architecture</h3>
+          <p>Designed RESTful API endpoints handling URL query parameters, min/max range validation, case-insensitive string filtering, array sorting, and HTTP error handling.</p>
+          <span class="tech-badge">Lab: 04</span>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <span>URL</span>
+          </div>
+          <h3>URL Parsing Module</h3>
+          <p>Parsed URL paths and query strings using native <code>url.parse()</code> and regex matching for route parameter extraction.</p>
+          <span class="tech-badge">Labs: 02, 04</span>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon-box">
+            <span>CLI</span>
+          </div>
+          <h3>Command-Line Apps</h3>
+          <p>Processed command-line arguments using <code>process.argv</code> to build interactive CLI utilities such as a file-backed Notes App.</p>
+          <span class="tech-badge">Labs: 01, 06</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto Discovery & Netlify Build Workflow -->
+  <section class="workflow-section" id="workflow">
+    <div class="container">
+      <div class="workflow-box">
+        <div class="workflow-content">
+          <div class="badge-pill purple">Netlify Compatible Build System</div>
+          <h2>Future Lab Auto-Discovery Workflow</h2>
+          <p>
+            When adding future labs (e.g. <code>Lab-07</code>, <code>Lab-08</code>), there is <strong>zero requirement to manually edit HTML, CSS, or JS files</strong>. The repository uses an automated build generator script that scans directories during deployment.
+          </p>
+
+          <ol class="steps-list">
+            <li>
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Create new Lab folder:</strong> Add <code>Lab-07/</code> inside <code>NodeJS-lab/</code>.
+              </div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Add your code & documentation:</strong> Copy from <code>Lab-Template/</code>, add your <code>.js</code> files, <code>README.md</code>, and terminal output in <code>screenshots/</code>.
+              </div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Push to GitHub:</strong> Netlify automatically runs <code>npm run build</code> (executing <code>node scripts/generate-labs.js</code>).
+              </div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <strong>Instant Portfolio Update:</strong> Netlify redeploys the updated static site with <code>Lab-07</code> fully indexed, searchable, and formatted!
+              </div>
+            </li>
+          </ol>
+
+          <div class="terminal-preview">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">Build Command Execution — Netlify / Local</span>
+            </div>
+            <pre><code><span class="cmd">$ npm run build</span>
+Generating labs dataset for portfolio...
+Discovered 6 Lab folders: Lab-01, Lab-02, Lab-03, Lab-04, Lab-05, Lab-06
+Successfully generated labs.json with 6 labs!
+<span class="success">✓ Netlify static deployment ready</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-grid">
+          <div class="about-bio">
+            <h2>About The Developer</h2>
+            <h3 class="highlight-title">Bhaskar Mall — BCA Student</h3>
+            <p>
+              I am a Bachelor of Computer Applications (BCA) student currently in my VII Semester at Dev Sanskriti Vishwavidyalaya. This web portfolio documents my authentic practical lab assignments for the subject <strong>CS403NOD — Node.js Architecture & Backend Engineering</strong>.
+            </p>
+            <p>
+              Rather than using placeholder data, every single card, source snippet, execution command, and screenshot displayed here reflects my real lab code stored directly in the repository.
+            </p>
+
+            <div class="student-info-tags">
+              <span class="info-tag"><strong>Scholar No:</strong> 23145005</span>
+              <span class="info-tag"><strong>Course:</strong> BCA VII Semester</span>
+              <span class="info-tag"><strong>Subject:</strong> Node.js (CS403NOD)</span>
+              <span class="info-tag"><strong>College:</strong> DSVV, Haridwar</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <div class="quick-links-card">
+              <h4>Project Quick Links</h4>
+              <ul>
+                <li>
+                  <a href="https://github.com/bhaskar945521/lab-assignment" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    GitHub Source Code Repository
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/bhaskar945521/lab-assignment/tree/main/NodeJS-lab/Lab-Template" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    Future Lab Template README
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 <strong>Bhaskar Mall</strong> · Node.js Lab Portfolio · BCA VII Semester</p>
+      <p class="footer-sub">Designed & Built for College Evaluation and Technical Showcase · Netlify Deployable</p>
+    </div>
+  </footer>
+
+  <!-- LAB DETAIL MODAL / SINGLE PAGE OVERLAY -->
+  <div class="modal-overlay" id="labModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-area">
+          <div class="badge-row">
+            <span class="num-badge" id="modalLabNum">LAB 01</span>
+            <span class="status-badge" id="modalLabStatus">Completed</span>
+            <div id="modalTechTags" class="tech-tags-inline"></div>
+          </div>
+          <h2 id="modalLabTitle">Lab Title Placeholder</h2>
+        </div>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">×</button>
+      </div>
+
+      <!-- Detail Modal Navigation Tabs -->
+      <div class="modal-tabs">
+        <button class="tab-btn active" data-tab="overview">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Overview & Theory
+        </button>
+        <button class="tab-btn" data-tab="code">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Source Code (<span id="modalFileCount">0</span>)
+        </button>
+        <button class="tab-btn" data-tab="screenshots">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          Screenshots & Output (<span id="modalShotCount">0</span>)
+        </button>
+        <button class="tab-btn" data-tab="execution">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          How to Run
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- TAB 1: OVERVIEW -->
+        <div class="tab-content active" id="tab-overview">
+          <div class="detail-section">
+            <h3>Objective</h3>
+            <p id="modalObjective">Objective text...</p>
+          </div>
+
+          <div class="detail-section">
+            <h3>Key Concepts Learned</h3>
+            <ul class="concepts-list" id="modalConcepts">
+              <!-- Concepts list -->
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h3>Practical Implementation & Description</h3>
+            <p id="modalDescription">Description text...</p>
+          </div>
+
+          <div class="detail-grid-info">
+            <div class="info-box">
+              <span class="info-label">Primary Entry File</span>
+              <span class="info-value code" id="modalEntryFile">app.js</span>
+            </div>
+            <div class="info-box">
+              <span class="info-label">Student</span>
+              <span class="info-value" id="modalStudentName">Bhaskar Mall</span>
+            </div>
+            <div class="info-box">
+              <span class="info-label">Scholar Number</span>
+              <span class="info-value" id="modalScholarNo">23145005</span>
+            </div>
+            <div class="info-box">
+              <span class="info-label">Total Code Lines</span>
+              <span class="info-value" id="modalTotalLines">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: SOURCE CODE VIEWER -->
+        <div class="tab-content" id="tab-code">
+          <div class="code-viewer-container">
+            <div class="file-selector-bar" id="fileTabs">
+              <!-- File tabs rendered via JS -->
+            </div>
+            <div class="code-toolbar">
+              <span class="file-info" id="activeFileInfo">filename.js · 0 lines</span>
+              <button class="copy-btn" id="copyCodeBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Code
+              </button>
+            </div>
+            <div class="code-pre-wrapper">
+              <pre class="code-block" id="codeContainer"><code id="codeBlock">// Code will load here</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: SCREENSHOTS & OUTPUT -->
+        <div class="tab-content" id="tab-screenshots">
+          <div id="screenshotsContainer" class="screenshots-gallery">
+            <!-- Screenshots rendered via JS -->
+          </div>
+        </div>
+
+        <!-- TAB 4: HOW TO RUN & EXECUTION -->
+        <div class="tab-content" id="tab-execution">
+          <div class="detail-section">
+            <h3>How to Run This Practical Locally</h3>
+            <p>Open your terminal or command prompt inside your local repository folder and execute the following commands:</p>
+
+            <div class="terminal-box">
+              <div class="terminal-header">Terminal / Shell Execution</div>
+              <pre id="modalRunCommands">cd NodeJS-lab/Lab-01
+node app.js</pre>
+            </div>
+          </div>
+
+          <div class="detail-section" id="serverInfoSection">
+            <h3>Server Endpoints & Local Testing</h3>
+            <p id="serverInfoText">For web server labs, run the server command above, then open your browser at:</p>
+            <div class="endpoints-list" id="endpointsList">
+              <!-- Dynamic endpoints rendered if applicable -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR FULL-SCREEN SCREENSHOTS -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="Enlarged output screenshot">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
