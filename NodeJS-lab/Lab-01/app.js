@@ -1,7 +1,7 @@
 console.log("Welcome to Node.js");
 
-console.log("Name : Rishabh Khatiwada");
-console.log("Scholar Number : 23145018");
+console.log("Name : Bhaskar Mall");
+console.log("Scholar Number : 23145005");
 console.log("Course : BCA");
 console.log("Semester : VII");
 console.log("College : Dev Sanskriti Vishwavidyalaya (DSVV)");
@@ -12,8 +12,8 @@ console.log("Today's Lab Completed Successfully");
 
 // Variables
 
-const name = "Rishabh Khatiwada";
-const scholarNumber = "23145018";
+const name = "Bhaskar Mall";
+const scholarNumber = "23145005";
 const semester = "VII";
 const course = "BCA";
 const college = "Dev Sanskriti Vishwavidyalaya (DSVV)";
@@ -31,8 +31,8 @@ console.log("College :", college);
 // Task 7 - Data Types
 // =======================
 
-let student = "Rishabh";
-let age = 21;
+let student = "Bhaskar";
+let age = 22;
 let isStudent = true;
 let city;
 let address = null;
