@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T12:08:25.613Z",
+  "generatedAt": "2026-10-05T09:21:58.538Z",
   "student": {
     "name": "Bhaskar Mall",
     "course": "BCA (Bachelor of Computer Applications)",
@@ -63,9 +63,9 @@
           "filename": "app.js",
           "relativePath": "Lab-01/app.js",
           "ext": "js",
-          "sizeBytes": 1240,
+          "sizeBytes": 1230,
           "lines": 46,
-          "content": "console.log(\"Welcome to Node.js\");\r\n\r\nconsole.log(\"Name : Rishabh Khatiwada\");\r\nconsole.log(\"Scholar Number : 23145018\");\r\nconsole.log(\"Course : BCA\");\r\nconsole.log(\"Semester : VII\");\r\nconsole.log(\"College : Dev Sanskriti Vishwavidyalaya (DSVV)\");\r\n\r\nconsole.log(\"Hello Node.js\");\r\nconsole.log(\"Learning Backend Development\");\r\nconsole.log(\"Today's Lab Completed Successfully\");\r\n\r\n// Variables\r\n\r\nconst name = \"Rishabh Khatiwada\";\r\nconst scholarNumber = \"23145018\";\r\nconst semester = \"VII\";\r\nconst course = \"BCA\";\r\nconst college = \"Dev Sanskriti Vishwavidyalaya (DSVV)\";\r\n\r\nconsole.log(\"\\n------ Variables ------\");\r\n\r\nconsole.log(\"Name :\", name);\r\nconsole.log(\"Scholar Number :\", scholarNumber);\r\nconsole.log(\"Semester :\", semester);\r\nconsole.log(\"Course :\", course);\r\nconsole.log(\"College :\", college);\r\n\r\n\r\n// =======================\r\n// Task 7 - Data Types\r\n// =======================\r\n\r\nlet student = \"Rishabh\";\r\nlet age = 21;\r\nlet isStudent = true;\r\nlet city;\r\nlet address = null;\r\n\r\nconsole.log(\"\\n------ Data Types ------\");\r\n\r\nconsole.log(\"student :\", typeof student);\r\nconsole.log(\"age :\", typeof age);\r\nconsole.log(\"isStudent :\", typeof isStudent);\r\nconsole.log(\"city :\", typeof city);\r\nconsole.log(\"address :\", typeof address);"
+          "content": "console.log(\"Welcome to Node.js\");\r\n\r\nconsole.log(\"Name : Bhaskar Mall\");\r\nconsole.log(\"Scholar Number : 23145005\");\r\nconsole.log(\"Course : BCA\");\r\nconsole.log(\"Semester : VII\");\r\nconsole.log(\"College : Dev Sanskriti Vishwavidyalaya (DSVV)\");\r\n\r\nconsole.log(\"Hello Node.js\");\r\nconsole.log(\"Learning Backend Development\");\r\nconsole.log(\"Today's Lab Completed Successfully\");\r\n\r\n// Variables\r\n\r\nconst name = \"Bhaskar Mall\";\r\nconst scholarNumber = \"23145005\";\r\nconst semester = \"VII\";\r\nconst course = \"BCA\";\r\nconst college = \"Dev Sanskriti Vishwavidyalaya (DSVV)\";\r\n\r\nconsole.log(\"\\n------ Variables ------\");\r\n\r\nconsole.log(\"Name :\", name);\r\nconsole.log(\"Scholar Number :\", scholarNumber);\r\nconsole.log(\"Semester :\", semester);\r\nconsole.log(\"Course :\", course);\r\nconsole.log(\"College :\", college);\r\n\r\n\r\n// =======================\r\n// Task 7 - Data Types\r\n// =======================\r\n\r\nlet student = \"Bhaskar\";\r\nlet age = 22;\r\nlet isStudent = true;\r\nlet city;\r\nlet address = null;\r\n\r\nconsole.log(\"\\n------ Data Types ------\");\r\n\r\nconsole.log(\"student :\", typeof student);\r\nconsole.log(\"age :\", typeof age);\r\nconsole.log(\"isStudent :\", typeof isStudent);\r\nconsole.log(\"city :\", typeof city);\r\nconsole.log(\"address :\", typeof address);"
         },
         {
           "filename": "difference.txt",
@@ -79,9 +79,9 @@
           "filename": "package.json",
           "relativePath": "Lab-01/package.json",
           "ext": "json",
-          "sizeBytes": 220,
+          "sizeBytes": 232,
           "lines": 13,
-          "content": "{\n  \"name\": \"lab-01\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n"
+          "content": "{\r\n  \"name\": \"lab-01\",\r\n  \"version\": \"1.0.0\",\r\n  \"description\": \"\",\r\n  \"main\": \"index.js\",\r\n  \"scripts\": {\r\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\r\n  },\r\n  \"keywords\": [],\r\n  \"author\": \"\",\r\n  \"license\": \"ISC\"\r\n}\r\n"
         },
         {
           "filename": "Readme.md",
@@ -343,8 +343,8 @@
           "content": "function placeOrder(item) { \r\n\r\n    return new Promise((resolve, reject) => {\r\n\r\n        console.log(`Order placed: ${item}`); \r\n\r\n        setTimeout(() => {\r\n\r\n            const success = Math.random() > 0.2; //randome no. to track delivery success or fail\r\n\r\n            if (success) {\r\n\r\n                resolve(`${item} is out for delivery!`);\r\n\r\n            } else {\r\n\r\n                reject(`Sorry, the restaurant could not prepare ${item}`);\r\n\r\n            }\r\n\r\n        }, 2000); //2 second \r\n\r\n    });\r\n}\r\n\r\n\r\nplaceOrder(\"Pizza\")\r\n\r\n    .then((message) => {\r\n\r\n        console.log(message);\r\n\r\n    })\r\n\r\n    .catch((error) => {\r\n\r\n        console.log(error);\r\n\r\n    });"
         },
         {
-          "filename": "README.md",
-          "relativePath": "Lab-05/README.md",
+          "filename": "README.MD",
+          "relativePath": "Lab-05/README.MD",
           "ext": "md",
           "sizeBytes": 1725,
           "lines": 105,
@@ -437,17 +437,17 @@
           "filename": "notes.txt",
           "relativePath": "Lab-06/notes.txt",
           "ext": "txt",
-          "sizeBytes": 90,
+          "sizeBytes": 88,
           "lines": 3,
-          "content": "[25/9/2026, 2:41:03 pm] Complete Node.js Lab 06\r\n[25/9/2026, 2:41:15 pm] Learn fs module\r\n"
+          "content": "[25/9/2026, 2:41:03 pm] Complete Node.js Lab 06\n[25/9/2026, 2:41:15 pm] Learn fs module\n"
         },
         {
           "filename": "output.txt",
           "relativePath": "Lab-06/output.txt",
           "ext": "txt",
-          "sizeBytes": 69,
+          "sizeBytes": 67,
           "lines": 4,
-          "content": "Hello from Lab 06!\r\nThis line was appended.\r\nLab-06 By Bhaskar Mall\r\n"
+          "content": "Hello from Lab 06!\nThis line was appended.\nLab-06 By Bhaskar Mall\r\n"
         },
         {
           "filename": "read-async.js",
