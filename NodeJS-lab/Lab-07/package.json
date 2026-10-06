@@ -1,0 +1,15 @@
+{
+  "name": "lab-07-event-emitter",
+  "version": "1.0.0",
+  "description": "Node.js Lab 07 - EventEmitter",
+  "main": "01-event-emitter/app.js",
+  "scripts": {
+    "lab01": "node 01-event-emitter/app.js",
+    "lab02": "node 02-custom-events/app.js",
+    "lab03": "node 03-event-arguments/app.js",
+    "lab04": "node 04-multiple-listeners/app.js",
+    "lab05": "node 05-once-event/app.js",
+    "lab06": "node 06-remove-listener/app.js",
+    "lab07": "node 07-practical-example/app.js"
+  }
+}
