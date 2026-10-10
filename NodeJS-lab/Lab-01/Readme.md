@@ -2,8 +2,8 @@
 
 ## Student Details
 
-- **Name:** Rishabh Khatiwada
-- **Scholar Number:** 23145018
+- **Name:** Bhaskar Mall
+- **Scholar Number:** 23145005
 - **Course:** BCA
 - **Semester:** VII
 - **Subject:** CS403NOD - Node.js
