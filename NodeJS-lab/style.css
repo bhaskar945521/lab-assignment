@@ -327,6 +327,7 @@ body {
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -718,6 +719,7 @@ body {
   font-size: 14px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 18px;
@@ -2032,6 +2034,7 @@ body {
   font-weight: 700;
   color: #38bdf8;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   display: flex;
   align-items: center;
