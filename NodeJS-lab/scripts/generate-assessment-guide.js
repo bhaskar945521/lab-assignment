@@ -4,17 +4,18 @@ const { execSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_HTML = path.join(ROOT, 'assessment-guide.html');
-const OUTPUT_PDF = path.join(ROOT, 'NodeJS_Practical_Assessment_Guide.pdf');
+const OUTPUT_PDF = path.join(ROOT, 'NodeJS_Complete_Lab_Manual_and_Viva_Guide.pdf');
+const LEGACY_PDF = path.join(ROOT, 'NodeJS_Practical_Assessment_Guide.pdf');
 const OUTPUT_MD = path.join(ROOT, 'PRACTICAL_ASSESSMENT_GUIDE.md');
 
-console.log('Generating comprehensive Node.js Practical Assessment Guide...');
+console.log('Generating comprehensive Node.js Practical Lab Manual & Viva Guide...');
 
 const htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Node.js Practical Lab Assessment & Viva Preparation Guide — Bhaskar Mall (23145005)</title>
+  <title>Node.js Practical Lab Manual &amp; Viva Handbook — Bhaskar Mall (23145005)</title>
   <style>
     @page {
       size: A4;
@@ -343,10 +344,10 @@ const htmlContent = `<!DOCTYPE html>
     <div class="cover-sub">Department of Computer Science · BCA VII Semester</div>
 
     <div class="cover-title">
-      Node.js Practical Assessment &amp; Viva Comprehensive Guide
+      Node.js Practical Lab Manual &amp; Viva Handbook
     </div>
     <div class="cover-tagline">
-      Master Syllabus: Lab 01 to Lab 08 · Architecture, Code Demos &amp; Teacher Viva Q&amp;A
+      Complete Syllabus: Lab 01 to Lab 08 · Architecture, Source Code Breakdown &amp; Teacher Viva Q&amp;A
     </div>
 
     <div class="student-badge-box">
@@ -953,6 +954,8 @@ if (fs.existsSync(edgePath)) {
   try {
     execSync(edgeCmd, { stdio: 'inherit' });
     console.log('✓ Successfully generated PDF:', OUTPUT_PDF);
+    fs.copyFileSync(OUTPUT_PDF, LEGACY_PDF);
+    console.log('✓ Synchronized legacy copy:', LEGACY_PDF);
   } catch (err) {
     console.error('Error generating PDF with Edge:', err.message);
   }
@@ -961,7 +964,7 @@ if (fs.existsSync(edgePath)) {
 }
 
 // 3. Also generate Markdown version for immediate reading
-const mdContent = `# Node.js Practical Lab Assessment & Viva Comprehensive Guide
+const mdContent = `# Node.js Practical Lab Manual & Viva Handbook
 **Candidate:** Bhaskar Mall | **Scholar No:** 23145005  
 **Course & Semester:** BCA VII Semester | **Subject:** CS403NOD — Node.js Architecture & Backend Development  
 **Institution:** Dev Sanskriti Vishwavidyalaya (DSVV), Haridwar  

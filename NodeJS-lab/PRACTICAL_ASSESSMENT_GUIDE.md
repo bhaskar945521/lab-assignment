@@ -1,4 +1,4 @@
-# Node.js Practical Lab Assessment & Viva Comprehensive Guide
+# Node.js Practical Lab Manual & Viva Handbook
 **Candidate:** Bhaskar Mall | **Scholar No:** 23145005  
 **Course & Semester:** BCA VII Semester | **Subject:** CS403NOD — Node.js Architecture & Backend Development  
 **Institution:** Dev Sanskriti Vishwavidyalaya (DSVV), Haridwar  

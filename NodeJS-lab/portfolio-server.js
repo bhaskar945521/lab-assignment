@@ -100,15 +100,25 @@ const server = http.createServer((req, res) => {
     });
   }
 
-  // Assessment Guide routes
-  if (pathname === '/guide.pdf' || pathname === '/assessment-guide.pdf' || pathname === '/assessment.pdf') {
-    const pdfPath = path.join(ROOT, 'NodeJS_Practical_Assessment_Guide.pdf');
+  // Lab Manual & Complete Guide routes
+  if (
+    pathname === '/manual.pdf' ||
+    pathname === '/guide.pdf' ||
+    pathname === '/complete.pdf' ||
+    pathname === '/NodeJS_Complete_Lab_Manual_and_Viva_Guide.pdf' ||
+    pathname === '/assessment-guide.pdf' ||
+    pathname === '/assessment.pdf'
+  ) {
+    const pdfPath = fs.existsSync(path.join(ROOT, 'NodeJS_Complete_Lab_Manual_and_Viva_Guide.pdf'))
+      ? path.join(ROOT, 'NodeJS_Complete_Lab_Manual_and_Viva_Guide.pdf')
+      : path.join(ROOT, 'NodeJS_Practical_Assessment_Guide.pdf');
+
     if (fs.existsSync(pdfPath)) {
       return sendFile(res, pdfPath, 'application/pdf');
     }
   }
 
-  if (pathname === '/guide' || pathname === '/assessment' || pathname === '/assessment-guide') {
+  if (pathname === '/guide' || pathname === '/manual' || pathname === '/assessment' || pathname === '/assessment-guide') {
     const htmlGuide = path.join(ROOT, 'assessment-guide.html');
     if (fs.existsSync(htmlGuide)) {
       return sendFile(res, htmlGuide, 'text/html; charset=utf-8');
