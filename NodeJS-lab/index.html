@@ -36,22 +36,12 @@
         <a href="#labs" class="nav-link">Labs</a>
         <a href="#stats" class="nav-link">Statistics</a>
         <a href="#technologies" class="nav-link">Technologies</a>
-        <a href="#assessment-guide" class="nav-link highlight-link">Lab Manual &amp; Viva</a>
+        <a href="#assessment-guide" class="nav-link highlight-link">Lab Manual</a>
         <a href="#workflow" class="nav-link">Auto-Discovery</a>
         <a href="#about" class="nav-link">About</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="NodeJS_Complete_Lab_Manual_and_Viva_Guide.pdf" download="NodeJS_Complete_Lab_Manual_and_Viva_Guide.pdf" class="btn btn-pdf" title="Download Complete Practical Lab Manual & Viva Guide (PDF)">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="12" y1="18" x2="12" y2="12"></line>
-            <line x1="9" y1="15" x2="12" y2="18"></line>
-            <line x1="15" y1="15" x2="12" y2="18"></line>
-          </svg>
-          <span>Complete PDF</span>
-        </a>
         <a href="https://github.com/bhaskar945521/lab-assignment" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="githubLink">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -102,7 +92,7 @@
               <line x1="9" y1="15" x2="12" y2="18"></line>
               <line x1="15" y1="15" x2="12" y2="18"></line>
             </svg>
-            <span>Complete Lab Manual &amp; Viva (PDF)</span>
+            <span>Complete Lab Manual (PDF)</span>
           </a>
           <a href="#workflow" class="btn btn-outline">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -303,17 +293,17 @@
   <section class="tech-section" id="technologies">
     <div class="container">
       
-      <!-- Lab Manual & Viva Handbook Banner -->
+      <!-- Lab Manual Banner -->
       <div class="assessment-prep-banner" id="assessment-guide">
         <div class="banner-content">
           <div class="banner-text-wrap">
             <span class="banner-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-              Practical Handbook &amp; Viva Ready
+              Practical Lab Manual
             </span>
-            <h3>Node.js Practical Lab Manual &amp; Viva Handbook</h3>
+            <h3>Node.js Practical Lab Manual</h3>
             <p>
-              Complete practical records across Lab 01 to Lab 08: V8 runtime &amp; libuv architecture, line-by-line source code walkthroughs, core module methods, and 30+ faculty viva questions with model answers.
+              Complete practical records across Lab 01 to Lab 08: V8 runtime &amp; libuv architecture, line-by-line source code walkthroughs, core module methods, and complete practical execution guides.
             </p>
           </div>
           <div class="banner-actions">
@@ -341,7 +331,7 @@
 
       <div class="section-header center">
         <h2 class="section-title">Technologies &amp; Core Modules Demonstrated</h2>
-        <p class="section-subtitle">Deep dive into Node.js native core modules, architecture, methods, and examiner viva questions</p>
+        <p class="section-subtitle">Deep dive into Node.js native core modules, architecture, methods, and practical implementations</p>
       </div>
 
       <div class="tech-grid">
@@ -359,13 +349,6 @@
             <span class="method-code">res.end()</span>
           </div>
           <span class="tech-badge">Labs: 01, 02, 03, 04, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: Why is res.end() mandatory in Node.js HTTP servers?</div>
-              <div class="viva-a"><strong>A:</strong> <code>res</code> is a writable stream. <code>res.end()</code> signals to the kernel and browser that all response headers and payload body data have been fully transmitted. Without it, the client connection hangs indefinitely until browser timeout.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 2. File System (fs) -->
@@ -382,13 +365,6 @@
             <span class="method-code">fs.promises</span>
           </div>
           <span class="tech-badge">Labs: 06, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: Why does readFile not block while readFileSync freezes execution?</div>
-              <div class="viva-a"><strong>A:</strong> <code>fs.readFile()</code> is asynchronous; it offloads disk I/O to libuv thread pool and continues running JavaScript immediately. <code>fs.readFileSync()</code> blocks the single V8 main thread completely until bytes are loaded into RAM.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 3. EventEmitter -->
@@ -405,13 +381,6 @@
             <span class="method-code">removeListener()</span>
           </div>
           <span class="tech-badge">Labs: 07, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: What happens if an 'error' event is emitted without a listener?</div>
-              <div class="viva-a"><strong>A:</strong> Node.js treats unhandled <code>'error'</code> events as fatal exceptions, prints a stack trace, and crashes the entire Node process. Always attach <code>emitter.on('error', handler)</code>.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 4. child_process -->
@@ -428,13 +397,6 @@
             <span class="method-code">process.execPath</span>
           </div>
           <span class="tech-badge">Lab: 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: Why is execFile safer than exec against command injection?</div>
-              <div class="viva-a"><strong>A:</strong> <code>execFile</code> directly invokes the binary without spawning a system shell (sh/cmd), meaning shell metacharacters cannot execute malicious injected commands.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 5. Asynchronous Paradigms -->
@@ -451,13 +413,6 @@
             <span class="method-code">try / catch</span>
           </div>
           <span class="tech-badge">Labs: 03, 05, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: When is Promise.all() preferred over sequential awaits?</div>
-              <div class="viva-a"><strong>A:</strong> When asynchronous operations are independent. Sequential awaits execute in <code>t1 + t2</code> (serial), while <code>Promise.all()</code> executes them concurrently taking only <code>max(t1, t2)</code>.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 6. REST API Architecture -->
@@ -474,13 +429,6 @@
             <span class="method-code">Array.filter()</span>
           </div>
           <span class="tech-badge">Labs: 02, 03, 04, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: How do you parse query strings in native Node without Express?</div>
-              <div class="viva-a"><strong>A:</strong> Using native <code>url.parse(req.url, true)</code>. Passing <code>true</code> as the second argument tells Node to parse the query string into an accessible JavaScript object.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 7. CLI Utilities & Process -->
@@ -497,13 +445,6 @@
             <span class="method-code">process.exit()</span>
           </div>
           <span class="tech-badge">Labs: 01, 06, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: What do process.argv[0] and process.argv[1] represent?</div>
-              <div class="viva-a"><strong>A:</strong> <code>process.argv[0]</code> is the absolute path to the Node executable (node.exe), and <code>process.argv[1]</code> is the path to the executing script file. User CLI arguments start at index 2.</div>
-            </div>
-          </details>
         </div>
 
         <!-- 8. Module Architecture & NPM -->
@@ -520,13 +461,6 @@
             <span class="method-code">package.json</span>
           </div>
           <span class="tech-badge">Labs: 04, 08</span>
-          <details class="tech-viva-details">
-            <summary>Faculty Viva Q&amp;A</summary>
-            <div class="viva-content">
-              <div class="viva-q">Q: What is module.exports vs exports?</div>
-              <div class="viva-a"><strong>A:</strong> <code>module.exports</code> is the actual object returned by <code>require()</code>. <code>exports</code> is merely a variable reference pointing to it. Reassigning <code>exports = ...</code> breaks the link; always assign to <code>module.exports</code>.</div>
-            </div>
-          </details>
         </div>
       </div>
     </div>
