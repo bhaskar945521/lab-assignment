@@ -415,14 +415,18 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    screenshotsContainer.innerHTML = screenshots.map(shot => `
-      <div class="shot-card" data-img-src="${shot.path}" data-caption="${escapeHtml(shot.caption)}">
+    screenshotsContainer.innerHTML = screenshots.map(shot => {
+      const src = typeof shot === 'string' ? shot : (shot.path || '');
+      const caption = typeof shot === 'string' ? shot.split('/').pop().replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ') : (shot.caption || 'Screenshot');
+      return `
+      <div class="shot-card" data-img-src="${src}" data-caption="${escapeHtml(caption)}">
         <div class="shot-img-wrapper">
-          <img src="${shot.path}" alt="${escapeHtml(shot.caption)}" loading="lazy">
+          <img src="${src}" alt="${escapeHtml(caption)}" loading="lazy">
         </div>
-        <div class="shot-caption">${escapeHtml(shot.caption)}</div>
+        <div class="shot-caption">${escapeHtml(caption)}</div>
       </div>
-    `).join('');
+      `;
+    }).join('');
 
     document.querySelectorAll('.shot-card').forEach(card => {
       card.addEventListener('click', () => {

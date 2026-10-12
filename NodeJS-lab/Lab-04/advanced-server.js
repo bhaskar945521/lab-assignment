@@ -18,7 +18,7 @@ const students = [
   { id: 12, name: "Shreya", course: "IT", marks: 73 }
 ];
 
-const server = http.createServer((req, res) => {
+function handler(req, res) {
   res.setHeader('Content-Type', 'application/json');
 
   const parsedUrl = url.parse(req.url, true);
@@ -157,10 +157,15 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
 
   res.end(JSON.stringify(result, null, 2));
-});
+}
 
-server.listen(PORT, () => {
-  console.log(
-    `Node.js server is running on http://localhost:${PORT}`
-  );
-});
+module.exports = handler;
+
+if (require.main === module) {
+  const server = http.createServer(handler);
+  server.listen(PORT, () => {
+    console.log(
+      `Node.js server is running on http://localhost:${PORT}`
+    );
+  });
+}

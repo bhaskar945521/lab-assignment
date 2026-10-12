@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T09:21:58.538Z",
+  "generatedAt": "2026-10-12T06:14:17.646Z",
   "student": {
     "name": "Bhaskar Mall",
     "course": "BCA (Bachelor of Computer Applications)",
@@ -10,22 +10,25 @@
     "githubUrl": "https://github.com/bhaskar945521/lab-assignment"
   },
   "stats": {
-    "totalLabs": 6,
-    "totalJsFiles": 17,
-    "totalProjects": 3,
-    "totalScreenshots": 8,
-    "totalFiles": 30,
-    "totalLinesOfCode": 1169,
+    "totalLabs": 8,
+    "totalJsFiles": 32,
+    "totalProjects": 5,
+    "totalScreenshots": 18,
+    "totalFiles": 57,
+    "totalLinesOfCode": 2595,
     "allTechnologies": [
       "Node.js",
       "JavaScript",
-      "CLI",
       "HTTP Module",
-      "REST API",
       "URL Module",
+      "REST API",
+      "CLI",
       "Promises",
       "Async/Await",
-      "File System (fs)"
+      "NPM (slugify)",
+      "File System (fs)",
+      "EventEmitter",
+      "child_process"
     ]
   },
   "labs": [
@@ -33,35 +36,40 @@
       "folder": "Lab-01",
       "labNo": 1,
       "formattedLabNo": "LAB 01",
-      "title": "Node.js Setup, Variables & Data Types",
-      "description": "Introduction to Node.js environment, project initialization with npm, variable scopes, JS data types, and Browser vs Node.js execution differences.",
-      "objective": "Demonstrate Node.js installation, running JS files outside browser, using typeof for data types, and understanding runtime environment differences.",
+      "title": "Node.js Setup, Variables & Simple HTTP Server",
+      "description": "Introduction to Node.js runtime, project initialization with npm, variables, data types, console outputs, and base HTTP server initialization.",
+      "objective": "Demonstrate Node.js installation, running JS outside the browser, data types inspection with typeof, and establishing a basic HTTP listener.",
       "concepts": [
         "Node.js Architecture",
         "V8 JavaScript Engine",
         "Variables & Scope",
         "Data Types (typeof)",
+        "HTTP Module",
         "Browser vs Node.js"
       ],
       "technologies": [
         "Node.js",
         "JavaScript",
+        "HTTP Module",
+        "URL Module",
+        "REST API",
         "CLI"
       ],
       "status": "Completed",
-      "date": "2026-08-01",
+      "date": "2026-10-12",
       "student": {
-        "name": " Rishabh Khatiwada",
-        "scholarNo": " 23145018",
-        "course": " BCA",
-        "semester": " VII"
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
       },
-      "entryFile": "app.js",
-      "howToRun": "node app.js",
+      "entryFile": "server.js",
+      "howToRun": "node app.js\nnode server.js",
       "files": [
         {
           "filename": "app.js",
-          "relativePath": "Lab-01/app.js",
+          "name": "app.js",
           "ext": "js",
           "sizeBytes": 1230,
           "lines": 46,
@@ -69,7 +77,7 @@
         },
         {
           "filename": "difference.txt",
-          "relativePath": "Lab-01/difference.txt",
+          "name": "difference.txt",
           "ext": "txt",
           "sizeBytes": 581,
           "lines": 16,
@@ -77,19 +85,27 @@
         },
         {
           "filename": "package.json",
-          "relativePath": "Lab-01/package.json",
+          "name": "package.json",
           "ext": "json",
-          "sizeBytes": 232,
+          "sizeBytes": 220,
           "lines": 13,
-          "content": "{\r\n  \"name\": \"lab-01\",\r\n  \"version\": \"1.0.0\",\r\n  \"description\": \"\",\r\n  \"main\": \"index.js\",\r\n  \"scripts\": {\r\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\r\n  },\r\n  \"keywords\": [],\r\n  \"author\": \"\",\r\n  \"license\": \"ISC\"\r\n}\r\n"
+          "content": "{\n  \"name\": \"lab-01\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n"
         },
         {
           "filename": "Readme.md",
-          "relativePath": "Lab-01/Readme.md",
+          "name": "Readme.md",
           "ext": "md",
-          "sizeBytes": 513,
+          "sizeBytes": 508,
           "lines": 16,
-          "content": "# Node.js Lab Assignment 01\r\n\r\n## Student Details\r\n\r\n- **Name:** Rishabh Khatiwada\r\n- **Scholar Number:** 23145018\r\n- **Course:** BCA\r\n- **Semester:** VII\r\n- **Subject:** CS403NOD - Node.js\r\n- **Lab Number:** 01\r\n- **Date:** 31/07/2026\r\n- **Node-Version:** screen short on not version \r\n\r\n## Practical Description\r\n\r\nThis practical demonstrates the basics of Node.js, including installation, project initialization, console output, variables, data types, and the difference between Browser JavaScript and Node.js."
+          "content": "# Node.js Lab Assignment 01\r\n\r\n## Student Details\r\n\r\n- **Name:** Bhaskar Mall\r\n- **Scholar Number:** 23145005\r\n- **Course:** BCA\r\n- **Semester:** VII\r\n- **Subject:** CS403NOD - Node.js\r\n- **Lab Number:** 01\r\n- **Date:** 31/07/2026\r\n- **Node-Version:** screen short on not version \r\n\r\n## Practical Description\r\n\r\nThis practical demonstrates the basics of Node.js, including installation, project initialization, console output, variables, data types, and the difference between Browser JavaScript and Node.js."
+        },
+        {
+          "filename": "server.js",
+          "name": "server.js",
+          "ext": "js",
+          "sizeBytes": 2047,
+          "lines": 56,
+          "content": "// Lab 01 - Simple HTTP Server\n// CS403NOD - Node.js\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n// College: Dev Sanskriti Vishwavidyalaya (DSVV)\n\nconst http = require(\"http\");\nconst url = require(\"url\");\n\nfunction handler(req, res) {\n  const parsedUrl = url.parse(req.url, true);\n  const pathname = parsedUrl.pathname;\n\n  if (pathname === \"/\" || pathname === \"\") {\n    res.writeHead(200, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\n      \"Welcome! This server is created by Bhaskar Mall\\n\" +\n      \"Name - Bhaskar Mall\\n\" +\n      \"Scholar Number - 23145005\\n\" +\n      \"Course - BCA (VII Semester)\\n\" +\n      \"College - Dev Sanskriti Vishwavidyalaya (DSVV)\\n\" +\n      \"Lab 01 - Simple HTTP Server is running successfully.\"\n    );\n  } else if (pathname === \"/about\") {\n    res.writeHead(200, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\"About\\n\\nHello! I am Bhaskar Mall, BCA VII Semester student at DSVV.\");\n  } else if (pathname === \"/college\") {\n    res.writeHead(200, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\"College\\n\\nCollege Name - Dev Sanskriti Vishwavidyalaya (DSVV)\\nSemester - BCA VII\");\n  } else if (pathname === \"/profile\") {\n    const profile = {\n      name: \"Bhaskar Mall\",\n      scholarNumber: \"23145005\",\n      course: \"BCA\",\n      semester: \"VII\",\n      college: \"Dev Sanskriti Vishwavidyalaya (DSVV)\",\n      subject: \"CS403NOD - Node.js\"\n    };\n    res.writeHead(200, { \"Content-Type\": \"application/json; charset=utf-8\" });\n    res.end(JSON.stringify(profile, null, 2));\n  } else {\n    res.writeHead(404, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\"Page Not Found\");\n  }\n}\n\n// Line 1: Export request handler for Lab-08 integration\nmodule.exports = handler;\n\n// Line 2: Start server only when run directly\nif (require.main === module) {\n  const PORT = process.env.PORT || 3000;\n  http.createServer(handler).listen(PORT, \"0.0.0.0\", () => {\n    console.log(`Lab 01 Simple HTTP Server running at http://localhost:${PORT}`);\n  });\n}\n"
         }
       ],
       "screenshots": [
@@ -99,15 +115,15 @@
           "caption": "Node Version"
         }
       ],
-      "totalLines": 91
+      "totalLines": 147
     },
     {
       "folder": "Lab-02",
       "labNo": 2,
       "formattedLabNo": "LAB 02",
       "title": "HTTP Web Server & Custom Routing",
-      "description": "Building a custom HTTP web server using Node.js core http module, creating multiple endpoints (/about, /college, /profile), and learning Event Loop concepts.",
-      "objective": "Understand how Node.js http module handles incoming requests, sets HTTP headers, routes request URLs, and returns plain text or JSON output.",
+      "description": "Building custom HTTP web servers using Node.js core http module, creating multiple endpoints (/about, /college, /profile, /students), and exploring the Event Loop.",
+      "objective": "Understand how Node.js handles incoming requests, sets HTTP headers, routes request URLs, and returns plain text or JSON output.",
       "concepts": [
         "HTTP Server Architecture",
         "Custom Routing (req.url)",
@@ -119,22 +135,24 @@
         "Node.js",
         "JavaScript",
         "HTTP Module",
+        "URL Module",
         "REST API"
       ],
       "status": "Completed",
-      "date": "2026-08-01",
+      "date": "2026-10-12",
       "student": {
         "name": "Bhaskar Mall",
         "scholarNo": "23145005",
-        "course": "BCA",
-        "semester": "VII"
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
       },
       "entryFile": "server.js",
       "howToRun": "node server.js",
       "files": [
         {
           "filename": "architecture-notes.txt",
-          "relativePath": "Lab-02/architecture-notes.txt",
+          "name": "architecture-notes.txt",
           "ext": "txt",
           "sizeBytes": 1015,
           "lines": 11,
@@ -142,7 +160,7 @@
         },
         {
           "filename": "package.json",
-          "relativePath": "Lab-02/package.json",
+          "name": "package.json",
           "ext": "json",
           "sizeBytes": 220,
           "lines": 13,
@@ -150,11 +168,11 @@
         },
         {
           "filename": "server.js",
-          "relativePath": "Lab-02/server.js",
+          "name": "server.js",
           "ext": "js",
-          "sizeBytes": 1297,
-          "lines": 43,
-          "content": "const http = require(\"http\");\r\n\r\nconst server = http.createServer((req, res) => {\r\n\r\n    if (req.url === \"/\") {\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"Welcome! this server is created by Bhaskar \\nName - Bhaskar\\nScholar Number - 23145005\\nCourse - BCA\");\r\n    }\r\n\r\n    else if (req.url === \"/about\") {\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"About \\n\\nHello! I am Bhaskar.\");\r\n    }\r\n\r\n    else if (req.url === \"/college\") {\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"College \\n\\nCollege Name - Dev Sanskriti Vishwavidhlya \\nSemester - BCA VII\");\r\n    }\r\n    else if (req.url === \"/profile\") {\r\n\r\n    const profile = {\r\n        name: \"Bhaskar\",\r\n        scholarNumber: \"23145005\",\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        college: \"Dev Sanskriti Vishwavidhyalaya\"\r\n    };\r\n\r\n    res.writeHead(200, { \"Content-Type\": \"application/json\" });\r\n    res.end(JSON.stringify(profile));\r\n}\r\n\r\n    else {\r\n        res.writeHead(404, { \"Content-Type\": \"text/plain\" });\r\n        res.end(\"Page Not Found\");\r\n    }\r\n});\r\n\r\nconst PORT = process.env.PORT || 3000;\r\n\r\nserver.listen(PORT, () => {\r\n    console.log(`Node.js server is running on http://localhost:${PORT}`);\r\n});"
+          "sizeBytes": 3566,
+          "lines": 85,
+          "content": "// Lab 02 - Student Directory API & HTTP Server\n// CS403NOD - Node.js\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n// College: Dev Sanskriti Vishwavidyalaya (DSVV)\n\nconst http = require(\"http\");\nconst url = require(\"url\");\n\nconst students = [\n  { id: \"01\", name: \"Aditya Soni\", age: 21, course: \"BCA\", semester: \"VII\", state: \"MP\" },\n  { id: \"02\", name: \"Ayush Ram Tripathi\", age: 22, course: \"BCA\", semester: \"VII\", state: \"UP\" },\n  { id: \"03\", name: \"Bhaskar Mall\", age: 22, course: \"BCA\", semester: \"VII\", state: \"UP\" },\n  { id: \"04\", name: \"Gauri Tyagi\", age: 22, course: \"BCA\", semester: \"VII\", state: \"UP\" },\n  { id: \"05\", name: \"Kanak Sharma\", age: 22, course: \"BCA\", semester: \"VII\", state: \"UP\" },\n  { id: \"06\", name: \"Pragya Gupta\", age: 22, course: \"BCA\", semester: \"VII\", state: \"UP\" },\n  { id: \"07\", name: \"Nisha\", age: 23, course: \"BCA\", semester: \"VII\", state: \"Delhi\" },\n  { id: \"08\", name: \"Rishabh Khatiwada\", age: 22, course: \"BCA\", semester: \"VII\", state: \"Nepal\" },\n  { id: \"09\", name: \"Sayon Dey\", age: 21, course: \"BCA\", semester: \"VII\", state: \"WB\" },\n  { id: \"10\", name: \"Sudhanshu Bhatt\", age: 22, course: \"BCA\", semester: \"VII\", state: \"UK\" },\n  { id: \"11\", name: \"Amit Kumar\", age: 22, course: \"IT\", semester: \"VII\", state: \"Bihar\" },\n  { id: \"12\", name: \"Shreya Verma\", age: 21, course: \"IT\", semester: \"VII\", state: \"UP\" }\n];\n\nfunction handler(req, res) {\n  const parsedUrl = url.parse(req.url, true);\n  const pathname = parsedUrl.pathname;\n  const query = parsedUrl.query;\n\n  if (pathname === \"/\" || pathname === \"\") {\n    res.writeHead(200, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\n      \"Welcome! This server is created by Bhaskar Mall\\n\" +\n      \"Name - Bhaskar Mall\\n\" +\n      \"Scholar Number - 23145005\\n\" +\n      \"Course - BCA (VII Semester)\\n\\n\" +\n      \"Available routes:\\n\" +\n      \"  /about\\n\" +\n      \"  /college\\n\" +\n      \"  /profile\\n\" +\n      \"  /students\\n\" +\n      \"  /students?course=BCA\"\n    );\n  } else if (pathname === \"/about\") {\n    res.writeHead(200, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\"About\\n\\nHello! I am Bhaskar Mall, BCA VII Semester student at DSVV.\");\n  } else if (pathname === \"/college\") {\n    res.writeHead(200, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\"College\\n\\nCollege Name - Dev Sanskriti Vishwavidyalaya (DSVV)\\nSemester - BCA VII\");\n  } else if (pathname === \"/profile\") {\n    const profile = {\n      name: \"Bhaskar Mall\",\n      scholarNumber: \"23145005\",\n      course: \"BCA\",\n      semester: \"VII\",\n      college: \"Dev Sanskriti Vishwavidyalaya\"\n    };\n    res.writeHead(200, { \"Content-Type\": \"application/json; charset=utf-8\" });\n    res.end(JSON.stringify(profile, null, 2));\n  } else if (pathname === \"/students\") {\n    let result = students;\n    if (query.course) {\n      result = result.filter(s => s.course.toLowerCase() === query.course.toLowerCase());\n    }\n    res.writeHead(200, { \"Content-Type\": \"application/json; charset=utf-8\" });\n    res.end(JSON.stringify({\n      total: result.length,\n      filter: query.course || \"all\",\n      students: result\n    }, null, 2));\n  } else {\n    res.writeHead(404, { \"Content-Type\": \"text/plain; charset=utf-8\" });\n    res.end(\"Page Not Found\");\n  }\n}\n\n// Line 1: export it\nmodule.exports = handler;\n\n// Line 2: start only when run directly\nif (require.main === module) {\n  const PORT = process.env.PORT || 3000;\n  http.createServer(handler).listen(PORT, \"0.0.0.0\", () => {\n    console.log(`Lab 02 Server running on http://localhost:${PORT}`);\n  });\n}"
         }
       ],
       "screenshots": [
@@ -169,46 +187,57 @@
           "caption": "Server Running"
         }
       ],
-      "totalLines": 67
+      "totalLines": 109
     },
     {
       "folder": "Lab-03",
       "labNo": 3,
       "formattedLabNo": "LAB 03",
-      "title": "Multi-Route Student Information Server",
-      "description": "HTTP server serving student database records. Features an index page listing all 12 BCA students and dynamic lookup routes by ID (/01, /03) or student name.",
-      "objective": "Implement dynamic route parameter handling in plain Node.js to filter and return student profile objects in clean text formatting.",
+      "title": "Student Information Server & Async Food Delivery",
+      "description": "Multi-route HTTP server serving student database records with dynamic search, and asynchronous food delivery process simulation.",
+      "objective": "Implement dynamic route parameter handling in Node.js and master asynchronous execution with Promises & async/await.",
       "concepts": [
         "HTTP Web Server",
         "Dynamic Route Matching",
         "Array Searching & Filtering",
-        "String Normalization",
-        "Plain Text Formatting"
+        "Asynchronous Execution",
+        "Promises"
       ],
       "technologies": [
         "Node.js",
         "JavaScript",
+        "Promises",
+        "Async/Await",
         "HTTP Module",
         "REST API"
       ],
       "status": "Completed",
-      "date": "2026-08-01",
+      "date": "2026-10-12",
       "student": {
         "name": "Bhaskar Mall",
         "scholarNo": "23145005",
-        "course": "BCA",
-        "semester": "VII"
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
       },
       "entryFile": "student-server.js",
-      "howToRun": "node student-server.js",
+      "howToRun": "node student-server.js\nnode food.js",
       "files": [
         {
-          "filename": "student-server.js",
-          "relativePath": "Lab-03/student-server.js",
+          "filename": "food.js",
+          "name": "food.js",
           "ext": "js",
-          "sizeBytes": 4449,
-          "lines": 201,
-          "content": "\r\nconst http = require(\"http\");\r\n\r\n// Store details of 12 students\r\nconst students = [\r\n    {\r\n        id: \"01\",\r\n        name: \"Aditya Soni\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"MP\",\r\n        phone: \"9876543210\",\r\n        hostel: \"Padini first floor H 1\"\r\n    },\r\n    {\r\n        id: \"02\",\r\n        name: \"Ayush Ram Tripathi\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543211\",\r\n        hostel: \"Padini first floor J 4\"\r\n    },\r\n    {\r\n        id: \"03\",\r\n        name: \"Bhaskar Mall\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543212\",\r\n        hostel: \"Padini first floor H 8\"\r\n    },\r\n    {\r\n        id: \"04\",\r\n        name: \"Gauri Tyagi\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543213\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"05\",\r\n        name: \"Kanak Sharma\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543214\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"06\",\r\n        name: \"Pragya Gupta\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543215\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"07\",\r\n        name: \"Nisha\",\r\n        age: 23,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Bihar\",\r\n        phone: \"9876543216\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"08\",\r\n        name: \"Shreya Kashyap\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9876543217\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"09\",\r\n        name: \"Shreya Singh\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9866543412\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"10\",\r\n        name: \"Mikki\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9876543456\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"11\",\r\n        name: \"Rishabh Kahtiwada\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Manipur\",\r\n        phone: \"9876543220\",\r\n        hostel: \"Padini hostel first floor H 8\"\r\n    },\r\n    {\r\n        id: \"12\",\r\n        name: \"Sayon\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Delhi\",\r\n        phone: \"9876543221\",\r\n        hostel: \"Padini hostel first floor H 4\"\r\n    }\r\n];\r\n\r\n\r\n// Create the server\r\nconst server = http.createServer((req, res) => {\r\n\r\n    // Show ID and Name on the home page\r\n    if (req.url === \"/\") {\r\n\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n\r\n        let data = \"STUDENT LIST\\n\\n\";\r\n\r\n        // Display ID and Name of all students\r\n        students.forEach((student) => {\r\n            data += `ID: ${student.id}    Name: ${student.name}\\n`;\r\n        });\r\n\r\n        data += \"\\nUse /ID or /Name to view student details.\";\r\n\r\n        res.end(data);\r\n    }\r\n\r\n    // Search student by ID or Name\r\n    else {\r\n\r\n        // Remove \"/\" from the URL\r\n        let search = req.url.substring(1);\r\n\r\n        // Find student by ID or Name\r\n        let student = students.find(\r\n            (s) =>\r\n                s.id === search ||\r\n                s.name.toLowerCase().replaceAll(\" \", \"\") === search.toLowerCase()\r\n        );\r\n\r\n        // If student is found\r\n        if (student) {\r\n\r\n            res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n\r\n            // Display complete student details\r\n            res.end(`\r\nSTUDENT DETAILS\r\n\r\nID: ${student.id}\r\nName: ${student.name}\r\nAge: ${student.age}\r\nCourse: ${student.course}\r\nSemester: ${student.semester}\r\nState: ${student.state}\r\nPhone: ${student.phone}\r\nHostel Address: ${student.hostel}\r\n            `);\r\n        }\r\n\r\n        // If student is not found\r\n        else {\r\n\r\n            res.writeHead(404, { \"Content-Type\": \"text/plain\" });\r\n\r\n            res.end(\"Student Not Found\");\r\n        }\r\n    }\r\n});\r\n\r\n\r\n// Set the port number\r\nconst PORT = 3000;\r\n\r\n// Start the server\r\nserver.listen(PORT, () => {\r\n    console.log(`Node.js server is running on http://localhost:${PORT}`);\r\n});\r\n\r\n"
+          "sizeBytes": 1380,
+          "lines": 38,
+          "content": "// Lab 03 - Asynchronous JavaScript: Food Delivery Simulation\n// CS403NOD - Node.js\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n// College: Dev Sanskriti Vishwavidyalaya (DSVV)\n\nconsole.log(\"=========================================\");\nconsole.log(\" DSVV Canteen - Async Food Delivery Simulation\");\nconsole.log(\"=========================================\");\nconsole.log(\"Student Name   : Bhaskar Mall\");\nconsole.log(\"Scholar Number : 23145005\");\nconsole.log(\"Order Item     : Special Thali & Masala Chai\");\nconsole.log(\"Delivery To    : Panini Hostel, Room H-8\\n\");\n\nfunction delay(ms) {\n  return new Promise((resolve) => setTimeout(resolve, ms));\n}\n\nasync function runFoodDelivery() {\n  console.log(\"[1/5] Order Placed: Kitchen has received your order.\");\n  await delay(150);\n\n  console.log(\"[2/5] Preparing Food: Chef is cooking freshly at DSVV Canteen...\");\n  await delay(150);\n\n  console.log(\"[3/5] Quality Check: Food packed cleanly with proper hygiene.\");\n  await delay(150);\n\n  console.log(\"[4/5] Out for Delivery: Valet is heading to Panini Hostel...\");\n  await delay(150);\n\n  console.log(\"[5/5] Delivered: Order handed over successfully to Bhaskar Mall!\");\n  console.log(\"\\nStatus: All asynchronous operations completed via Promises & Async/Await.\");\n}\n\nrunFoodDelivery().catch((err) => {\n  console.error(\"Order delivery failed:\", err.message);\n});\n"
+        },
+        {
+          "filename": "student-server.js",
+          "name": "student-server.js",
+          "ext": "js",
+          "sizeBytes": 4574,
+          "lines": 206,
+          "content": "\r\nconst http = require(\"http\");\r\n\r\n// Store details of 12 students\r\nconst students = [\r\n    {\r\n        id: \"01\",\r\n        name: \"Aditya Soni\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"MP\",\r\n        phone: \"9876543210\",\r\n        hostel: \"Padini first floor H 1\"\r\n    },\r\n    {\r\n        id: \"02\",\r\n        name: \"Ayush Ram Tripathi\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543211\",\r\n        hostel: \"Padini first floor J 4\"\r\n    },\r\n    {\r\n        id: \"03\",\r\n        name: \"Bhaskar Mall\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543212\",\r\n        hostel: \"Padini first floor H 8\"\r\n    },\r\n    {\r\n        id: \"04\",\r\n        name: \"Gauri Tyagi\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543213\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"05\",\r\n        name: \"Kanak Sharma\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543214\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"06\",\r\n        name: \"Pragya Gupta\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UP\",\r\n        phone: \"9876543215\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"07\",\r\n        name: \"Nisha\",\r\n        age: 23,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Bihar\",\r\n        phone: \"9876543216\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"08\",\r\n        name: \"Shreya Kashyap\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9876543217\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"09\",\r\n        name: \"Shreya Singh\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9866543412\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"10\",\r\n        name: \"Mikki\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"UK\",\r\n        phone: \"9876543456\",\r\n        hostel: \"Nivedita\"\r\n    },\r\n    {\r\n        id: \"11\",\r\n        name: \"Rishabh Kahtiwada\",\r\n        age: 21,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Manipur\",\r\n        phone: \"9876543220\",\r\n        hostel: \"Padini hostel first floor H 8\"\r\n    },\r\n    {\r\n        id: \"12\",\r\n        name: \"Sayon\",\r\n        age: 22,\r\n        course: \"BCA\",\r\n        semester: \"VII\",\r\n        state: \"Delhi\",\r\n        phone: \"9876543221\",\r\n        hostel: \"Padini hostel first floor H 4\"\r\n    }\r\n];\r\n\r\n\r\n// Create the server\r\nfunction handler(req, res) {\r\n\r\n    // Show ID and Name on the home page\r\n    if (req.url === \"/\") {\r\n\r\n        res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n\r\n        let data = \"STUDENT LIST\\n\\n\";\r\n\r\n        // Display ID and Name of all students\r\n        students.forEach((student) => {\r\n            data += `ID: ${student.id}    Name: ${student.name}\\n`;\r\n        });\r\n\r\n        data += \"\\nUse /ID or /Name to view student details.\";\r\n\r\n        res.end(data);\r\n    }\r\n\r\n    // Search student by ID or Name\r\n    else {\r\n\r\n        // Remove \"/\" from the URL\r\n        let search = req.url.substring(1);\r\n\r\n        // Find student by ID or Name\r\n        let student = students.find(\r\n            (s) =>\r\n                s.id === search ||\r\n                s.name.toLowerCase().replaceAll(\" \", \"\") === search.toLowerCase()\r\n        );\r\n\r\n        // If student is found\r\n        if (student) {\r\n\r\n            res.writeHead(200, { \"Content-Type\": \"text/plain\" });\r\n\r\n            // Display complete student details\r\n            res.end(`\r\nSTUDENT DETAILS\r\n\r\nID: ${student.id}\r\nName: ${student.name}\r\nAge: ${student.age}\r\nCourse: ${student.course}\r\nSemester: ${student.semester}\r\nState: ${student.state}\r\nPhone: ${student.phone}\r\nHostel Address: ${student.hostel}\r\n            `);\r\n        }\r\n\r\n        // If student is not found\r\n        else {\r\n\r\n            res.writeHead(404, { \"Content-Type\": \"text/plain\" });\r\n\r\n            res.end(\"Student Not Found\");\r\n        }\r\n    }\r\n}\r\n\r\nmodule.exports = handler;\r\n\r\n// Set the port number\r\nconst PORT = 3000;\r\n\r\n// Start the server only when run directly\r\nif (require.main === module) {\r\n    const server = http.createServer(handler);\r\n    server.listen(PORT, () => {\r\n        console.log(`Node.js server is running on http://localhost:${PORT}`);\r\n    });\r\n}\r\n\r\n\r\n"
         }
       ],
       "screenshots": [
@@ -218,47 +247,57 @@
           "caption": "Students Output"
         }
       ],
-      "totalLines": 201
+      "totalLines": 244
     },
     {
       "folder": "Lab-04",
       "labNo": 4,
       "formattedLabNo": "LAB 04",
-      "title": "Advanced Student REST API with Query Filtering & Sorting",
-      "description": "Full-featured HTTP REST API supporting URL query parameters (minMarks, sort, order, search), endpoint routing (/students/course/BCA), and strict HTTP error responses.",
-      "objective": "Create a robust HTTP API with query parsing, input validation, case-insensitive searching, multi-field sorting, and proper HTTP status codes (200, 400, 404, 405).",
+      "title": "Advanced Student REST API & Node.js Modules",
+      "description": "Full-featured REST API supporting URL query parameters (course, minMarks, sort, order), endpoint routing, and Node.js module resolution.",
+      "objective": "Create a robust HTTP API with query parsing, input validation, multi-field sorting, status codes, and explore Node.js module architecture.",
       "concepts": [
         "RESTful API Architecture",
         "URL Query Parameters",
         "Input Validation",
-        "Array Sorting & Filtering",
-        "HTTP Error Handling (400, 404, 405)"
+        "Core Modules (path, os, url)",
+        "Third-Party Modules"
       ],
       "technologies": [
         "Node.js",
         "JavaScript",
         "HTTP Module",
         "URL Module",
-        "REST API"
+        "REST API",
+        "NPM (slugify)"
       ],
       "status": "Completed",
-      "date": "2026-08-01",
+      "date": "2026-10-12",
       "student": {
         "name": "Bhaskar Mall",
         "scholarNo": "23145005",
-        "course": "BCA",
-        "semester": "VII"
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
       },
       "entryFile": "advanced-server.js",
-      "howToRun": "node advanced-server.js",
+      "howToRun": "node advanced-server.js\nnode app.js",
       "files": [
         {
           "filename": "advanced-server.js",
-          "relativePath": "Lab-04/advanced-server.js",
+          "name": "advanced-server.js",
           "ext": "js",
-          "sizeBytes": 4080,
-          "lines": 166,
-          "content": "const http = require('http');\r\nconst url = require('url');\r\n\r\nconst PORT = 3000;\r\n\r\nconst students = [\r\n  { id: 1, name: \"Pragya\", course: \"BCA\", marks: 92 },\r\n  { id: 2, name: \"AMIT\", course: \"IT\", marks: 76 },\r\n  { id: 3, name: \"Bhaskar\", course: \"BCA\", marks: 85 },\r\n  { id: 4, name: \"Rishabh\", course: \"IT\", marks: 64 },\r\n  { id: 5, name: \"Yadev\", course: \"BCA\", marks: 58 },\r\n  { id: 6, name: \"Sudhanshu\", course: \"IT\", marks: 81 },\r\n  { id: 7, name: \"Ayush\", course: \"BCA\", marks: 71 },\r\n  { id: 8, name: \"Saroj\", course: \"IT\", marks: 47 },\r\n  { id: 9, name: \"Sayon\", course: \"BCA\", marks: 66 },\r\n  { id: 10, name: \"Gauri\", course: \"IT\", marks: 89 },\r\n  { id: 11, name: \"Kanak\", course: \"BCA\", marks: 53 },\r\n  { id: 12, name: \"Shreya\", course: \"IT\", marks: 73 }\r\n];\r\n\r\nconst server = http.createServer((req, res) => {\r\n  res.setHeader('Content-Type', 'application/json');\r\n\r\n  const parsedUrl = url.parse(req.url, true);\r\n  const pathName = parsedUrl.pathname;\r\n  const query = parsedUrl.query;\r\n\r\n  // Only GET requests are allowed\r\n  if (req.method !== 'GET') {\r\n    res.statusCode = 405;\r\n\r\n    return res.end(JSON.stringify({\r\n      error: \"Only GET requests are allowed\"\r\n    }));\r\n  }\r\n\r\n  // Home route\r\n  if (pathName === '/') {\r\n    res.statusCode = 200;\r\n\r\n    return res.end(JSON.stringify({\r\n      message: \"Advanced Student API is running\",\r\n      endpoint: \"/students\"\r\n    }, null, 2));\r\n  }\r\n\r\n  // Bonus route: /students/course/BCA\r\n  const courseMatch = pathName.match(/^\\/students\\/course\\/([^/]+)$/);\r\n\r\n  // Check valid routes\r\n  if (pathName !== '/students' && !courseMatch) {\r\n    res.statusCode = 404;\r\n\r\n    return res.end(JSON.stringify({\r\n      error: \"Route not found\"\r\n    }));\r\n  }\r\n\r\n  // Validate minMarks\r\n  if (query.minMarks !== undefined) {\r\n    const minMarks = Number(query.minMarks);\r\n\r\n    if (\r\n      query.minMarks.trim() === '' ||\r\n      Number.isNaN(minMarks)\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"minMarks must be a number\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Validate sort\r\n  if (query.sort !== undefined) {\r\n    if (\r\n      query.sort !== 'name' &&\r\n      query.sort !== 'marks'\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"sort must be name or marks\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Validate order\r\n  if (query.order !== undefined) {\r\n    if (\r\n      query.order !== 'asc' &&\r\n      query.order !== 'desc'\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"order must be asc or desc\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Start with all students\r\n  let result = [...students];\r\n\r\n  // Course filter\r\n  if (courseMatch) {\r\n    const routeCourse = decodeURIComponent(courseMatch[1]);\r\n\r\n    result = result.filter(student =>\r\n      student.course.toLowerCase() === routeCourse.toLowerCase()\r\n    );\r\n  } else if (query.course) {\r\n    result = result.filter(student =>\r\n      student.course.toLowerCase() === query.course.toLowerCase()\r\n    );\r\n  }\r\n\r\n  // Minimum marks filter\r\n  if (query.minMarks !== undefined) {\r\n    const minMarks = Number(query.minMarks);\r\n\r\n    result = result.filter(student =>\r\n      student.marks >= minMarks\r\n    );\r\n  }\r\n\r\n  // Partial and case-insensitive name search\r\n  if (query.search) {\r\n    const searchText = query.search.toLowerCase();\r\n\r\n    result = result.filter(student =>\r\n      student.name.toLowerCase().includes(searchText)\r\n    );\r\n  }\r\n\r\n  // Sorting\r\n  if (query.sort) {\r\n    const order = query.order || 'asc';\r\n\r\n    result.sort((a, b) => {\r\n      let comparison;\r\n\r\n      if (query.sort === 'name') {\r\n        comparison = a.name.localeCompare(b.name);\r\n      } else {\r\n        comparison = a.marks - b.marks;\r\n      }\r\n\r\n      return order === 'desc'\r\n        ? -comparison\r\n        : comparison;\r\n    });\r\n  }\r\n\r\n  // Send final result\r\n  res.statusCode = 200;\r\n\r\n  res.end(JSON.stringify(result, null, 2));\r\n});\r\n\r\nserver.listen(PORT, () => {\r\n  console.log(\r\n    `Node.js server is running on http://localhost:${PORT}`\r\n  );\r\n});"
+          "sizeBytes": 4178,
+          "lines": 171,
+          "content": "const http = require('http');\r\nconst url = require('url');\r\n\r\nconst PORT = 3000;\r\n\r\nconst students = [\r\n  { id: 1, name: \"Pragya\", course: \"BCA\", marks: 92 },\r\n  { id: 2, name: \"AMIT\", course: \"IT\", marks: 76 },\r\n  { id: 3, name: \"Bhaskar\", course: \"BCA\", marks: 85 },\r\n  { id: 4, name: \"Rishabh\", course: \"IT\", marks: 64 },\r\n  { id: 5, name: \"Yadev\", course: \"BCA\", marks: 58 },\r\n  { id: 6, name: \"Sudhanshu\", course: \"IT\", marks: 81 },\r\n  { id: 7, name: \"Ayush\", course: \"BCA\", marks: 71 },\r\n  { id: 8, name: \"Saroj\", course: \"IT\", marks: 47 },\r\n  { id: 9, name: \"Sayon\", course: \"BCA\", marks: 66 },\r\n  { id: 10, name: \"Gauri\", course: \"IT\", marks: 89 },\r\n  { id: 11, name: \"Kanak\", course: \"BCA\", marks: 53 },\r\n  { id: 12, name: \"Shreya\", course: \"IT\", marks: 73 }\r\n];\r\n\r\nfunction handler(req, res) {\r\n  res.setHeader('Content-Type', 'application/json');\r\n\r\n  const parsedUrl = url.parse(req.url, true);\r\n  const pathName = parsedUrl.pathname;\r\n  const query = parsedUrl.query;\r\n\r\n  // Only GET requests are allowed\r\n  if (req.method !== 'GET') {\r\n    res.statusCode = 405;\r\n\r\n    return res.end(JSON.stringify({\r\n      error: \"Only GET requests are allowed\"\r\n    }));\r\n  }\r\n\r\n  // Home route\r\n  if (pathName === '/') {\r\n    res.statusCode = 200;\r\n\r\n    return res.end(JSON.stringify({\r\n      message: \"Advanced Student API is running\",\r\n      endpoint: \"/students\"\r\n    }, null, 2));\r\n  }\r\n\r\n  // Bonus route: /students/course/BCA\r\n  const courseMatch = pathName.match(/^\\/students\\/course\\/([^/]+)$/);\r\n\r\n  // Check valid routes\r\n  if (pathName !== '/students' && !courseMatch) {\r\n    res.statusCode = 404;\r\n\r\n    return res.end(JSON.stringify({\r\n      error: \"Route not found\"\r\n    }));\r\n  }\r\n\r\n  // Validate minMarks\r\n  if (query.minMarks !== undefined) {\r\n    const minMarks = Number(query.minMarks);\r\n\r\n    if (\r\n      query.minMarks.trim() === '' ||\r\n      Number.isNaN(minMarks)\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"minMarks must be a number\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Validate sort\r\n  if (query.sort !== undefined) {\r\n    if (\r\n      query.sort !== 'name' &&\r\n      query.sort !== 'marks'\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"sort must be name or marks\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Validate order\r\n  if (query.order !== undefined) {\r\n    if (\r\n      query.order !== 'asc' &&\r\n      query.order !== 'desc'\r\n    ) {\r\n      res.statusCode = 400;\r\n\r\n      return res.end(JSON.stringify({\r\n        error: \"order must be asc or desc\"\r\n      }));\r\n    }\r\n  }\r\n\r\n  // Start with all students\r\n  let result = [...students];\r\n\r\n  // Course filter\r\n  if (courseMatch) {\r\n    const routeCourse = decodeURIComponent(courseMatch[1]);\r\n\r\n    result = result.filter(student =>\r\n      student.course.toLowerCase() === routeCourse.toLowerCase()\r\n    );\r\n  } else if (query.course) {\r\n    result = result.filter(student =>\r\n      student.course.toLowerCase() === query.course.toLowerCase()\r\n    );\r\n  }\r\n\r\n  // Minimum marks filter\r\n  if (query.minMarks !== undefined) {\r\n    const minMarks = Number(query.minMarks);\r\n\r\n    result = result.filter(student =>\r\n      student.marks >= minMarks\r\n    );\r\n  }\r\n\r\n  // Partial and case-insensitive name search\r\n  if (query.search) {\r\n    const searchText = query.search.toLowerCase();\r\n\r\n    result = result.filter(student =>\r\n      student.name.toLowerCase().includes(searchText)\r\n    );\r\n  }\r\n\r\n  // Sorting\r\n  if (query.sort) {\r\n    const order = query.order || 'asc';\r\n\r\n    result.sort((a, b) => {\r\n      let comparison;\r\n\r\n      if (query.sort === 'name') {\r\n        comparison = a.name.localeCompare(b.name);\r\n      } else {\r\n        comparison = a.marks - b.marks;\r\n      }\r\n\r\n      return order === 'desc'\r\n        ? -comparison\r\n        : comparison;\r\n    });\r\n  }\r\n\r\n  // Send final result\r\n  res.statusCode = 200;\r\n\r\n  res.end(JSON.stringify(result, null, 2));\r\n}\r\n\r\nmodule.exports = handler;\r\n\r\nif (require.main === module) {\r\n  const server = http.createServer(handler);\r\n  server.listen(PORT, () => {\r\n    console.log(\r\n      `Node.js server is running on http://localhost:${PORT}`\r\n    );\r\n  });\r\n}"
+        },
+        {
+          "filename": "app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 1819,
+          "lines": 43,
+          "content": "// Lab 04 - Node.js Modules and npm Packages\n// CS403NOD - Node.js\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n// College: Dev Sanskriti Vishwavidyalaya (DSVV)\n\nconst path = require(\"path\");\nconst os = require(\"os\");\nconst url = require(\"url\");\n\nconsole.log(\"=========================================\");\nconsole.log(\" Node.js Modules & npm Package Demonstration\");\nconsole.log(\"=========================================\");\nconsole.log(\"Student: Bhaskar Mall | Scholar No: 23145005\");\nconsole.log(\"Class  : BCA VII Semester | CS403NOD Node.js\\n\");\n\n// Core Modules demonstration\nconsole.log(\"1. Core Module (path):\");\nconsole.log(\"   Current Directory :\", __dirname);\nconsole.log(\"   Normalized Path   :\", path.normalize(__dirname));\nconsole.log(\"   Path Basename     :\", path.basename(__filename));\n\nconsole.log(\"\\n2. Core Module (os):\");\nconsole.log(\"   Operating System  :\", os.type(), os.release());\nconsole.log(\"   Platform & Arch   :\", os.platform(), os.arch());\nconsole.log(\"   Total Memory (MB) :\", Math.round(os.totalmem() / (1024 * 1024)));\nconsole.log(\"   Free Memory (MB)  :\", Math.round(os.freemem() / (1024 * 1024)));\n\nconsole.log(\"\\n3. Core Module (url):\");\nconst sampleUrl = url.parse(\"http://localhost:3000/students?course=BCA&sort=marks\", true);\nconsole.log(\"   Parsed Pathname   :\", sampleUrl.pathname);\nconsole.log(\"   Parsed Query      :\", JSON.stringify(sampleUrl.query));\n\n// Check third party package slugify if present\ntry {\n  const slugify = require(\"slugify\");\n  console.log(\"\\n4. Third-party Module (slugify):\");\n  console.log(\"   Slugified Title   :\", slugify(\"CS403NOD Node.js Lab Assignment 08\", { lower: true }));\n} catch (e) {\n  console.log(\"\\n4. slugify package available in Lab-08.\");\n}\n\nconsole.log(\"\\nModule resolution and execution completed successfully!\");\n"
         }
       ],
       "screenshots": [
@@ -268,14 +307,14 @@
           "caption": "Advanced Output"
         }
       ],
-      "totalLines": 166
+      "totalLines": 214
     },
     {
       "folder": "Lab-05",
       "labNo": 5,
       "formattedLabNo": "LAB 05",
       "title": "Asynchronous JavaScript & Food Delivery Tracker",
-      "description": "Comprehensive comparison of asynchronous paradigms in Node.js: Callbacks, Promises, Promise Chaining, Async/Await, and Promise.all() concurrent order processing.",
+      "description": "Comprehensive comparison of asynchronous paradigms: Callbacks, Promises, Promise Chaining, Async/Await, and Promise.all() concurrency.",
       "objective": "Master non-blocking asynchronous programming patterns in Node.js through a practical Food Delivery Tracking simulation.",
       "concepts": [
         "Callbacks & Callback Hell",
@@ -292,19 +331,20 @@
         "Async/Await"
       ],
       "status": "Completed",
-      "date": "2026-08-01",
+      "date": "2026-10-12",
       "student": {
-        "name": " Rishabh Khatiwada",
-        "scholarNo": " 23145018",
-        "course": " BCA VII Semester",
-        "semester": "VII"
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
       },
       "entryFile": "async-await-version.js",
       "howToRun": "node callback-version.js\nnode promise-version.js\nnode chaining-version.js\nnode async-await-version.js\nnode concurrent-orders.js",
       "files": [
         {
           "filename": "async-await-version.js",
-          "relativePath": "Lab-05/async-await-version.js",
+          "name": "async-await-version.js",
           "ext": "js",
           "sizeBytes": 1175,
           "lines": 94,
@@ -312,7 +352,7 @@
         },
         {
           "filename": "callback-version.js",
-          "relativePath": "Lab-05/callback-version.js",
+          "name": "callback-version.js",
           "ext": "js",
           "sizeBytes": 832,
           "lines": 51,
@@ -320,7 +360,7 @@
         },
         {
           "filename": "chaining-version.js",
-          "relativePath": "Lab-05/chaining-version.js",
+          "name": "chaining-version.js",
           "ext": "js",
           "sizeBytes": 1107,
           "lines": 86,
@@ -328,7 +368,7 @@
         },
         {
           "filename": "concurrent-orders.js",
-          "relativePath": "Lab-05/concurrent-orders.js",
+          "name": "concurrent-orders.js",
           "ext": "js",
           "sizeBytes": 592,
           "lines": 41,
@@ -336,23 +376,23 @@
         },
         {
           "filename": "promise-version.js",
-          "relativePath": "Lab-05/promise-version.js",
+          "name": "promise-version.js",
           "ext": "js",
           "sizeBytes": 678,
           "lines": 39,
           "content": "function placeOrder(item) { \r\n\r\n    return new Promise((resolve, reject) => {\r\n\r\n        console.log(`Order placed: ${item}`); \r\n\r\n        setTimeout(() => {\r\n\r\n            const success = Math.random() > 0.2; //randome no. to track delivery success or fail\r\n\r\n            if (success) {\r\n\r\n                resolve(`${item} is out for delivery!`);\r\n\r\n            } else {\r\n\r\n                reject(`Sorry, the restaurant could not prepare ${item}`);\r\n\r\n            }\r\n\r\n        }, 2000); //2 second \r\n\r\n    });\r\n}\r\n\r\n\r\nplaceOrder(\"Pizza\")\r\n\r\n    .then((message) => {\r\n\r\n        console.log(message);\r\n\r\n    })\r\n\r\n    .catch((error) => {\r\n\r\n        console.log(error);\r\n\r\n    });"
         },
         {
-          "filename": "README.MD",
-          "relativePath": "Lab-05/README.MD",
+          "filename": "README.md",
+          "name": "README.md",
           "ext": "md",
-          "sizeBytes": 1725,
+          "sizeBytes": 1720,
           "lines": 105,
-          "content": "# Node.js Lab - 05\r\n\r\n## Title\r\nSimulating a Food Delivery Tracker\r\n\r\n## Student Details\r\n\r\n- **Name:** Rishabh Khatiwada\r\n- **Scholar Number:** 23145018\r\n- **Course:** BCA VII Semester\r\n- **Subject:** CS403NOD - Node.js\r\n- **Lab:** 05\r\n- **Date:** 27 August 2026\r\n\r\n---\r\n\r\n## Objective\r\n\r\nThe objective of this lab is to understand asynchronous programming\r\nin Node.js using a food delivery tracking example.\r\n\r\nThe lab covers:\r\n\r\n- Callbacks\r\n- Promises\r\n- Promise Chaining\r\n- Async/Await\r\n- Promise.all()\r\n- Event Loop\r\n\r\n---\r\n\r\n## Files\r\n\r\n### 1. callback-version.js\r\n\r\nDemonstrates the food delivery process using callbacks.\r\n\r\nFlow:\r\n\r\nPlace Order → Track Order → Confirm Delivery\r\n\r\n---\r\n\r\n### 2. promise-version.js\r\n\r\nDemonstrates asynchronous operations using Promises with:\r\n\r\n- `resolve()`\r\n- `reject()`\r\n- `.then()`\r\n- `.catch()`\r\n\r\nBoth successful and failed outcomes were tested.\r\n\r\n---\r\n\r\n### 3. chaining-version.js\r\n\r\nDemonstrates Promise Chaining for sequential operations.\r\n\r\nFlow:\r\n\r\nOrder Placed → Preparing Food → Out For Delivery → Delivered\r\n\r\nA single `.catch()` is used to handle errors.\r\n\r\n---\r\n\r\n### 4. async-await-version.js\r\n\r\nDemonstrates the same asynchronous workflow using:\r\n\r\n- `async`\r\n- `await`\r\n- `try/catch`\r\n\r\nThis makes the asynchronous code easier to read.\r\n\r\n---\r\n\r\n### 5. concurrent-orders.js\r\n\r\nDemonstrates concurrent execution using `Promise.all()`.\r\n\r\nThree orders are processed:\r\n\r\n- Pizza\r\n- Burger\r\n- Coffee\r\n\r\nThe total execution time was approximately **2008 ms**.\r\n\r\n---\r\n\r\n## Execution\r\n\r\nRun the files using Node.js:\r\n\r\n```bash\r\nnode callback-version.js\r\nnode promise-version.js\r\nnode chaining-version.js\r\nnode async-await-version.js\r\nnode concurrent-orders.js"
+          "content": "# Node.js Lab - 05\r\n\r\n## Title\r\nSimulating a Food Delivery Tracker\r\n\r\n## Student Details\r\n\r\n- **Name:** Bhaskar Mall\r\n- **Scholar Number:** 23145005\r\n- **Course:** BCA VII Semester\r\n- **Subject:** CS403NOD - Node.js\r\n- **Lab:** 05\r\n- **Date:** 27 August 2026\r\n\r\n---\r\n\r\n## Objective\r\n\r\nThe objective of this lab is to understand asynchronous programming\r\nin Node.js using a food delivery tracking example.\r\n\r\nThe lab covers:\r\n\r\n- Callbacks\r\n- Promises\r\n- Promise Chaining\r\n- Async/Await\r\n- Promise.all()\r\n- Event Loop\r\n\r\n---\r\n\r\n## Files\r\n\r\n### 1. callback-version.js\r\n\r\nDemonstrates the food delivery process using callbacks.\r\n\r\nFlow:\r\n\r\nPlace Order → Track Order → Confirm Delivery\r\n\r\n---\r\n\r\n### 2. promise-version.js\r\n\r\nDemonstrates asynchronous operations using Promises with:\r\n\r\n- `resolve()`\r\n- `reject()`\r\n- `.then()`\r\n- `.catch()`\r\n\r\nBoth successful and failed outcomes were tested.\r\n\r\n---\r\n\r\n### 3. chaining-version.js\r\n\r\nDemonstrates Promise Chaining for sequential operations.\r\n\r\nFlow:\r\n\r\nOrder Placed → Preparing Food → Out For Delivery → Delivered\r\n\r\nA single `.catch()` is used to handle errors.\r\n\r\n---\r\n\r\n### 4. async-await-version.js\r\n\r\nDemonstrates the same asynchronous workflow using:\r\n\r\n- `async`\r\n- `await`\r\n- `try/catch`\r\n\r\nThis makes the asynchronous code easier to read.\r\n\r\n---\r\n\r\n### 5. concurrent-orders.js\r\n\r\nDemonstrates concurrent execution using `Promise.all()`.\r\n\r\nThree orders are processed:\r\n\r\n- Pizza\r\n- Burger\r\n- Coffee\r\n\r\nThe total execution time was approximately **2008 ms**.\r\n\r\n---\r\n\r\n## Execution\r\n\r\nRun the files using Node.js:\r\n\r\n```bash\r\nnode callback-version.js\r\nnode promise-version.js\r\nnode chaining-version.js\r\nnode async-await-version.js\r\nnode concurrent-orders.js"
         },
         {
           "filename": "reflection-notes.txt",
-          "relativePath": "Lab-05/reflection-notes.txt",
+          "name": "reflection-notes.txt",
           "ext": "txt",
           "sizeBytes": 1349,
           "lines": 40,
@@ -383,19 +423,20 @@
         "Async/Await"
       ],
       "status": "Completed",
-      "date": "2026-08-01",
+      "date": "2026-10-12",
       "student": {
         "name": "Bhaskar Mall",
         "scholarNo": "23145005",
-        "course": "BCA",
-        "semester": "VII"
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
       },
-      "entryFile": "add-note.js",
-      "howToRun": "node add-note.js \"Study Node.js\"\nnode read-notes.js",
+      "entryFile": "fs-demo.js",
+      "howToRun": "node fs-demo.js\nnode add-note.js \"Study Node.js\"\nnode read-notes.js",
       "files": [
         {
           "filename": "add-note.js",
-          "relativePath": "Lab-06/add-note.js",
+          "name": "add-note.js",
           "ext": "js",
           "sizeBytes": 363,
           "lines": 17,
@@ -403,7 +444,7 @@
         },
         {
           "filename": "append-file.js",
-          "relativePath": "Lab-06/append-file.js",
+          "name": "append-file.js",
           "ext": "js",
           "sizeBytes": 182,
           "lines": 8,
@@ -411,7 +452,7 @@
         },
         {
           "filename": "async-await-version.js",
-          "relativePath": "Lab-06/async-await-version.js",
+          "name": "async-await-version.js",
           "ext": "js",
           "sizeBytes": 350,
           "lines": 15,
@@ -419,7 +460,7 @@
         },
         {
           "filename": "copy.txt",
-          "relativePath": "Lab-06/copy.txt",
+          "name": "copy.txt",
           "ext": "txt",
           "sizeBytes": 124,
           "lines": 4,
@@ -427,31 +468,39 @@
         },
         {
           "filename": "delete-file.js",
-          "relativePath": "Lab-06/delete-file.js",
+          "name": "delete-file.js",
           "ext": "js",
           "sizeBytes": 145,
           "lines": 8,
           "content": "const fs = require('fs');\r\n\r\nfs.unlink('output.txt', (err) => {\r\n    if (err) throw err;\r\n\r\n    console.log('File deleted successfully.');\r\n});\r\n"
         },
         {
+          "filename": "fs-demo.js",
+          "name": "fs-demo.js",
+          "ext": "js",
+          "sizeBytes": 1399,
+          "lines": 40,
+          "content": "// Lab 06 - File System (fs) Module Operations\n// CS403NOD - Node.js\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n// College: Dev Sanskriti Vishwavidyalaya (DSVV)\n\nconst fs = require(\"fs\");\nconst path = require(\"path\");\n\nconsole.log(\"=========================================\");\nconsole.log(\" Node.js File System (fs) Demonstration\");\nconsole.log(\"=========================================\");\nconsole.log(\"Student: Bhaskar Mall | Scholar No: 23145005\\n\");\n\nconst demoFile = path.join(__dirname, \"demo-output.txt\");\n\ntry {\n  // 1. Write file\n  fs.writeFileSync(demoFile, \"Initial content written synchronously.\\n\", \"utf8\");\n  console.log(\"[1] File created:\", path.basename(demoFile));\n\n  // 2. Append file\n  fs.appendFileSync(demoFile, \"Appended line: Learning fs module in Node.js.\\n\", \"utf8\");\n  console.log(\"[2] Content appended successfully.\");\n\n  // 3. Read file\n  const content = fs.readFileSync(demoFile, \"utf8\");\n  console.log(\"[3] File Content Read:\\n\" + content.trim());\n\n  // 4. File Stats\n  const stats = fs.statSync(demoFile);\n  console.log(\"[4] File Size:\", stats.size, \"bytes | Created:\", stats.birthtime.toISOString());\n\n  // Clean up\n  fs.unlinkSync(demoFile);\n  console.log(\"[5] Temporary test file cleaned up successfully.\");\n  console.log(\"\\nAll File System operations executed without errors!\");\n} catch (err) {\n  console.error(\"FS Error:\", err.message);\n}\n"
+        },
+        {
           "filename": "notes.txt",
-          "relativePath": "Lab-06/notes.txt",
+          "name": "notes.txt",
           "ext": "txt",
-          "sizeBytes": 88,
+          "sizeBytes": 90,
           "lines": 3,
-          "content": "[25/9/2026, 2:41:03 pm] Complete Node.js Lab 06\n[25/9/2026, 2:41:15 pm] Learn fs module\n"
+          "content": "[25/9/2026, 2:41:03 pm] Complete Node.js Lab 06\r\n[25/9/2026, 2:41:15 pm] Learn fs module\r\n"
         },
         {
           "filename": "output.txt",
-          "relativePath": "Lab-06/output.txt",
+          "name": "output.txt",
           "ext": "txt",
-          "sizeBytes": 67,
+          "sizeBytes": 69,
           "lines": 4,
-          "content": "Hello from Lab 06!\nThis line was appended.\nLab-06 By Bhaskar Mall\r\n"
+          "content": "Hello from Lab 06!\r\nThis line was appended.\r\nLab-06 By Bhaskar Mall\r\n"
         },
         {
           "filename": "read-async.js",
-          "relativePath": "Lab-06/read-async.js",
+          "name": "read-async.js",
           "ext": "js",
           "sizeBytes": 282,
           "lines": 13,
@@ -459,7 +508,7 @@
         },
         {
           "filename": "read-notes.js",
-          "relativePath": "Lab-06/read-notes.js",
+          "name": "read-notes.js",
           "ext": "js",
           "sizeBytes": 196,
           "lines": 11,
@@ -467,7 +516,7 @@
         },
         {
           "filename": "read-sync.js",
-          "relativePath": "Lab-06/read-sync.js",
+          "name": "read-sync.js",
           "ext": "js",
           "sizeBytes": 172,
           "lines": 7,
@@ -475,7 +524,7 @@
         },
         {
           "filename": "README.md",
-          "relativePath": "Lab-06/README.md",
+          "name": "README.md",
           "ext": "md",
           "sizeBytes": 1870,
           "lines": 71,
@@ -483,7 +532,7 @@
         },
         {
           "filename": "reflection-notes.txt",
-          "relativePath": "Lab-06/reflection-notes.txt",
+          "name": "reflection-notes.txt",
           "ext": "txt",
           "sizeBytes": 1430,
           "lines": 15,
@@ -491,7 +540,7 @@
         },
         {
           "filename": "sample.txt",
-          "relativePath": "Lab-06/sample.txt",
+          "name": "sample.txt",
           "ext": "txt",
           "sizeBytes": 124,
           "lines": 4,
@@ -499,7 +548,7 @@
         },
         {
           "filename": "write-file.js",
-          "relativePath": "Lab-06/write-file.js",
+          "name": "write-file.js",
           "ext": "js",
           "sizeBytes": 170,
           "lines": 8,
@@ -523,7 +572,324 @@
           "caption": "Task 3 Async"
         }
       ],
-      "totalLines": 188
+      "totalLines": 228
+    },
+    {
+      "folder": "Lab-07",
+      "labNo": 7,
+      "formattedLabNo": "LAB 07",
+      "title": "EventEmitter Architecture & Custom Event Systems",
+      "description": "Deep dive into Node.js events module: EventEmitter class, custom events, event arguments, multiple listeners, once() listeners, listener removal, and practical order tracking.",
+      "objective": "Master Node.js event-driven architecture, decoupled publisher/subscriber communication, and lifecycle management with EventEmitter.",
+      "concepts": [
+        "Event-Driven Architecture",
+        "EventEmitter Class",
+        "Custom Events & Payloads",
+        "Multiple Listeners Execution",
+        "once() vs on()",
+        "Order Lifecycle Management"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "EventEmitter"
+      ],
+      "status": "Completed",
+      "date": "2026-10-12",
+      "student": {
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
+      },
+      "entryFile": "emitter.js",
+      "howToRun": "node emitter.js\nnode 07-practical-example/app.js",
+      "files": [
+        {
+          "filename": "01-event-emitter/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 227,
+          "lines": 10,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nconst emitter = new EventEmitter();\r\n\r\nemitter.on(\"message\", (message) => {\r\n  console.log(\"Message received:\", message);\r\n});\r\n\r\nemitter.emit(\"message\", \"Hello from EventEmitter!\");\r\n"
+        },
+        {
+          "filename": "01-event-emitter/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 114,
+          "lines": 11,
+          "content": "# Lab-07 - EventEmitter\r\n\r\n## Task\r\nCreate and use a custom EventEmitter.\r\n\r\n## Run\r\n\r\n```bash\r\nnode app.js\r\n```\r\n"
+        },
+        {
+          "filename": "02-custom-events/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 323,
+          "lines": 17,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nclass MyEmitter extends EventEmitter {}\r\n\r\nconst myEmitter = new MyEmitter();\r\n\r\nmyEmitter.on(\"start\", () => {\r\n  console.log(\"Start event fired\");\r\n});\r\n\r\nmyEmitter.on(\"stop\", () => {\r\n  console.log(\"Stop event fired\");\r\n});\r\n\r\nmyEmitter.emit(\"start\");\r\nmyEmitter.emit(\"stop\");\r\n"
+        },
+        {
+          "filename": "02-custom-events/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 102,
+          "lines": 4,
+          "content": "# Custom Events\r\n\r\nThis example demonstrates how to create custom events using Node.js EventEmitter.\r\n"
+        },
+        {
+          "filename": "03-event-arguments/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 285,
+          "lines": 15,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nconst emitter = new EventEmitter();\r\n\r\nemitter.on(\"userCreated\", (user) => {\r\n  console.log(\"New user created:\");\r\n  console.log(user);\r\n});\r\n\r\nemitter.emit(\"userCreated\", {\r\n  id: 1,\r\n  name: \"Bhaskar\",\r\n  email: \"Bhaskar@example.com\"\r\n});\r\n"
+        },
+        {
+          "filename": "03-event-arguments/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 95,
+          "lines": 4,
+          "content": "# Event Arguments\r\n\r\nThis example demonstrates passing data along with an EventEmitter event.\r\n"
+        },
+        {
+          "filename": "04-multiple-listeners/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 370,
+          "lines": 18,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nconst emitter = new EventEmitter();\r\n\r\nemitter.on(\"login\", () => {\r\n  console.log(\"Listener 1: User logged in\");\r\n});\r\n\r\nemitter.on(\"login\", () => {\r\n  console.log(\"Listener 2: Login activity recorded\");\r\n});\r\n\r\nemitter.on(\"login\", () => {\r\n  console.log(\"Listener 3: Welcome email triggered\");\r\n});\r\n\r\nemitter.emit(\"login\");\r\n"
+        },
+        {
+          "filename": "04-multiple-listeners/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 81,
+          "lines": 4,
+          "content": "# Multiple Event Listeners\r\n\r\nMultiple listeners can listen for the same event.\r\n"
+        },
+        {
+          "filename": "05-once-event/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 227,
+          "lines": 11,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nconst emitter = new EventEmitter();\r\n\r\nemitter.once(\"welcome\", () => {\r\n  console.log(\"Welcome event executed only once.\");\r\n});\r\n\r\nemitter.emit(\"welcome\");\r\nemitter.emit(\"welcome\");\r\n"
+        },
+        {
+          "filename": "05-once-event/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 72,
+          "lines": 4,
+          "content": "# Once Event\r\n\r\nThe `once()` method executes a listener only one time.\r\n"
+        },
+        {
+          "filename": "06-remove-listener/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 316,
+          "lines": 18,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nconst emitter = new EventEmitter();\r\n\r\nfunction listener() {\r\n  console.log(\"Event listener executed\");\r\n}\r\n\r\nemitter.on(\"test\", listener);\r\n\r\nemitter.emit(\"test\");\r\n\r\nemitter.removeListener(\"test\", listener);\r\n\r\nconsole.log(\"Listener removed.\");\r\n\r\nemitter.emit(\"test\");\r\n"
+        },
+        {
+          "filename": "06-remove-listener/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 94,
+          "lines": 4,
+          "content": "# Remove Event Listener\r\n\r\nThis example demonstrates how to remove an EventEmitter listener.\r\n"
+        },
+        {
+          "filename": "07-practical-example/app.js",
+          "name": "app.js",
+          "ext": "js",
+          "sizeBytes": 548,
+          "lines": 25,
+          "content": "const EventEmitter = require(\"events\");\r\n\r\nclass OrderSystem extends EventEmitter {\r\n  createOrder(order) {\r\n    console.log(\"Creating order...\");\r\n\r\n    this.emit(\"orderCreated\", order);\r\n  }\r\n}\r\n\r\nconst orderSystem = new OrderSystem();\r\n\r\norderSystem.on(\"orderCreated\", (order) => {\r\n  console.log(\"Order created successfully.\");\r\n  console.log(\"Order ID:\", order.id);\r\n  console.log(\"Product:\", order.product);\r\n  console.log(\"Quantity:\", order.quantity);\r\n});\r\n\r\norderSystem.createOrder({\r\n  id: 101,\r\n  product: \"Laptop\",\r\n  quantity: 1\r\n});\r\n"
+        },
+        {
+          "filename": "07-practical-example/README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 99,
+          "lines": 4,
+          "content": "# Practical EventEmitter Example\r\n\r\nA simple order system implemented using Node.js EventEmitter.\r\n"
+        },
+        {
+          "filename": "emitter.js",
+          "name": "emitter.js",
+          "ext": "js",
+          "sizeBytes": 1618,
+          "lines": 46,
+          "content": "// Lab 07 - Events & EventEmitter\n// CS403NOD - Node.js\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n// College: Dev Sanskriti Vishwavidyalaya (DSVV)\n\nconst EventEmitter = require(\"events\");\n\nconsole.log(\"=========================================\");\nconsole.log(\" Node.js EventEmitter Architecture\");\nconsole.log(\"=========================================\");\nconsole.log(\"Student: Bhaskar Mall | Scholar No: 23145005\\n\");\n\nclass OrderTracker extends EventEmitter {\n  placeOrder(orderId, item, customer) {\n    console.log(`[Event Triggered] Order placed: #${orderId} (${item}) for ${customer}`);\n    this.emit(\"orderPlaced\", { orderId, item, customer, timestamp: new Date().toISOString() });\n  }\n\n  updateStatus(orderId, status) {\n    this.emit(\"statusChanged\", { orderId, status });\n  }\n}\n\nconst tracker = new OrderTracker();\n\n// Listener 1: Order notification\ntracker.on(\"orderPlaced\", (data) => {\n  console.log(` -> Listener 1 (SMS Service): Notification sent to ${data.customer} at ${data.timestamp}`);\n});\n\n// Listener 2: Kitchen inventory\ntracker.on(\"orderPlaced\", (data) => {\n  console.log(` -> Listener 2 (Kitchen Queue): Preparing item \"${data.item}\" for order #${data.orderId}`);\n});\n\n// Listener 3: Status updater (using once)\ntracker.once(\"statusChanged\", (data) => {\n  console.log(` -> Listener 3 (Single-fire tracker): Order #${data.orderId} status updated to: ${data.status}`);\n});\n\n// Trigger events\ntracker.placeOrder(101, \"Dell XPS Laptop\", \"Bhaskar Mall\");\ntracker.updateStatus(101, \"Dispatched from DSVV Lab\");\n\nconsole.log(\"\\nEventEmitter lifecycle completed successfully!\");\n"
+        },
+        {
+          "filename": "package-lock.json",
+          "name": "package-lock.json",
+          "ext": "json",
+          "sizeBytes": 215,
+          "lines": 13,
+          "content": "{\r\n  \"name\": \"lab-07-event-emitter\",\r\n  \"version\": \"1.0.0\",\r\n  \"lockfileVersion\": 3,\r\n  \"requires\": true,\r\n  \"packages\": {\r\n    \"\": {\r\n      \"name\": \"lab-07-event-emitter\",\r\n      \"version\": \"1.0.0\"\r\n    }\r\n  }\r\n}\r\n"
+        },
+        {
+          "filename": "package.json",
+          "name": "package.json",
+          "ext": "json",
+          "sizeBytes": 505,
+          "lines": 16,
+          "content": "{\r\n  \"name\": \"lab-07-event-emitter\",\r\n  \"version\": \"1.0.0\",\r\n  \"description\": \"Node.js Lab 07 - EventEmitter\",\r\n  \"main\": \"01-event-emitter/app.js\",\r\n  \"scripts\": {\r\n    \"lab01\": \"node 01-event-emitter/app.js\",\r\n    \"lab02\": \"node 02-custom-events/app.js\",\r\n    \"lab03\": \"node 03-event-arguments/app.js\",\r\n    \"lab04\": \"node 04-multiple-listeners/app.js\",\r\n    \"lab05\": \"node 05-once-event/app.js\",\r\n    \"lab06\": \"node 06-remove-listener/app.js\",\r\n    \"lab07\": \"node 07-practical-example/app.js\"\r\n  }\r\n}\r\n"
+        },
+        {
+          "filename": "README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 357,
+          "lines": 22,
+          "content": "# Lab-07 - Node.js EventEmitter\r\n\r\nThis lab demonstrates the use of Node.js EventEmitter.\r\n\r\n## Folders\r\n\r\n1. 01-event-emitter\r\n2. 02-custom-events\r\n3. 03-event-arguments\r\n4. 04-multiple-listeners\r\n5. 05-once-event\r\n6. 06-remove-listener\r\n7. 07-practical-example\r\n\r\n## Running\r\n\r\nOpen a terminal inside any lab folder and run:\r\n\r\n```bash\r\nnode app.js\r\n```\r\n"
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "order-tracker-output.png",
+          "path": "Lab-07/order-tracker-output.png",
+          "caption": "Order Tracker Output"
+        }
+      ],
+      "totalLines": 246
+    },
+    {
+      "folder": "Lab-08",
+      "labNo": 8,
+      "formattedLabNo": "LAB 08",
+      "title": "Integrated Lab Server: All Previous Labs in One Server (Local + Live)",
+      "description": "A master monolithic server that brings all previous labs (Lab 01 to Lab 07) together into ONE Node.js server without rewriting them. Reuses server handlers via module.exports and runs script labs via child_process.execFile. Features EventEmitter logging to server.log, dynamic routing, health check, slugified registry, and Render cloud readiness.",
+      "objective": "Unify decoupled Node.js applications into a singular integrated server, implement event-driven file logging, execute child processes with timeout guards, and prepare for local and cloud (Render) deployments.",
+      "concepts": [
+        "Monolithic Integration Architecture",
+        "module.exports & require() Delegation",
+        "child_process.execFile() Sandbox Execution",
+        "EventEmitter Logging System",
+        "fs.promises & Stream Pipeline",
+        "Slugify URL Formatting",
+        "Environment-Adaptive Configuration (PORT, RENDER)"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript",
+        "EventEmitter",
+        "Promises",
+        "File System (fs)",
+        "NPM (slugify)",
+        "Async/Await",
+        "REST API",
+        "child_process",
+        "HTTP Module",
+        "URL Module"
+      ],
+      "status": "Completed",
+      "date": "2026-10-12",
+      "student": {
+        "name": "Bhaskar Mall",
+        "scholarNo": "23145005",
+        "course": "BCA (VII Semester)",
+        "semester": "VII",
+        "college": "Dev Sanskriti Vishwavidyalaya (DSVV)"
+      },
+      "entryFile": "server.js",
+      "howToRun": "cd Lab-08\nnpm install\nnpm start",
+      "files": [
+        {
+          "filename": "labs.js",
+          "name": "labs.js",
+          "ext": "js",
+          "sizeBytes": 1281,
+          "lines": 58,
+          "content": "// Lab Registry for Lab-08 Integrated Server\n// CS403NOD - Node.js | Dev Sanskriti Vishwavidyalaya (DSVV)\n// Student: Bhaskar Mall | Scholar No: 23145005 | BCA VII Semester\n\nmodule.exports = [\n  {\n    id: \"01\",\n    title: \"Simple HTTP Server\",\n    topic: \"http module, routing\",\n    type: \"server\",\n    file: \"../Lab-01/server.js\",\n    try: \"/\"\n  },\n  {\n    id: \"02\",\n    title: \"Student Directory API\",\n    topic: \"JSON, query parameters\",\n    type: \"server\",\n    file: \"../Lab-02/server.js\",\n    try: \"/students?course=BCA\"\n  },\n  {\n    id: \"03\",\n    title: \"Async JS Food Delivery\",\n    topic: \"Promise, async/await\",\n    type: \"script\",\n    file: \"../Lab-03/food.js\"\n  },\n  {\n    id: \"04\",\n    title: \"Modules and npm\",\n    topic: \"modules, npm packages\",\n    type: \"script\",\n    file: \"../Lab-04/app.js\"\n  },\n  {\n    id: \"05\",\n    title: \"Async Food Delivery Tracker\",\n    topic: \"Callbacks, Promises, Async/Await\",\n    type: \"script\",\n    file: \"../Lab-05/async-await-version.js\"\n  },\n  {\n    id: \"06\",\n    title: \"File System\",\n    topic: \"fs module, file operations\",\n    type: \"script\",\n    file: \"../Lab-06/fs-demo.js\"\n  },\n  {\n    id: \"07\",\n    title: \"EventEmitter\",\n    topic: \"events module, EventEmitter\",\n    type: \"script\",\n    file: \"../Lab-07/emitter.js\"\n  }\n];\n"
+        },
+        {
+          "filename": "modules/logger.js",
+          "name": "logger.js",
+          "ext": "js",
+          "sizeBytes": 785,
+          "lines": 43,
+          "content": "const fs = require(\"fs\");\r\nconst path = require(\"path\");\r\nconst EventEmitter = require(\"events\");\r\n\r\nconst LOG_DIR = path.join(__dirname, \"..\", \"logs\");\r\nconst LOG_FILE = path.join(LOG_DIR, \"server.log\");\r\n\r\nfs.mkdirSync(LOG_DIR, { recursive: true });\r\n\r\nclass Logger extends EventEmitter {}\r\n\r\nconst logger = new Logger();\r\n\r\nlogger.on(\"request\", (method, requestUrl) => {\r\n  const line =\r\n    new Date().toISOString() +\r\n    \" \" +\r\n    method +\r\n    \" \" +\r\n    requestUrl;\r\n\r\n  console.log(line);\r\n\r\n  fs.appendFile(\r\n    LOG_FILE,\r\n    line + \"\\n\",\r\n    (err) => {\r\n      if (err) {\r\n        logger.emit(\"error\", err);\r\n      }\r\n    }\r\n  );\r\n});\r\n\r\nlogger.on(\"error\", (err) => {\r\n  console.error(\"Logger error:\", err.message);\r\n});\r\n\r\nmodule.exports = {\r\n  logger,\r\n  LOG_FILE\r\n};\r\n"
+        },
+        {
+          "filename": "package.json",
+          "name": "package.json",
+          "ext": "json",
+          "sizeBytes": 263,
+          "lines": 13,
+          "content": "{\n  \"name\": \"lab-08-integrated-server\",\n  \"version\": \"1.0.0\",\n  \"description\": \"CS403NOD Lab 08 Integrated Node.js Server by Bhaskar Mall\",\n  \"main\": \"server.js\",\n  \"scripts\": {\n    \"start\": \"node server.js\"\n  },\n  \"dependencies\": {\n    \"slugify\": \"^1.6.6\"\n  }\n}\n"
+        },
+        {
+          "filename": "README.md",
+          "name": "README.md",
+          "ext": "md",
+          "sizeBytes": 6086,
+          "lines": 118,
+          "content": "# CS403NOD - Lab Assignment 08\n## Integrated Lab Server: All Previous Labs in One Server (Local + Live)\n\n- **Student Name:** Bhaskar Mall\n- **Scholar / Roll Number:** 23145005\n- **Course & Semester:** BCA VII Semester\n- **Subject:** CS403NOD – Node.js Architecture & Backend Development\n- **Department:** Department of Computer Science\n- **Institution:** Dev Sanskriti Vishwavidyalaya (DSVV), Haridwar\n- **Lab Number:** 08\n\n---\n\n## 1. Project Description\nThis project brings all previous Node.js practical labs (Lab 01 to Lab 07) together into a single, cohesive Node.js server without rewriting the original assignments. It directly reuses the existing lab code using `module.exports` and `require()` for HTTP server labs, and executes standalone script labs via Node.js `child_process.execFile()`. It provides source code viewers, live execution endpoints, screenshot previews, request logging via `EventEmitter`, and a live dashboard.\n\n---\n\n## 2. List of Labs Included\n\n| Lab No. | Title | Topic / Concepts | Type | Primary File |\n|---|---|---|---|---|\n| **01** | Simple HTTP Server | `http` module, request routing, headers | Server | `../Lab-01/server.js` |\n| **02** | Student Directory API | JSON response, query parameters (`/students?course=BCA`) | Server | `../Lab-02/server.js` |\n| **03** | Async JS Food Delivery | Promises, async/await delivery simulation | Script | `../Lab-03/food.js` |\n| **04** | Modules and npm | Core modules (`path`, `os`, `url`) & `slugify` | Script | `../Lab-04/app.js` |\n| **05** | Async Food Delivery Tracker | Callbacks, Promises, async/await comparison | Script | `../Lab-05/async-await-version.js` |\n| **06** | File System (fs) | `fs` module, sync & async file operations | Script | `../Lab-06/fs-demo.js` |\n| **07** | EventEmitter | `events` module, custom events & listeners | Script | `../Lab-07/emitter.js` |\n| **08** | Integrated Lab Server | Full portal, logger, dynamic routing, child_process | Server | `server.js` |\n\n---\n\n## 3. Route Table\n\n| Method | Route | Description & Expected Behavior |\n|---|---|---|\n| `GET` | `/` | Portal page (HTML): displays environment status (`local` or `live (Render)`) and all labs with direct links to `/labs/<id>` |\n| `GET` | `/about` | JSON response with project details, student name (`process.env.STUDENT_NAME || 'Bhaskar Mall'`), and total labs count |\n| `GET` | `/health` | JSON response `{ status: 'ok', environment, uptimeSeconds }` (environment is `live (Render)` when `process.env.RENDER` exists) |\n| `GET` | `/labs` | JSON array of all labs from `labs.js` with slugified URL titles generated via the `slugify` package |\n| `GET` | `/labs/:id` | HTML page for a specific lab showing title, topic, run/open link, escaped source code, and screenshots |\n| `GET` | `/labs/:id/run` | Script labs: executes file with `child_process.execFile(process.execPath, [file], { timeout: 5000 })` returning `{ ok, output, error }` |\n| `GET` | `/labs/:id/app/...` | Server labs: strips `/labs/<id>/app` prefix from `req.url` and invokes the exported `handler(req, res)` |\n| `GET` | `/screenshots/<name>` | Safely streams `.png` / `.jpg` images from `public/screenshots` using `fs.createReadStream` and `path.basename` |\n| `GET` | `/api/dashboard` | Uses `Promise.all` to read `logs/server.log` and `public/screenshots/` concurrently, returning `{ labs, screenshots, requestsLogged }` |\n| `*` | Any other route | Returns 404 JSON `{ error: 'Route not found', path }` |\n\n---\n\n## 4. Technologies Used\n- **Node.js Core Modules:** `http`, `fs`, `fs.promises`, `path`, `url`, `events` (`EventEmitter`), `child_process` (`execFile`), `util` (`promisify`)\n- **NPM Package:** `slugify` (for semantic URL slugs in `/labs`)\n- **Hosting Platforms:** Local Node.js runtime, Render (Cloud deployment)\n\n---\n\n## 5. How to Run Locally\n\n```bash\n# Navigate to Lab-08 folder\ncd Lab-08\n\n# Install dependencies (slugify)\nnpm install\n\n# Start the integrated server\nnpm start\n```\n\nOnce running, visit:\n- **Home Portal:** http://localhost:3000/\n- **Health Check:** http://localhost:3000/health\n- **About Info:** http://localhost:3000/about\n- **Labs JSON Registry:** http://localhost:3000/labs\n- **Lab 01 Server:** http://localhost:3000/labs/01/app/\n- **Lab 02 Server (Filtered):** http://localhost:3000/labs/02/app/students?course=BCA\n- **Lab 03 Script Execution:** http://localhost:3000/labs/03/run\n- **Lab 04 Script Execution:** http://localhost:3000/labs/04/run\n- **Lab 06 Script Execution:** http://localhost:3000/labs/06/run\n- **Lab 07 Script Execution:** http://localhost:3000/labs/07/run\n- **Live Dashboard API:** http://localhost:3000/api/dashboard\n- **404 Route Verification:** http://localhost:3000/labs/99\n\n---\n\n## 6. Live Deployment (Render Free Tier)\n- **Deployment Platform:** [Render](https://render.com)\n- **Runtime:** Node.js\n- **Root Directory:** *(leave blank — repository root)*\n- **Build Command:**\n  ```bash\n  for d in */; do if [ -f \"$d/package.json\" ]; then (cd \"$d\" && npm install); fi; done\n  ```\n- **Start Command:**\n  ```bash\n  node NodeJS-lab/Lab-08/server.js\n  ```\n  *(or `node Lab-08/server.js` if deploying from NodeJS-lab directory)*\n- **Environment Variables:**\n  - `STUDENT_NAME`: `Bhaskar Mall`\n  - `RENDER`: `true`\n\n---\n\n## 7. Screenshots\nAll local and live screenshots are stored in `public/screenshots/`:\n- `lab01-local.png`, `lab02-local.png`, `lab03-local.png`, `lab04-local.png`, `lab05-local.png`, `lab06-local.png`, `lab07-local.png`, `lab08-local.png`\n\n---\n\n## 8. What I Learned\nThrough this lab assignment, I learned:\n1. How to architecturalize a monolithic integrated server that unifies decoupled modules without modifying legacy source implementations.\n2. How to leverage `EventEmitter` for non-blocking asynchronous request logging to disk while protecting the runtime from fatal crashes with defensive error handling.\n3. How to execute standalone scripts safely using `child_process.execFile` with explicit execution timeouts and buffer management.\n4. How to seamlessly handle URL prefix rewrites and delegate HTTP requests dynamically between multiple exported request handlers.\n"
+        },
+        {
+          "filename": "server.js",
+          "name": "server.js",
+          "ext": "js",
+          "sizeBytes": 22002,
+          "lines": 719,
+          "content": "// Lab 08 - Integrated Lab Server (Local + Live)\n// Department of Computer Science, Dev Sanskriti Vishwavidyalaya (DSVV)\n// CS403NOD – Node.js | BCA VII Semester | Lab No.: 08\n// Student: Bhaskar Mall | Scholar No: 23145005\n\nconst http = require(\"http\");\nconst url = require(\"url\");\nconst path = require(\"path\");\nconst fs = require(\"fs\");\nconst { execFile } = require(\"child_process\");\nconst { promisify } = require(\"util\");\nconst slugify = require(\"slugify\");\n\nconst labs = require(\"./labs\");\nconst { logger, LOG_FILE } = require(\"./modules/logger\");\n\nconst execFileAsync = promisify(execFile);\n\nconst PORT = process.env.PORT || 3000;\nconst ROOT = __dirname;\n\nconst ENVIRONMENT = process.env.RENDER ? \"live (Render)\" : \"local\";\nconst STUDENT_NAME = process.env.STUDENT_NAME || \"Bhaskar Mall\";\n\n// Helper: send JSON response\nfunction send(res, status, data) {\n  res.statusCode = status;\n  res.setHeader(\"Content-Type\", \"application/json; charset=utf-8\");\n  res.end(JSON.stringify(data, null, 2));\n}\n\n// Helper: send HTML response\nfunction sendHtml(res, status, html) {\n  res.statusCode = status;\n  res.setHeader(\"Content-Type\", \"text/html; charset=utf-8\");\n  res.end(html);\n}\n\n// Helper: escape HTML entities\nfunction escapeHtml(str) {\n  return String(str || \"\")\n    .replace(/&/g, \"&amp;\")\n    .replace(/</g, \"&lt;\")\n    .replace(/>/g, \"&gt;\")\n    .replace(/\"/g, \"&quot;\")\n    .replace(/'/g, \"&#039;\");\n}\n\nfunction getLab(id) {\n  const normalizedId = String(id).padStart(2, \"0\");\n  return labs.find((lab) => lab.id === id || lab.id === normalizedId);\n}\n\nfunction resolveLabFile(lab) {\n  return path.resolve(ROOT, lab.file);\n}\n\nfunction htmlTemplate(title, body) {\n  return `<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>${escapeHtml(title)} — DSVV Node.js Lab Server</title>\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n  <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap\" rel=\"stylesheet\">\n  <style>\n    :root {\n      --bg: #090e17;\n      --card-bg: #0f172a;\n      --card-border: #1e293b;\n      --text: #f1f5f9;\n      --text-muted: #94a3b8;\n      --accent-cyan: #38bdf8;\n      --accent-purple: #a855f7;\n      --accent-emerald: #10b981;\n      --accent-amber: #f59e0b;\n      --code-bg: #030712;\n    }\n    * { box-sizing: border-box; margin: 0; padding: 0; }\n    body {\n      background-color: var(--bg);\n      color: var(--text);\n      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n      line-height: 1.6;\n      padding: 24px;\n    }\n    .wrapper {\n      max-width: 1100px;\n      margin: 0 auto;\n    }\n    header.header {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      flex-wrap: wrap;\n      gap: 16px;\n      padding-bottom: 20px;\n      border-bottom: 1px solid var(--card-border);\n      margin-bottom: 28px;\n    }\n    .brand-section {\n      display: flex;\n      align-items: center;\n      gap: 14px;\n    }\n    .brand-logo {\n      height: 48px;\n      max-width: 180px;\n      object-fit: contain;\n      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.25));\n    }\n    .brand-text h1 {\n      font-size: 20px;\n      font-weight: 700;\n      color: var(--text);\n      letter-spacing: -0.01em;\n    }\n    .brand-text p {\n      font-size: 13px;\n      color: var(--text-muted);\n    }\n    nav.nav-links {\n      display: flex;\n      gap: 10px;\n      flex-wrap: wrap;\n    }\n    nav.nav-links a {\n      color: var(--text-muted);\n      text-decoration: none;\n      font-size: 13px;\n      font-weight: 600;\n      padding: 7px 14px;\n      border-radius: 8px;\n      background: rgba(255,255,255,0.03);\n      border: 1px solid var(--card-border);\n      transition: all 0.2s ease;\n    }\n    nav.nav-links a:hover {\n      color: var(--accent-cyan);\n      border-color: var(--accent-cyan);\n      background: rgba(56, 189, 248, 0.08);\n    }\n    .badge {\n      display: inline-flex;\n      align-items: center;\n      gap: 6px;\n      padding: 4px 10px;\n      border-radius: 9999px;\n      font-size: 12px;\n      font-weight: 600;\n    }\n    .badge-live {\n      background: rgba(16, 185, 129, 0.15);\n      color: #34d399;\n      border: 1px solid rgba(16, 185, 129, 0.3);\n    }\n    .badge-local {\n      background: rgba(56, 189, 248, 0.15);\n      color: #7dd3fc;\n      border: 1px solid rgba(56, 189, 248, 0.3);\n    }\n    .card {\n      background: var(--card-bg);\n      border: 1px solid var(--card-border);\n      border-radius: 14px;\n      padding: 24px;\n      margin-bottom: 24px;\n      box-shadow: 0 4px 20px rgba(0,0,0,0.25);\n    }\n    .card h2 {\n      font-size: 18px;\n      font-weight: 700;\n      margin-bottom: 12px;\n      color: var(--text);\n    }\n    .labs-grid {\n      display: grid;\n      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n      gap: 16px;\n      margin-top: 16px;\n    }\n    .lab-item {\n      background: rgba(255, 255, 255, 0.02);\n      border: 1px solid var(--card-border);\n      border-radius: 12px;\n      padding: 18px;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n      transition: border-color 0.2s, transform 0.2s;\n    }\n    .lab-item:hover {\n      border-color: var(--accent-cyan);\n      transform: translateY(-2px);\n    }\n    .lab-item-header {\n      display: flex;\n      justify-content: space-between;\n      align-items: flex-start;\n      margin-bottom: 10px;\n    }\n    .lab-num {\n      font-size: 12px;\n      font-weight: 800;\n      letter-spacing: 0.05em;\n      color: var(--accent-cyan);\n    }\n    .lab-title {\n      font-size: 16px;\n      font-weight: 700;\n      margin-bottom: 6px;\n      color: #ffffff;\n    }\n    .lab-topic {\n      font-size: 13px;\n      color: var(--text-muted);\n      margin-bottom: 14px;\n    }\n    .btn {\n      display: inline-flex;\n      align-items: center;\n      gap: 6px;\n      font-size: 12px;\n      font-weight: 600;\n      text-decoration: none;\n      padding: 7px 12px;\n      border-radius: 7px;\n      cursor: pointer;\n      transition: all 0.2s;\n    }\n    .btn-primary {\n      background: var(--accent-cyan);\n      color: #041226;\n    }\n    .btn-outline {\n      background: transparent;\n      color: var(--text);\n      border: 1px solid var(--card-border);\n    }\n    .btn-outline:hover {\n      border-color: var(--accent-cyan);\n      color: var(--accent-cyan);\n    }\n    pre {\n      background: var(--code-bg);\n      border: 1px solid var(--card-border);\n      border-radius: 10px;\n      padding: 16px;\n      overflow-x: auto;\n      font-family: 'JetBrains Mono', Consolas, monospace;\n      font-size: 13px;\n      line-height: 1.5;\n      color: #e2e8f0;\n      margin: 14px 0;\n    }\n    img.screenshot {\n      max-width: 100%;\n      height: auto;\n      border-radius: 10px;\n      border: 1px solid var(--card-border);\n      margin: 12px 0 20px;\n    }\n    footer {\n      text-align: center;\n      padding: 30px 0;\n      font-size: 12px;\n      color: var(--text-muted);\n      border-top: 1px solid var(--card-border);\n      margin-top: 40px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"wrapper\">\n    <header class=\"header\">\n      <div class=\"brand-section\">\n        <img src=\"/dsvvlogo.png\" alt=\"Dev Sanskriti Vishwavidyalaya Logo\" class=\"brand-logo\" onerror=\"this.style.display='none'\">\n        <div class=\"brand-text\">\n          <h1>CS403NOD – Lab 08: Integrated Lab Server</h1>\n          <p>Dev Sanskriti Vishwavidyalaya · BCA VII Semester · ${escapeHtml(STUDENT_NAME)}</p>\n        </div>\n      </div>\n      <nav class=\"nav-links\">\n        <a href=\"/\">Home</a>\n        <a href=\"/labs\">JSON Registry (/labs)</a>\n        <a href=\"/health\">Health Check</a>\n        <a href=\"/about\">About</a>\n        <a href=\"/api/dashboard\">Dashboard API</a>\n      </nav>\n    </header>\n\n    ${body}\n\n    <footer>\n      Department of Computer Science · Dev Sanskriti Vishwavidyalaya (DSVV) · Bhaskar Mall (23145005)\n    </footer>\n  </div>\n</body>\n</html>`;\n}\n\n// Handler for GET /labs/:id\nasync function handleLabPage(res, lab) {\n  const filePath = resolveLabFile(lab);\n  let source = \"\";\n\n  try {\n    source = await fs.promises.readFile(filePath, \"utf8\");\n  } catch (err) {\n    source = `// Error loading file: ${err.message}\\n// Target path: ${lab.file}`;\n  }\n\n  let screenshots = [];\n  try {\n    const shotDir = path.join(ROOT, \"public\", \"screenshots\");\n    const shotFiles = await fs.promises.readdir(shotDir);\n    const prefix = `lab${lab.id}`;\n    screenshots = shotFiles.filter(\n      (name) => name.toLowerCase().startsWith(prefix.toLowerCase()) && /\\.(png|jpg)$/i.test(name)\n    );\n  } catch (err) {\n    screenshots = [];\n  }\n\n  let shotHtml = \"\";\n  if (screenshots.length === 0) {\n    shotHtml = '<p style=\"color:var(--text-muted); font-size:14px; margin-top:8px;\">No screenshots found for this lab in public/screenshots/.</p>';\n  } else {\n    shotHtml = screenshots\n      .map(\n        (name) => `\n        <div style=\"margin-top:14px;\">\n          <p style=\"font-size:12px; font-weight:600; color:var(--text-muted); margin-bottom:4px;\">${escapeHtml(name)}</p>\n          <img src=\"/screenshots/${encodeURIComponent(name)}\" alt=\"${escapeHtml(name)}\" class=\"screenshot\">\n        </div>`\n      )\n      .join(\"\");\n  }\n\n  let runUrl = \"\";\n  let runLabel = \"\";\n  if (lab.type === \"script\") {\n    runUrl = `/labs/${lab.id}/run`;\n    runLabel = \"Execute Script & View JSON Output\";\n  } else {\n    runUrl = `/labs/${lab.id}/app${lab.try || \"/\"}`;\n    runLabel = `Launch Server Route (${lab.try || \"/\"})`;\n  }\n\n  const body = `\n    <div class=\"card\">\n      <div style=\"display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;\">\n        <div>\n          <span class=\"badge ${lab.type === \"server\" ? \"badge-local\" : \"badge-live\"}\">\n            ${lab.type.toUpperCase()} LAB\n          </span>\n          <h2 style=\"font-size:24px; margin:8px 0 4px;\">Lab ${escapeHtml(lab.id)}: ${escapeHtml(lab.title)}</h2>\n          <p style=\"color:var(--text-muted); font-size:14px;\"><strong>Topic:</strong> ${escapeHtml(lab.topic)}</p>\n        </div>\n        <div>\n          <a href=\"${runUrl}\" target=\"_blank\" class=\"btn btn-primary\" style=\"font-size:13px; padding:10px 16px;\">\n            ${runLabel} &rarr;\n          </a>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"card\">\n      <h2>Source Code (${escapeHtml(path.basename(lab.file))})</h2>\n      <pre><code>${escapeHtml(source)}</code></pre>\n    </div>\n\n    <div class=\"card\">\n      <h2>Output Screenshots</h2>\n      ${shotHtml}\n    </div>\n  `;\n\n  sendHtml(res, 200, htmlTemplate(`Lab ${lab.id} - ${lab.title}`, body));\n}\n\n// Handler for GET /labs/:id/run (Script labs)\nasync function handleRun(res, lab) {\n  if (lab.type !== \"script\") {\n    return send(res, 400, {\n      error: \"This is a server lab. Use /labs/:id/app/... instead.\",\n      labId: lab.id,\n      tryUrl: `/labs/${lab.id}/app${lab.try || \"/\"}`\n    });\n  }\n\n  const labFilePath = resolveLabFile(lab);\n\n  try {\n    const result = await execFileAsync(\n      process.execPath,\n      [labFilePath],\n      { timeout: 5000, maxBuffer: 1024 * 1024 }\n    );\n\n    return send(res, 200, {\n      ok: true,\n      labId: lab.id,\n      title: lab.title,\n      file: lab.file,\n      output: result.stdout,\n      error: result.stderr || \"\"\n    });\n  } catch (error) {\n    return send(res, 200, {\n      ok: false,\n      labId: lab.id,\n      title: lab.title,\n      file: lab.file,\n      output: error.stdout || \"\",\n      error: error.stderr || error.message\n    });\n  }\n}\n\n// Handler for GET /labs/:id/app/... (Server labs)\nasync function handleServerLab(req, res, lab, pathname) {\n  if (lab.type !== \"server\") {\n    return send(res, 400, {\n      error: \"This is a script lab. Use /labs/:id/run instead.\",\n      labId: lab.id,\n      runUrl: `/labs/${lab.id}/run`\n    });\n  }\n\n  const prefix = `/labs/${lab.id}/app`;\n  const remainder = pathname.slice(prefix.length) || \"/\";\n  const queryIndex = req.url.indexOf(\"?\");\n  const query = queryIndex >= 0 ? req.url.slice(queryIndex) : \"\";\n\n  req.url = remainder + query;\n\n  const labFilePath = resolveLabFile(lab);\n\n  let handler;\n  try {\n    // Clear module cache to allow hot updates if modified\n    delete require.cache[require.resolve(labFilePath)];\n    handler = require(labFilePath);\n  } catch (err) {\n    return send(res, 500, {\n      error: \"Could not load lab handler\",\n      file: lab.file,\n      message: err.message\n    });\n  }\n\n  if (typeof handler !== \"function\") {\n    return send(res, 500, {\n      error: \"Lab handler is not a function. In the old lab, export the handler function (module.exports = handler).\",\n      file: lab.file\n    });\n  }\n\n  return handler(req, res);\n}\n\n// Main HTTP request handler\nasync function handler(req, res) {\n  // Task 4 & 5: Emit 'request' event on logger for every request\n  logger.emit(\"request\", req.method, req.url);\n\n  try {\n    const parsed = url.parse(req.url, true);\n    const pathname = parsed.pathname;\n\n    // Direct logo route so template and visitors can load DSVV branding\n    if (pathname === \"/dsvvlogo.png\" || pathname === \"/dsvvlogo.ong\") {\n      const candidates = [\n        path.join(ROOT, \"public\", \"dsvvlogo.png\"),\n        path.join(ROOT, \"..\", \"dsvvlogo.png\"),\n        path.join(ROOT, \"..\", \"NodeJS-lab\", \"dsvvlogo.png\")\n      ];\n      for (const p of candidates) {\n        if (fs.existsSync(p)) {\n          res.writeHead(200, { \"Content-Type\": \"image/png\" });\n          return fs.createReadStream(p).pipe(res);\n        }\n      }\n    }\n\n    if (req.method !== \"GET\") {\n      return send(res, 405, { error: \"Method not allowed. Only GET is supported.\" });\n    }\n\n    // GET / — Portal page (HTML)\n    if (pathname === \"/\") {\n      const isLive = Boolean(process.env.RENDER);\n      const envBadge = isLive\n        ? `<span class=\"badge badge-live\">&#9679; live (Render)</span>`\n        : `<span class=\"badge badge-local\">&#9679; local</span>`;\n\n      const labCards = labs\n        .map((lab) => {\n          const runUrl =\n            lab.type === \"script\"\n              ? `/labs/${lab.id}/run`\n              : `/labs/${lab.id}/app${lab.try || \"/\"}`;\n          const typeBadge =\n            lab.type === \"server\"\n              ? `<span class=\"badge badge-local\">SERVER</span>`\n              : `<span class=\"badge badge-live\">SCRIPT</span>`;\n\n          return `\n          <div class=\"lab-item\">\n            <div>\n              <div class=\"lab-item-header\">\n                <span class=\"lab-num\">LAB ${escapeHtml(lab.id)}</span>\n                ${typeBadge}\n              </div>\n              <h3 class=\"lab-title\">${escapeHtml(lab.title)}</h3>\n              <p class=\"lab-topic\"><strong>Topic:</strong> ${escapeHtml(lab.topic)}</p>\n            </div>\n            <div style=\"display:flex; gap:8px; margin-top:12px;\">\n              <a href=\"/labs/${lab.id}\" class=\"btn btn-outline\" style=\"flex:1; text-align:center;\">View Code &amp; Shots</a>\n              <a href=\"${runUrl}\" target=\"_blank\" class=\"btn btn-primary\" style=\"flex:1; text-align:center;\">\n                ${lab.type === \"server\" ? \"Open Server &rarr;\" : \"Run Script &rarr;\"}\n              </a>\n            </div>\n          </div>`;\n        })\n        .join(\"\");\n\n      const body = `\n        <div class=\"card\" style=\"background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.7)); border-color:rgba(56,189,248,0.2);\">\n          <div style=\"display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;\">\n            <div>\n              <div style=\"font-size:12px; color:var(--accent-cyan); font-weight:800; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:4px;\">\n                Node.js Lab Integration Portal\n              </div>\n              <h2 style=\"font-size:26px; margin:0 0 6px;\">All Laboratory Practicals in ONE Server</h2>\n              <p style=\"color:var(--text-muted); font-size:14px; max-width:650px;\">\n                Reusing existing lab assignments (Lab 01 to Lab 07) via <code>module.exports</code> and <code>child_process</code>.\n                Fully compliant with Lab Assignment 08 specifications.\n              </p>\n            </div>\n            <div style=\"text-align:right;\">\n              <div style=\"margin-bottom:6px;\">${envBadge}</div>\n              <div style=\"font-size:12px; color:var(--text-muted);\">Uptime: <strong>${Math.floor(process.uptime())}s</strong></div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"card\">\n          <div style=\"display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;\">\n            <h2>Integrated Practicals Registry (${labs.length} Labs)</h2>\n            <a href=\"/labs\" target=\"_blank\" style=\"font-size:12px; color:var(--accent-cyan); text-decoration:none; font-weight:600;\">View JSON Schema &rarr;</a>\n          </div>\n          <div class=\"labs-grid\">\n            ${labCards}\n          </div>\n        </div>\n\n        <div class=\"card\">\n          <h2>Standard Evaluation Endpoints (Task 6 Verification)</h2>\n          <div style=\"display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px; margin-top:10px;\">\n            <a href=\"/health\" target=\"_blank\" class=\"btn btn-outline\">GET /health</a>\n            <a href=\"/about\" target=\"_blank\" class=\"btn btn-outline\">GET /about</a>\n            <a href=\"/labs\" target=\"_blank\" class=\"btn btn-outline\">GET /labs</a>\n            <a href=\"/api/dashboard\" target=\"_blank\" class=\"btn btn-outline\">GET /api/dashboard</a>\n            <a href=\"/labs/01/app/\" target=\"_blank\" class=\"btn btn-outline\">GET /labs/01/app/</a>\n            <a href=\"/labs/02/app/students?course=BCA\" target=\"_blank\" class=\"btn btn-outline\">GET /labs/02/app/students?course=BCA</a>\n            <a href=\"/labs/03/run\" target=\"_blank\" class=\"btn btn-outline\">GET /labs/03/run</a>\n            <a href=\"/labs/04/run\" target=\"_blank\" class=\"btn btn-outline\">GET /labs/04/run</a>\n            <a href=\"/labs/06/run\" target=\"_blank\" class=\"btn btn-outline\">GET /labs/06/run</a>\n            <a href=\"/labs/07/run\" target=\"_blank\" class=\"btn btn-outline\">GET /labs/07/run</a>\n            <a href=\"/labs/99\" target=\"_blank\" class=\"btn btn-outline\" style=\"color:var(--accent-amber);\">GET /labs/99 (404 Test)</a>\n          </div>\n        </div>\n      `;\n\n      return sendHtml(res, 200, htmlTemplate(\"Lab 08 - Integrated Lab Server\", body));\n    }\n\n    // GET /about\n    if (pathname === \"/about\") {\n      return send(res, 200, {\n        projectName: \"Lab 08 - Integrated Lab Server\",\n        name: STUDENT_NAME,\n        scholarNumber: \"23145005\",\n        course: \"BCA (VII Semester)\",\n        institution: \"Dev Sanskriti Vishwavidyalaya (DSVV)\",\n        labs: labs.length\n      });\n    }\n\n    // GET /health\n    if (pathname === \"/health\") {\n      return send(res, 200, {\n        status: \"ok\",\n        environment: ENVIRONMENT,\n        uptimeSeconds: Math.floor(process.uptime())\n      });\n    }\n\n    // GET /labs\n    if (pathname === \"/labs\") {\n      const labsWithSlug = labs.map((l) => ({\n        ...l,\n        slug: slugify(l.title, { lower: true, strict: true })\n      }));\n      return send(res, 200, labsWithSlug);\n    }\n\n    // Match /labs/:id or /labs/:id/run or /labs/:id/app/...\n    const labMatch = pathname.match(/^\\/labs\\/([^/]+)(?:\\/(.*))?$/);\n    if (labMatch) {\n      const id = labMatch[1];\n      const tail = labMatch[2] || \"\";\n      const lab = getLab(id);\n\n      if (!lab) {\n        return send(res, 404, {\n          error: \"Lab not found\",\n          id: id\n        });\n      }\n\n      // GET /labs/:id\n      if (!tail) {\n        return handleLabPage(res, lab);\n      }\n\n      // GET /labs/:id/run\n      if (tail === \"run\") {\n        return handleRun(res, lab);\n      }\n\n      // GET /labs/:id/app/...\n      if (tail === \"app\" || tail.startsWith(\"app/\")) {\n        return handleServerLab(req, res, lab, pathname);\n      }\n    }\n\n    // GET /screenshots/<name>\n    const shotMatch = pathname.match(/^\\/screenshots\\/(.+)$/);\n    if (shotMatch) {\n      const filename = path.basename(shotMatch[1]);\n\n      if (!/\\.(png|jpg|jpeg)$/i.test(filename)) {\n        return send(res, 400, {\n          error: \"Only .png and .jpg files are allowed.\"\n        });\n      }\n\n      const filePath = path.join(ROOT, \"public\", \"screenshots\", filename);\n\n      try {\n        await fs.promises.access(filePath);\n      } catch (err) {\n        return send(res, 404, {\n          error: \"Screenshot not found\",\n          name: filename\n        });\n      }\n\n      res.statusCode = 200;\n      res.setHeader(\n        \"Content-Type\",\n        filename.toLowerCase().endsWith(\".png\") ? \"image/png\" : \"image/jpeg\"\n      );\n      return fs.createReadStream(filePath).pipe(res);\n    }\n\n    // GET /api/dashboard\n    if (pathname === \"/api/dashboard\") {\n      const [logContent, shotFiles] = await Promise.all([\n        fs.promises.readFile(LOG_FILE, \"utf8\").catch(() => \"\"),\n        fs.promises.readdir(path.join(ROOT, \"public\", \"screenshots\")).catch(() => [])\n      ]);\n\n      const screenshots = shotFiles.filter((name) => /\\.(png|jpg|jpeg)$/i.test(name));\n      const requestsLogged = logContent.trim()\n        ? logContent.trim().split(\"\\n\").length\n        : 0;\n\n      return send(res, 200, {\n        labs: labs,\n        screenshots: screenshots,\n        requestsLogged: requestsLogged\n      });\n    }\n\n    // 404 Route Not Found\n    return send(res, 404, {\n      error: \"Route not found\",\n      path: pathname\n    });\n\n  } catch (error) {\n    console.error(\"SERVER ERROR:\", error);\n    return send(res, 500, {\n      error: \"Internal Server Error\",\n      message: error.message\n    });\n  }\n}\n\nconst server = http.createServer(handler);\n\nif (require.main === module) {\n  server.listen(PORT, \"0.0.0.0\", () => {\n    console.log(`Integrated Lab Server running on port ${PORT}`);\n    console.log(`Environment: ${ENVIRONMENT}`);\n  });\n}\n\nmodule.exports = {\n  handler,\n  server\n};\n"
+        }
+      ],
+      "screenshots": [
+        {
+          "filename": "dsvvlogo.png",
+          "path": "Lab-08/public/dsvvlogo.png",
+          "caption": "Dsvvlogo"
+        },
+        {
+          "filename": "lab01-local.png",
+          "path": "Lab-08/public/screenshots/lab01-local.png",
+          "caption": "Lab01 Local"
+        },
+        {
+          "filename": "lab02-local.png",
+          "path": "Lab-08/public/screenshots/lab02-local.png",
+          "caption": "Lab02 Local"
+        },
+        {
+          "filename": "lab03-local.png",
+          "path": "Lab-08/public/screenshots/lab03-local.png",
+          "caption": "Lab03 Local"
+        },
+        {
+          "filename": "lab04-local.png",
+          "path": "Lab-08/public/screenshots/lab04-local.png",
+          "caption": "Lab04 Local"
+        },
+        {
+          "filename": "lab05-local.png",
+          "path": "Lab-08/public/screenshots/lab05-local.png",
+          "caption": "Lab05 Local"
+        },
+        {
+          "filename": "lab06-local.png",
+          "path": "Lab-08/public/screenshots/lab06-local.png",
+          "caption": "Lab06 Local"
+        },
+        {
+          "filename": "lab07-local.png",
+          "path": "Lab-08/public/screenshots/lab07-local.png",
+          "caption": "Lab07 Local"
+        },
+        {
+          "filename": "lab08-local.png",
+          "path": "Lab-08/public/screenshots/lab08-local.png",
+          "caption": "Lab08 Local"
+        }
+      ],
+      "totalLines": 951
     }
   ]
 }

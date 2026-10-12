@@ -14,5 +14,8 @@
     "lab",
     "bca"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "slugify": "^1.6.9"
+  }
 }

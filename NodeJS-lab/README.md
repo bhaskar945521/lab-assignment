@@ -22,48 +22,21 @@ This website showcases real source code, HTTP web servers, REST APIs, asynchrono
 
 | Lab | Title | Key Technologies & Concepts | Entry Point |
 |---|---|---|---|
-| **Lab 01** | Node.js Setup, Variables & Data Types | Node.js, V8 Engine, typeof Data Types, Browser vs Node.js | `node app.js` |
-| **Lab 02** | HTTP Web Server & Custom Routing | HTTP Module, Routing (`/about`, `/profile`), Event Loop, libuv | `node server.js` |
-| **Lab 03** | Multi-Route Student Information Server | HTTP Server, 12 Student Database Records, Dynamic Search by ID/Name | `node student-server.js` |
-| **Lab 04** | Advanced Student REST API | RESTful API, Query Filters (`minMarks`, `sort`, `order`), URL Module | `node advanced-server.js` |
+| **Lab 01** | Node.js Setup, Variables & Simple HTTP Server | Node.js, V8 Engine, typeof Data Types, HTTP Module | `node app.js` / `node server.js` |
+| **Lab 02** | HTTP Web Server & Custom Routing | HTTP Module, Routing (`/about`, `/profile`, `/students`), Event Loop | `node server.js` |
+| **Lab 03** | Multi-Route Student Server & Async Food Delivery | HTTP Server, 12 Student Database Records, Promises | `node student-server.js` / `node food.js` |
+| **Lab 04** | Advanced Student REST API & Node.js Modules | RESTful API, Query Filters (`course`, `minMarks`, `sort`), Core Modules | `node advanced-server.js` / `node app.js` |
 | **Lab 05** | Asynchronous JS & Food Delivery Tracker | Callbacks, Promises, Promise Chaining, Async/Await, `Promise.all()` | `node async-await-version.js` |
-| **Lab 06** | File System (`fs`) Module & CLI Notes App | `fs.readFile`, `fs.writeFile`, `fs.unlink`, `fs.promises`, CLI Notes App | `node add-note.js` |
+| **Lab 06** | File System (`fs`) Module & CLI Notes App | `fs.readFile`, `fs.writeFile`, `fs.unlink`, `fs.promises`, CLI Notes App | `node fs-demo.js` / `node add-note.js` |
+| **Lab 07** | Events & EventEmitter Architecture | `events` Module, Custom Events, Multiple Listeners, Order System | `node emitter.js` |
+| **Lab 08** | Integrated Lab Server (Local + Live) | Monolithic Server, Handler Delegation, Child Process Execution, Logger | `node server.js` |
 
 ---
 
-## Automated Build & Netlify Deployment
-
-This portfolio is built to be deployed **statically on Netlify** without requiring a live Node.js/Express backend server or MongoDB database.
-
-### Build Script (`scripts/generate-labs.js`)
-When deployed or built locally, `npm run build` runs `scripts/generate-labs.js`. This script automatically:
-1. Scans all `Lab-01`, `Lab-02`, ... `Lab-XX` directories.
-2. Extracts code metadata, file contents, concepts, and image screenshots.
-3. Generates `labs.json`.
-4. Prepares the static portfolio site for Netlify.
-
-### Netlify Configuration (`netlify.toml`)
-```toml
-[build]
-  command = "npm run build"
-  publish = "."
-```
-
----
-
-## Adding Future Labs (Workflow)
-
-When creating future lab assignments (e.g. `Lab-07`, `Lab-08`):
-
-1. Create a new directory named `Lab-07/` inside `NodeJS-lab/`.
-2. Add your JavaScript files, `README.md` (template available in `Lab-Template/`), and terminal output images in `screenshots/`.
-3. Commit and push to GitHub:
-   ```bash
-   git add .
-   git commit -m "Add Lab 07"
-   git push
-   ```
-4. **Netlify automatically triggers a new deployment**, runs `npm run build`, and `Lab-07` immediately appears on the live portfolio homepage with full search, syntax highlighting, and screenshot lightbox support!
+## Automated Build & Deployment
+This portfolio is built to be deployed seamlessly:
+- **Netlify**: Builds via `npm run build` (`scripts/generate-labs.js`) and serves the static portfolio.
+- **Render / Local**: `Lab-08/server.js` unifies all previous labs under one live port.
 
 ---
 

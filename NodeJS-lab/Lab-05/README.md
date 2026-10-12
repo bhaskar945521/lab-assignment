@@ -5,8 +5,8 @@ Simulating a Food Delivery Tracker
 
 ## Student Details
 
-- **Name:** Bhaskar Mall
-- **Scholar Number:** 23145005
+- **Name:** Rishabh Khatiwada
+- **Scholar Number:** 23145018
 - **Course:** BCA VII Semester
 - **Subject:** CS403NOD - Node.js
 - **Lab:** 05

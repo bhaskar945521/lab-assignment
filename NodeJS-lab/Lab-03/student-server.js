@@ -127,7 +127,7 @@ const students = [
 
 
 // Create the server
-const server = http.createServer((req, res) => {
+function handler(req, res) {
 
     // Show ID and Name on the home page
     if (req.url === "/") {
@@ -187,14 +187,19 @@ Hostel Address: ${student.hostel}
             res.end("Student Not Found");
         }
     }
-});
+}
 
+module.exports = handler;
 
 // Set the port number
 const PORT = 3000;
 
-// Start the server
-server.listen(PORT, () => {
-    console.log(`Node.js server is running on http://localhost:${PORT}`);
-});
+// Start the server only when run directly
+if (require.main === module) {
+    const server = http.createServer(handler);
+    server.listen(PORT, () => {
+        console.log(`Node.js server is running on http://localhost:${PORT}`);
+    });
+}
+
 
