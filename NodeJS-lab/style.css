@@ -1481,33 +1481,73 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS — Full Mobile-First System
    ========================================================================== */
 
+/* ── 1024px Tablet Landscape ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-container {
+    padding: 14px 20px;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
+
+  .hero-card-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .workflow-box {
+    padding: 32px 28px;
+  }
+
+  .labs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .modal-container {
+    max-width: 95vw;
   }
 }
 
+/* ── 768px Tablet Portrait ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
+  /* --- Navbar --- */
+  .nav-container {
+    padding: 12px 16px;
+  }
+
+  /* Hide desktop nav links behind hamburger */
   .nav-menu {
     position: fixed;
-    top: 73px;
+    top: 65px;
     left: 0;
     right: 0;
     background: var(--bg-surface);
-    flex-direction: column;
-    padding: 24px;
     border-bottom: 1px solid var(--border-color);
-    transform: translateY(-100%);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    gap: 4px;
+    transform: translateY(-110%);
     opacity: 0;
     pointer-events: none;
-    transition: all var(--transition-normal);
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+    z-index: 99;
+    box-shadow: var(--shadow-md);
   }
 
   .nav-menu.active {
@@ -1516,19 +1556,348 @@ body {
     pointer-events: auto;
   }
 
+  .nav-link {
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(56, 189, 248, 0.08);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  /* Show hamburger */
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+  }
+
+  /* Hide GitHub btn text, show icon-only */
+  .btn-github span {
+    display: none;
+  }
+
+  /* College logo smaller */
+  .college-logo {
+    height: 32px;
+    max-width: 120px;
+  }
+
+  .brand-text .name {
+    font-size: 14px;
+  }
+
+  .brand-text .subtitle {
+    font-size: 11px;
+  }
+
+  /* --- Hero --- */
+  .hero-section {
+    padding: 52px 0 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .hero-lead {
+    font-size: 15px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Stats --- */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  /* --- Labs --- */
+  .labs-section {
+    padding: 32px 0 60px;
   }
 
   .labs-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .toolbar-card {
+    padding: 14px;
+  }
+
+  /* Filter pills: scrollable row instead of wrapping */
+  .filter-group {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .filter-pills {
+    flex-wrap: nowrap;
+  }
+
+  /* --- Technologies --- */
+  .tech-section {
+    padding: 44px 0;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* --- Workflow --- */
+  .workflow-section {
+    padding: 52px 0;
+  }
+
+  .workflow-box {
+    padding: 24px 18px;
+  }
+
+  .steps-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* --- About --- */
+  .about-card {
+    padding: 24px 18px;
+  }
+
+  /* --- Modal --- */
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
   }
 
   .modal-container {
-    max-height: 95vh;
+    max-width: 100%;
+    max-height: 92vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .modal-header {
+    padding: 18px 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 19px;
+  }
+
+  .modal-tabs {
+    padding: 0 12px;
+  }
+
+  .tab-btn {
+    padding: 12px 12px;
+    font-size: 13px;
   }
 
   .modal-body {
-    padding: 20px;
+    padding: 18px;
+  }
+
+  /* Endpoint list stack on mobile */
+  .endpoint-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* --- Detail grid compress --- */
+  .detail-grid-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* --- Screenshots gallery --- */
+  .screenshots-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 28px 16px;
+  }
+}
+
+/* ── 480px Small Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  /* Navbar brand: hide divider & shrink */
+  .brand-divider {
+    display: none;
+  }
+
+  .college-logo-wrap {
+    padding: 3px 7px;
+  }
+
+  .college-logo {
+    height: 28px;
+    max-width: 90px;
+  }
+
+  .brand-text .subtitle {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 40px 0 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+
+  .hero-bg-glow {
+    width: 100%;
+    height: 280px;
+  }
+
+  .student-card {
+    padding: 20px 16px;
+  }
+
+  /* Stats: single column on tiny screens */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 12px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  /* Lab card */
+  .lab-card {
+    padding: 18px 14px;
+  }
+
+  .lab-card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .lab-card-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 22px;
+  }
+
+  /* Workflow */
+  .workflow-box {
+    padding: 18px 14px;
+  }
+
+  .terminal-preview pre {
+    font-size: 11px;
+    padding: 14px;
+  }
+
+  /* About */
+  .about-card {
+    padding: 18px 14px;
+  }
+
+  .student-info-tags {
+    gap: 8px;
+  }
+
+  /* Modal full-screen on tiny phones */
+  .modal-container {
+    max-height: 96vh;
+  }
+
+  .modal-header {
+    padding: 14px 14px;
+  }
+
+  .modal-body {
+    padding: 14px;
+  }
+
+  .detail-grid-info {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 13px;
+    padding: 22px 14px;
+  }
+}
+
+/* ── 360px Very small phones (Galaxy S / iPhone SE) ───────────────────── */
+@media (max-width: 360px) {
+  .college-logo {
+    display: none;
+  }
+
+  .college-logo-wrap {
+    display: none;
+  }
+
+  .brand-divider {
+    display: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .btn {
+    padding: 9px 14px;
+    font-size: 13px;
   }
 }

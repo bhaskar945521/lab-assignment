@@ -63,10 +63,40 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile nav toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
+  const navbar = document.querySelector('.navbar');
+
+  function setNavMenuOffset() {
+    if (navbar) {
+      navMenu.style.top = navbar.offsetHeight + 'px';
+    }
+  }
+
+  setNavMenuOffset();
+  window.addEventListener('resize', setNavMenuOffset);
 
   mobileToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    // Animate hamburger icon
+    const isOpen = navMenu.classList.contains('active');
+    mobileToggle.setAttribute('aria-expanded', isOpen);
   });
+
+  // Close menu when a nav link is clicked
+  navMenu.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close menu on outside click
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
 
   /**
    * Fetch portfolio labs.json data
