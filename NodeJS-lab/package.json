@@ -4,9 +4,10 @@
   "description": "Auto-discovered Node.js laboratory portfolio for Bhaskar Mall",
   "main": "portfolio-server.js",
   "scripts": {
-    "build": "node scripts/generate-labs.js",
+    "build": "node scripts/generate-labs.js && node scripts/generate-assessment-guide.js",
     "start": "node portfolio-server.js",
-    "dev": "node portfolio-server.js"
+    "dev": "node portfolio-server.js",
+    "guide": "node scripts/generate-assessment-guide.js"
   },
   "keywords": [
     "nodejs",

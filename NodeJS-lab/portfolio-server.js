@@ -24,7 +24,8 @@ const MIME_TYPES = {
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.txt': 'text/plain; charset=utf-8',
-  '.md': 'text/plain; charset=utf-8'
+  '.md': 'text/plain; charset=utf-8',
+  '.pdf': 'application/pdf'
 };
 
 function sendJson(res, data, status = 200) {
@@ -97,6 +98,21 @@ const server = http.createServer((req, res) => {
       college: 'Dev Sanskriti Vishwavidyalaya (DSVV)',
       subject: 'CS403NOD - Node.js'
     });
+  }
+
+  // Assessment Guide routes
+  if (pathname === '/guide.pdf' || pathname === '/assessment-guide.pdf' || pathname === '/assessment.pdf') {
+    const pdfPath = path.join(ROOT, 'NodeJS_Practical_Assessment_Guide.pdf');
+    if (fs.existsSync(pdfPath)) {
+      return sendFile(res, pdfPath, 'application/pdf');
+    }
+  }
+
+  if (pathname === '/guide' || pathname === '/assessment' || pathname === '/assessment-guide') {
+    const htmlGuide = path.join(ROOT, 'assessment-guide.html');
+    if (fs.existsSync(htmlGuide)) {
+      return sendFile(res, htmlGuide, 'text/html; charset=utf-8');
+    }
   }
 
   // Direct check for DSVV Logo in root or current folder
