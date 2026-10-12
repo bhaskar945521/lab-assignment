@@ -276,7 +276,6 @@ function htmlTemplate(title, body) {
   <div class="wrapper">
     <header class="header">
       <div class="brand-section">
-        <img src="/dsvvlogo.png" alt="Dev Sanskriti Vishwavidyalaya Logo" class="brand-logo" onerror="this.style.display='none'">
         <div class="brand-text">
           <h1>CS403NOD – Lab 08: Integrated Lab Server</h1>
           <p>Dev Sanskriti Vishwavidyalaya · BCA VII Semester · ${escapeHtml(STUDENT_NAME)}</p>
@@ -470,21 +469,6 @@ async function handler(req, res) {
   try {
     const parsed = url.parse(req.url, true);
     const pathname = parsed.pathname;
-
-    // Direct logo route so template and visitors can load DSVV branding
-    if (pathname === "/dsvvlogo.png" || pathname === "/dsvvlogo.ong") {
-      const candidates = [
-        path.join(ROOT, "public", "dsvvlogo.png"),
-        path.join(ROOT, "..", "dsvvlogo.png"),
-        path.join(ROOT, "..", "NodeJS-lab", "dsvvlogo.png")
-      ];
-      for (const p of candidates) {
-        if (fs.existsSync(p)) {
-          res.writeHead(200, { "Content-Type": "image/png" });
-          return fs.createReadStream(p).pipe(res);
-        }
-      }
-    }
 
     if (req.method !== "GET") {
       return send(res, 405, { error: "Method not allowed. Only GET is supported." });
